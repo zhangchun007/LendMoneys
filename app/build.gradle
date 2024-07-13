@@ -13,13 +13,13 @@ android {
         debug {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
-            storeFile file('../../goHuaAND/key/debug.keystore')
+            storeFile file('../../LendMoneys/key/debug.keystore')
             storePassword 'android'
         }
         release {
             keyAlias 'haiercash'
             keyPassword 'a123456'
-            storeFile file('../../goHuaAND/key/Gouhua-release.keystore')
+            storeFile file('../../LendMoneys/key/Gouhua-release.keystore')
             storePassword 'a123456'
         }
     }
