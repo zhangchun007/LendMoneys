@@ -1,0 +1,14 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.megvii.livenesslib">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+
+    <application>
+        <activity
+            android:name="com.megvii.livenesslib.MainLiveActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+    </application>
+
+</manifest>

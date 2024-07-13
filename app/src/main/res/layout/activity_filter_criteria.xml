@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_top_radius"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <FrameLayout
+            android:id="@+id/layout_close"
+            android:layout_width="@dimen/common33dp"
+            android:layout_height="@dimen/common33dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivInterestClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:layout_marginTop="@dimen/common20dp"
+                android:layout_marginEnd="@dimen/common20dp"
+                android:src="@drawable/icon_close_grey" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common40dp"
+            android:text="选择查询时间"
+            android:textColor="@color/color_303133"
+            android:textSize="@dimen/sp22"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_deal_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common20dp"
+            android:text="交易时间"
+            android:textColor="#ff606166"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+
+        <LinearLayout
+            android:id="@+id/rg_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common12dp"
+            android:layout_marginEnd="@dimen/common15dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_deal_time">
+
+            <TextView
+                android:id="@+id/rb_three_month"
+                android:layout_width="90dp"
+                android:layout_height="36dp"
+                android:background="@drawable/shape_start_end_time"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:tag="threeMonth"
+                android:text="近三月"
+                android:textColor="@color/color_start_end_time"
+                android:textSize="@dimen/sp16" />
+
+            <TextView
+                android:id="@+id/rb_six_month"
+                android:layout_width="90dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="@dimen/common10dp"
+                android:layout_marginEnd="@dimen/common10dp"
+                android:background="@drawable/shape_start_end_time"
+                android:button="@null"
+                android:gravity="center"
+                android:tag="sixMonth"
+                android:text="近半年"
+                android:textColor="@color/color_start_end_time"
+                android:textSize="@dimen/sp16" />
+
+            <TextView
+                android:id="@+id/rb_one_year"
+                android:layout_width="90dp"
+                android:layout_height="36dp"
+                android:background="@drawable/shape_start_end_time"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center"
+                android:tag="oneYear"
+                android:text="近一年"
+                android:textColor="@color/color_start_end_time"
+                android:textSize="@dimen/sp16" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_custom_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common20dp"
+            android:text="自定义时间"
+            android:textColor="#ff606166"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rg_type" />
+
+        <RadioGroup
+            android:id="@+id/ll_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common35dp"
+            android:layout_marginTop="@dimen/common10dp"
+            android:layout_marginRight="@dimen/common35dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_custom_time">
+
+            <TextView
+                android:id="@+id/tv_start_time"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/common36dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_start_end_time"
+                android:gravity="center"
+                android:hint="选择开始时间"
+                android:textColor="@color/color_start_end_time1"
+                android:textSize="@dimen/sp16" />
+
+            <View
+                android:layout_width="@dimen/common8dp"
+                android:layout_height="@dimen/common1dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/common10dp"
+                android:layout_marginEnd="@dimen/common10dp"
+                android:background="@drawable/selector_view_bg" />
+
+            <TextView
+                android:id="@+id/tv_end_time"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/common36dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_start_end_time"
+                android:gravity="center"
+                android:hint="选择开始时间"
+                android:textColor="@color/color_start_end_time1"
+                android:textSize="@dimen/sp16" />
+        </RadioGroup>
+
+
+        <LinearLayout
+            android:id="@+id/ll_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constrainedWidth="true"
+            android:layout_marginTop="@dimen/common12dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_time">
+
+            <TextView
+                android:id="@+id/tv_select_time_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可查询近两年内记录｜起止时间跨度小于一年"
+                android:textColor="#909199" />
+
+            <FrameLayout
+                android:id="@+id/layout_dialog_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="@dimen/dimen_1"
+                android:paddingBottom="@dimen/dimen_1">
+
+                <ImageView
+                    android:id="@+id/img_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common5dp"
+                    android:src="@drawable/img_quan_dialog_tips" />
+            </FrameLayout>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            android:layout_marginTop="@dimen/common25dp"
+            android:layout_marginBottom="40dp"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toTopOf="@+id/tv_certain"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_tips">
+
+            <FrameLayout
+                android:id="@+id/fl_container"
+                android:layout_width="wrap_content"
+                android:layout_height="165dp" />
+
+        <!--  这两个LinearLayout是时间选择器的divider-->
+            <LinearLayout
+                android:id="@+id/top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="@dimen/common56dp"
+                android:layout_marginRight="32dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.33dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_weight="1"
+                    android:background="#E8EAEF" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.33dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_weight="1"
+                    android:background="#E8EAEF" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.33dp"
+                    android:layout_weight="1"
+                    android:background="#E8EAEF" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="32dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.33dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_weight="1"
+                    android:background="#E8EAEF" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.33dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_weight="1"
+                    android:background="#E8EAEF" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.33dp"
+                    android:layout_weight="1"
+                    android:background="#E8EAEF" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_certain"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common48dp"
+            android:layout_marginLeft="@dimen/common15dp"
+            android:layout_marginRight="@dimen/common15dp"
+            android:layout_marginBottom="@dimen/common20dp"
+            android:background="@drawable/shape_certain_bg"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp18"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

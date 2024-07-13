@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.app.haiercash.base.bui.TitleBarView
+        android:id="@+id/bar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_divider1"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/app_bg" />
+
+            <LinearLayout
+                android:id="@+id/llyt_warning"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/tv_divider1"
+                android:background="#fff9e0"
+                android:paddingStart="@dimen/common17dp">
+
+                <ImageView
+                    android:layout_width="@dimen/common4dp"
+                    android:layout_height="@dimen/common4dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="#fb9d39" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:text="请仔细阅读全文，并点击页面底部按钮进行授权"
+                    android:textColor="#fb9d39"
+                    android:textSize="@dimen/dimen_12sp" />
+            </LinearLayout>
+
+            <WebView
+                android:id="@+id/wv_contract_treaty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/llyt_button"
+                android:layout_below="@+id/llyt_warning"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/llyt_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_agree"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common42dp"
+                    android:layout_marginLeft="@dimen/common15dp"
+                    android:layout_marginTop="@dimen/common20dp"
+                    android:layout_marginRight="@dimen/common15dp"
+                    android:layout_marginBottom="@dimen/common20dp"
+                    android:background="@drawable/selector_big_btn"
+                    android:gravity="center"
+                    android:text="我已阅读并同意"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_know"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="我知道了"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

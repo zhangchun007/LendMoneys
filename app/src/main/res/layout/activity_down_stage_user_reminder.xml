@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackground"
+    tools:viewBindingIgnore="true">
+
+    <com.app.haiercash.base.bui.TitleBarView
+        android:id="@+id/bar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_head"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_down_stage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bar_header" />
+
+    <TextView
+        android:id="@+id/tv_down_des"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common16dp"
+        android:layout_marginTop="@dimen/common15dp"
+        android:layout_marginEnd="@dimen/common16dp"
+        android:lineSpacingMultiplier="1.25"
+        android:text="您尚有*****元欠款未归还，请先结清欠款哦！您可将欠款转入如下账户结清欠款,在转账时备注您的姓名,身\n份证号,以便确认您的身份。"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_head" />
+
+
+    <TextView
+        android:id="@+id/tv_account_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common16dp"
+        android:layout_marginTop="@dimen/common30dp"
+        android:lineSpacingMultiplier="1.25"
+        android:text="转账账户名称:\n海尔消费金融有限公司 (图icon_copy_number) \n(海尔消费金融唯一指定还款账户)"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_down_des" />
+
+    <TextView
+        android:id="@+id/tv_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common16dp"
+        android:layout_marginTop="@dimen/common30dp"
+        android:lineSpacingMultiplier="1.25"
+        android:text="账号：\n37150198551000000762 (图icon_copy_number) "
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_account_name" />
+
+
+    <TextView
+        android:id="@+id/tv_open_bank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common16dp"
+        android:layout_marginTop="@dimen/common30dp"
+        android:lineSpacingMultiplier="1.25"
+        android:text="开户行：\n中国建设银行股份有限公司青岛海尔路支行  (图icon_copy_number) "
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_account" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common16dp"
+        android:layout_marginTop="@dimen/common30dp"
+        android:layout_marginEnd="@dimen/common16dp"
+        android:lineSpacingMultiplier="1.25"
+        android:text="建议拨打400-018-7777在客服指引下操作\n贷款逾期会影响您的征信记录，征信不良会影响您的信用生活哦，比如车贷，房贷申请，信用卡使用等，请尽快还款，保持良好信用。"
+        android:textColor="@color/text_gray_dark"
+        android:textSize="@dimen/sp13"
+        app:layout_constraintTop_toBottomOf="@+id/tv_open_bank" />
+
+    <ImageView
+        android:id="@+id/iv_state_error"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/windowBackground"
+        android:contentDescription="@string/app_name"
+        android:paddingBottom="@dimen/common50dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/iv_down_stage"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_head" />
+</androidx.constraintlayout.widget.ConstraintLayout>

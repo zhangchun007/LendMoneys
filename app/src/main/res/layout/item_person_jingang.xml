@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:viewBindingIgnore="true">
+
+    <ImageView
+        android:id="@+id/img_default"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="@dimen/common25dp"
+        android:src="@drawable/img_jingang_default"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_lab"
+            android:layout_width="@dimen/common30dp"
+            android:layout_height="@dimen/common30dp"
+            android:layout_marginTop="@dimen/common25dp"
+            android:src="@drawable/img_loan_record"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Space
+            android:id="@+id/id_space"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="13dp"
+            app:layout_constraintRight_toRightOf="@id/img_lab"
+            app:layout_constraintTop_toTopOf="@id/img_lab" />
+
+        <TextView
+            android:id="@+id/tv_bubble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-6dp"
+            android:paddingLeft="@dimen/common4dp"
+            android:paddingTop="@dimen/common1dp"
+            android:paddingRight="@dimen/common4dp"
+            android:paddingBottom="@dimen/common1dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/common10dp"
+            app:layout_constraintBottom_toTopOf="@+id/id_space"
+            app:layout_constraintLeft_toRightOf="@+id/id_space"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_tab_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common8dp"
+            android:text="商城订单"
+            android:textColor="#303133"
+            android:textSize="@dimen/common13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_lab" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

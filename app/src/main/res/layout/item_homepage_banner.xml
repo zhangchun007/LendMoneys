@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/common15dp"
+    android:layout_marginRight="@dimen/common15dp"
+    android:layout_marginBottom="@dimen/common20dp"
+    android:background="@drawable/bg_white_radius8"
+    android:orientation="horizontal"
+    app:cardCornerRadius="@dimen/common8dp"
+    app:cardElevation="0dp"
+    tools:viewBindingIgnore="true">
+
+    <com.haiercash.gouhua.widget.BannerView
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mineBackground"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:vpb_defaultResId="@drawable/src_default_banner"
+        app:vpb_isNeedAdaptationScreen="false"
+        app:vpb_isNeedShowPoint="true"
+        app:vpb_scaleType="fitXY" />
+
+</androidx.cardview.widget.CardView>

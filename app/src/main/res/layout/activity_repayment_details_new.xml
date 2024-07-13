@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/common160dp"
+        android:background="@drawable/bg_top_radius">
+
+        <FrameLayout
+            android:id="@+id/layout_close"
+            android:layout_width="@dimen/common33dp"
+            android:layout_height="@dimen/common33dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivInterestClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:layout_marginTop="@dimen/common20dp"
+                android:layout_marginEnd="@dimen/common20dp"
+                android:src="@drawable/icon_close_grey" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common40dp"
+            android:gravity="center"
+            android:text="还款计划"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp22"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:viewBindingIgnore="true" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common10dp"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_title_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/common45dp"
+                    android:layout_marginBottom="@dimen/common4dp"
+                    android:background="@drawable/shape_repay_tips_bg"
+                    android:paddingLeft="@dimen/common8dp"
+                    android:paddingTop="2dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="2dp"
+                    android:text="主动还款可享"
+                    android:textColor="@color/color_ff5151"
+                    android:textSize="@dimen/sp12"
+                    android:visibility="gone"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="@dimen/common3dp"
+                    android:layout_height="@dimen/common12dp"
+                    android:background="@drawable/shape_bule_divider"
+                    app:layout_constraintBottom_toBottomOf="@+id/title"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/title" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common4dp"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:includeFontPadding="false"
+                    android:textColor="#303133"
+                    android:textSize="@dimen/sp15"
+                    app:layout_constraintLeft_toRightOf="@+id/divider1"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_tips"
+                    tools:text="应还总额1,24.00元，优惠后10,0.00元" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="@dimen/common15dp"
+                    android:background="@drawable/shape_repay_head_info"
+                    android:paddingTop="@dimen/common15dp"
+                    android:paddingBottom="@dimen/common15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/title">
+
+                    <TextView
+                        android:id="@+id/tv_repay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common10dp"
+                        android:text="还款方式"
+                        android:textColor="@color/color_606166"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_repay_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common45dp"
+                        android:text="等额本息"
+                        android:textColor="@color/color_606166"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_repay"
+                        app:layout_constraintTop_toTopOf="@+id/tv_repay" />
+
+                    <TextView
+                        android:id="@+id/tv_loan_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common10dp"
+                        android:layout_marginTop="@dimen/common15dp"
+                        android:text="借款本金"
+                        android:textColor="@color/color_606166"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_repay" />
+
+                    <TextView
+                        android:id="@+id/tv_loan_money_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common45dp"
+                        android:textColor="@color/color_606166"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_loan_money"
+                        app:layout_constraintTop_toTopOf="@+id/tv_loan_money"
+                        tools:text="¥10,000.00" />
+
+                    <TextView
+                        android:id="@+id/tv_interest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common10dp"
+                        android:layout_marginTop="@dimen/common15dp"
+                        android:text="总利息"
+                        android:textColor="@color/color_606166"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_loan_money" />
+
+                    <TextView
+                        android:id="@+id/tv_interest_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_606166"
+                        app:layout_constraintLeft_toLeftOf="@+id/tv_loan_money_num"
+                        app:layout_constraintTop_toTopOf="@+id/tv_interest"
+                        tools:text="¥240.00" />
+
+                    <TextView
+                        android:id="@+id/tv_coupon_interest_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common10dp"
+                        android:textColor="@color/color_ff5151"
+                        android:textSize="@dimen/sp12"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_interest_num"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_interest_num"
+                        app:layout_constraintTop_toTopOf="@+id/tv_interest_num"
+                        tools:text="（优惠后200.0）" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="@dimen/common3dp"
+                    android:layout_height="@dimen/common12dp"
+                    android:background="@drawable/shape_bule_divider"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_qishu"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_qishu" />
+
+                <TextView
+                    android:id="@+id/tv_qishu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common4dp"
+                    android:layout_marginTop="@dimen/common15dp"
+                    android:includeFontPadding="false"
+                    android:textColor="#303133"
+                    android:textSize="@dimen/sp15"
+                    app:layout_constraintLeft_toRightOf="@+id/divider2"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_head"
+                    tools:text="共6期·每月18日还款" />
+
+                <FrameLayout
+                    android:id="@+id/layout_dialog_tips"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_qishu"
+                    app:layout_constraintLeft_toRightOf="@+id/tv_qishu"
+                    app:layout_constraintTop_toTopOf="@+id/tv_qishu">
+
+                    <ImageView
+                        android:id="@+id/img_tips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common5dp"
+                        android:src="@drawable/img_quan_dialog_tips" />
+                </FrameLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/common62dp"
+                    android:overScrollMode="never"
+                    app:layout_constrainedHeight="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_qishu"
+                    tools:listitem="@layout/item_repayment_info" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <FrameLayout
+            android:id="@+id/layout_certain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common42dp"
+                android:layout_marginLeft="@dimen/common15dp"
+                android:layout_marginRight="@dimen/common15dp"
+                android:layout_marginBottom="@dimen/common20dp"
+                android:background="@drawable/shape_certain_bg"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp15" />
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <com.app.haiercash.base.bui.TitleBarView
+        android:id="@+id/bar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View style="@style/Divider_0_5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common15dp"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <com.haiercash.gouhua.widget.DelEditText
+            android:id="@+id/edt_phone"
+            style="@style/get_code_no"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common50dp"
+            android:hint="请输入新的手机号"
+            android:inputType="number"
+            android:maxLength="13"
+            android:paddingLeft="@dimen/common15dp"
+            android:paddingRight="@dimen/common15dp" />
+
+        <View
+            style="@style/Divider_0_5dp"
+            android:layout_marginLeft="@dimen/common15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/common15dp"
+            android:paddingRight="@dimen/common15dp">
+
+            <com.haiercash.gouhua.widget.DelEditText
+                android:id="@+id/edt_getcode"
+                style="@style/get_code_no"
+                android:hint="请输入短信验证码"
+                android:inputType="number"
+                android:maxLength="6" />
+
+            <com.haiercash.gouhua.sms.SmsTimeView
+                android:id="@+id/ttv_get_code"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvSetOK"
+        style="@style/bigButton"
+        android:layout_marginLeft="@dimen/common15dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="@dimen/common15dp"
+        android:enabled="false"
+        android:text="确定"
+        android:textSize="@dimen/dimen_18sp" />
+</LinearLayout>

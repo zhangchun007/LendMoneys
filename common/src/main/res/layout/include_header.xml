@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_title"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:viewBindingIgnore="true">
+
+    <ImageView
+        android:id="@+id/head_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:contentDescription="TODO"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp" />
+
+    <ImageView
+        android:id="@+id/head_left_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/head_left"
+        android:contentDescription="TODO"
+        android:src="@drawable/ic_web_close"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/head_title"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:text="@string/app_name"
+        android:textColor="#333333"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/head_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:contentDescription="TODO"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/head_rightText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="10dp"
+        android:textColor="#1555ff"
+        android:textSize="15sp" />
+</RelativeLayout>

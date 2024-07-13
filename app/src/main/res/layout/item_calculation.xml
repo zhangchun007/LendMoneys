@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/rlContent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/common15dp"
+    android:layout_marginEnd="@dimen/common15dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/common10dp"
+    tools:viewBindingIgnore="true">
+
+    <TextView
+        android:id="@+id/tvPerNO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/common15dp"
+        android:text="perNo"
+        android:textColor="@color/color_303133"
+        android:textSize="@dimen/sp16" />
+
+    <TextView
+        android:id="@+id/tvAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingEnd="@dimen/common15dp"
+        android:text="money"
+        android:textColor="@color/color_303133"
+        android:textSize="@dimen/sp16" />
+
+    <TextView
+        android:id="@+id/tvRem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAmt"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/common6dp"
+        android:paddingEnd="@dimen/common15dp"
+        android:paddingBottom="@dimen/common10dp"
+        android:text="money"
+        android:textColor="@color/color_909199"
+        android:textSize="@dimen/sp13" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp05"
+        android:layout_below="@+id/tvRem"
+        android:layout_marginStart="@dimen/common15dp"
+        android:alpha="0.3"
+        android:background="@color/color_EDEFF2" />
+</RelativeLayout>

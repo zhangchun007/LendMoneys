@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.haiercash.gouhua",
+  "variantName": "processSealing58DebugResources",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "versionCode": 427,
+      "versionName": "4.2.7",
+      "outputFile": "gouhua_封测_v4.2.7_58.apk"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/common34dp"
+        android:layout_marginEnd="@dimen/common34dp"
+        android:background="@drawable/bg_white_radius8"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/common26dp"
+        android:paddingBottom="@dimen/common26dp">
+
+        <TextView
+            android:id="@+id/tvClose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common12dp"
+            android:layout_marginEnd="@dimen/common12dp"
+            android:drawableEnd="@drawable/icon_close_small" />
+
+        <TextView
+            android:id="@+id/tvPopTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingStart="@dimen/common20dp"
+            android:paddingEnd="@dimen/common20dp"
+            android:text=""
+            android:textStyle="bold"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp17" />
+
+        <ScrollView
+            android:id="@+id/sllv"
+            android:layout_width="match_parent"
+            android:layout_height="262dp"
+            android:layout_marginTop="@dimen/common8dp"
+            android:fadingEdge="none"
+            android:overScrollMode="never"
+            android:paddingStart="@dimen/common20dp"
+            android:paddingEnd="@dimen/common20dp"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvContentInterest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.35"
+                android:text=""
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp15" />
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common15dp"
+            android:lineSpacingMultiplier="1.2"
+            android:paddingStart="@dimen/common20dp"
+            android:paddingEnd="@dimen/common20dp"
+            android:text=""
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp15" />
+
+        <TextView
+            android:id="@+id/tvContentDes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common12dp"
+            android:lineSpacingMultiplier="1.2"
+            android:paddingStart="@dimen/common20dp"
+            android:paddingEnd="@dimen/common20dp"
+            android:text=""
+            android:textColor="@color/gray_909199"
+            android:textSize="@dimen/sp12" />
+
+        <TextView
+            android:id="@+id/tvNext"
+            android:layout_width="243dp"
+            android:layout_height="@dimen/common40dp"
+            android:layout_marginTop="@dimen/common20dp"
+            android:background="@drawable/diaolg_bg_shap2"
+            android:drawablePadding="@dimen/common8dp"
+            android:gravity="center"
+            android:paddingStart="@dimen/common20dp"
+            android:paddingEnd="@dimen/common20dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp16" />
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="243dp"
+            android:layout_height="@dimen/common40dp"
+            android:layout_marginTop="@dimen/common5dp"
+            android:drawablePadding="@dimen/common8dp"
+            android:gravity="center"
+            android:paddingStart="@dimen/common20dp"
+            android:paddingEnd="@dimen/common20dp"
+            android:text="不同意"
+            android:textColor="@color/color_909199"
+            android:textSize="@dimen/sp15"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <com.app.haiercash.base.bui.TitleBarView
+        android:id="@+id/bar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View style="@style/Divider_0_5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/common16dp"
+        android:paddingTop="@dimen/common25dp"
+        android:text="实名认证"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/sp23"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/common16dp"
+        android:paddingTop="@dimen/common6dp"
+        android:text="@string/input_your_info_to_validate"
+        android:textColor="@color/text_gray_light"
+        android:textSize="@dimen/sp12" />
+
+    <ImageView
+        android:id="@+id/iv_nameauth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="@dimen/common40dp"
+        android:src="@drawable/ic_nameauth_idcard" />
+
+    <TextView
+        android:id="@+id/tv_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="@dimen/common20dp"
+        android:text="点击图片扫描身份证"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp16" />
+
+    <View
+        style="@style/Divider_0_5dp"
+        android:layout_marginLeft="@dimen/common16dp"
+        android:layout_marginTop="@dimen/common40dp"
+        android:layout_marginRight="@dimen/common16dp" />
+
+    <TextView
+        android:id="@+id/tv_lost_idcard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="@dimen/common40dp"
+        android:text="身份证暂不在身边请手动输入 >"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp16"
+        android:visibility="invisible" />
+
+
+    <com.haiercash.gouhua.view.EduProgressBottomBarView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:edu_progress="1" />
+
+
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:viewBindingIgnore="true">
+
+    <LinearLayout
+        android:id="@+id/ll_prompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/common50dp"
+        android:layout_marginEnd="@dimen/common50dp"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/common10dp"
+                android:gravity="center"
+                android:padding="@dimen/common10dp"
+                android:text="title"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/common10dp"
+                android:text="tv_content"
+                android:textColor="@color/text_gray_dark"
+                android:textSize="@dimen/sp14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_fingerprint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/common35dp"
+                android:layout_height="@dimen/common35dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/common5dp"
+                android:src="@drawable/src_verify_biometri" />
+
+            <TextView
+                android:id="@+id/state_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/common5dp"
+                android:text="请验证指纹"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp16"
+                android:typeface="normal" />
+        </LinearLayout>
+
+        <View
+            style="@style/Divider_0_5dp"
+            android:layout_marginTop="@dimen/common17dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/use_password_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="使用手势密码"
+                android:textColor="#419BF9"
+                android:textSize="@dimen/sp16" />
+
+            <TextView
+                android:id="@+id/cancel_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="#419BF9"
+                android:textSize="@dimen/sp16" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

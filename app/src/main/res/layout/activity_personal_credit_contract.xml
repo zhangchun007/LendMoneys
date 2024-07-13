@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <com.app.haiercash.base.bui.TitleBarView
+        android:id="@+id/bar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View style="@style/Divider_0_5dp" />
+
+    <FrameLayout
+        android:id="@+id/flContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.haiercash.gouhua.x5webview.CusWebView
+            android:id="@+id/cu_web"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <View
+            style="@style/Shadow_up"
+            android:layout_gravity="bottom" />
+    </FrameLayout>
+
+    <include
+        android:id="@+id/v_bottom"
+        layout="@layout/layout_agreement_common" />
+</LinearLayout>

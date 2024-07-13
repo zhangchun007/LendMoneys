@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <com.app.haiercash.base.bui.TitleBarView
+        android:id="@+id/bar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View style="@style/Divider_0_5dp" />
+
+    <com.haiercash.gouhua.view.BankCardView
+        android:id="@+id/bankcardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common16dp"
+        android:layout_marginRight="@dimen/common16dp"
+        android:paddingTop="@dimen/common10dp"
+        android:paddingBottom="@dimen/common10dp"
+        app:text_style="clear_text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/common16dp">
+
+        <LinearLayout
+            android:id="@+id/ll_btn_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_loan_association"
+                style="@style/bigButton"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="@dimen/common20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="@dimen/common30dp"
+                android:background="@drawable/selector_big_btn_3158f8"
+                android:text="关联贷款"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_18sp" />
+
+            <TextView
+                android:id="@+id/tv_goToSign"
+                style="@style/bigButton"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="验证银行卡/签约"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_18sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_check_sign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_bankcard_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="手机号"
+                android:textColor="@color/text_gray_dark"
+                android:textSize="@dimen/sp15"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.haiercash.gouhua.widget.DelEditText
+                android:id="@+id/et_bancard_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common12dp"
+                android:background="@null"
+                android:hint="请输入该卡银行预留手机号"
+                android:inputType="phone"
+                android:maxLength="13"
+                android:textColor="@color/text_black"
+                android:textColorHint="@color/text_gray_light"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_bankcard_phone" />
+
+            <ImageView
+                android:id="@+id/iv_bankcard_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/common17dp"
+                android:src="@drawable/ic_sign_tips"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_bankcard_phone" />
+
+            <View
+                android:id="@+id/view_bankcard_line"
+                style="@style/Divider1dp_con"
+                android:layout_marginTop="@dimen/common12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_bancard_phone" />
+
+            <CheckBox
+                android:id="@+id/cb_bankcard_agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common20dp"
+                android:button="@drawable/selector_checkbox1"
+                android:checked="false"
+                android:paddingLeft="6dp"
+                android:paddingTop="@dimen/common5dp"
+                android:paddingBottom="@dimen/common5dp"
+                android:text="我已阅读并同意"
+                android:textColor="@color/text_gray_dark"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_bankcard_line" />
+
+            <TextView
+                android:id="@+id/tv_quick_payment_bank_agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common20dp"
+                android:paddingTop="@dimen/common5dp"
+                android:paddingBottom="@dimen/common5dp"
+                android:text="《银行卡快捷支付协议》"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toRightOf="@+id/cb_bankcard_agreement"
+                app:layout_constraintTop_toBottomOf="@+id/view_bankcard_line" />
+
+            <TextView
+                android:id="@+id/tv_bank_cancle"
+                android:layout_width="@dimen/common100dp"
+                android:layout_height="@dimen/common50dp"
+                android:layout_marginTop="@dimen/common20dp"
+                android:background="@drawable/selector_big_btn"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp17"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_bankcard_agreement" />
+
+            <TextView
+                android:id="@+id/tv_bank_confirm"
+                android:layout_width="215dp"
+                android:layout_height="@dimen/common50dp"
+                android:layout_marginTop="@dimen/common20dp"
+                android:background="@drawable/selector_big_btn"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp17"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_bankcard_agreement" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common10dp"
+            android:layout_marginTop="@dimen/common30dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_loan_association_rem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/common15dp">
+
+                <View
+                    android:layout_width="@dimen/common2dp"
+                    android:layout_height="@dimen/common8dp"
+                    android:background="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common5dp"
+                    android:text="如需更换贷款关联的银行卡，请“关联贷款”"
+                    android:textColor="@color/text_gray_dark"
+                    android:textSize="@dimen/sp12"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="@dimen/common2dp"
+                    android:layout_height="@dimen/common8dp"
+                    android:background="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common5dp"
+                    android:text="若银行卡预留手机号更换，请重新验证银行卡"
+                    android:textColor="@color/text_gray_dark"
+                    android:textSize="@dimen/sp12"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+

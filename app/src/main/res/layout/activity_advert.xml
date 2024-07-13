@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_advert"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:gravity="end|bottom"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/common23dp"
+    tools:viewBindingIgnore="true">
+
+    <TextView
+        android:id="@+id/tv_last_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common20dp"
+        android:layout_marginBottom="@dimen/common40dp"
+        android:drawableEnd="@drawable/arrow_big_right_gray"
+        android:drawablePadding="0dp"
+        android:text="跳过"
+        android:textColor="@color/text_gray_light"
+        android:textSize="@dimen/sp16" />
+</LinearLayout>

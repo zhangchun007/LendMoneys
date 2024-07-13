@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/common10dp"
+        android:paddingBottom="@dimen/common10dp">
+        <!--<com.haiercash.gouhua.view.HorizontalPageRecyclerView
+            android:id="@+id/rv_help_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <com.haiercash.gouhua.widget.PageIndicatorView
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom" />-->
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/rv_help_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <com.haiercash.gouhua.widget.CirclePageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:padding="3dp"
+            android:visibility="gone"
+            app:fillColor="#c7c7c7"
+            app:pageColor="#eeeeee"
+            app:strokeWidth="0dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common10dp"
+        android:background="@color/divider" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/common15dp"
+        android:paddingTop="@dimen/common15dp"
+        android:text="常见问题"
+        android:textSize="@dimen/sp18" />
+</LinearLayout>

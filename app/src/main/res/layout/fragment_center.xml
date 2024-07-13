@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/mineBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/layout_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.haiercash.gouhua.homepageview.GHRefreshHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCenter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+            <!--头部信息-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_top_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/group_top_user_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:constraint_referenced_ids="img_top_avatar,tv_top_name,tv_top_num"></androidx.constraintlayout.widget.Group>
+
+                <ImageView
+                    android:id="@+id/img_top_avatar"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="12dp"
+                    android:src="@drawable/img_user_avatar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_top_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/color_303133"
+                    android:textSize="12dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/img_top_avatar"
+                    app:layout_constraintLeft_toRightOf="@+id/img_top_avatar"
+                    app:layout_constraintTop_toTopOf="@+id/img_top_avatar"
+                    tools:text="Hi,你好" />
+
+
+                <TextView
+                    android:id="@+id/tv_top_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/color_606166"
+                    android:textSize="12dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_top_name"
+                    app:layout_constraintLeft_toRightOf="@+id/tv_top_name"
+                    app:layout_constraintTop_toTopOf="@+id/tv_top_name"
+                    tools:text="137****7890" />
+
+
+                <ImageView
+                    android:id="@+id/iv_message"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="43dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="17dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_message"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/iv_setting"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Space
+                    android:id="@+id/id_space"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintLeft_toRightOf="@+id/iv_message"
+                    app:layout_constraintTop_toTopOf="@id/iv_message" />
+
+
+                <FrameLayout
+                    android:id="@+id/layout_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/id_space"
+                    app:layout_constraintRight_toRightOf="@+id/id_space">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/notice_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_messge_notice_num_bg"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/white"
+                        android:textSize="9dp"
+                        android:visibility="visible"
+                        tools:text="99+" />
+                </FrameLayout>
+
+
+                <ImageView
+                    android:id="@+id/iv_setting"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="43dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="17dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_setting"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+    <!--快速申额度-->
+    <include
+        android:id="@+id/rl_apply"
+        layout="@layout/layout_quick_applyment" />
+
+    <!-- 指纹设置-->
+    <include
+        android:id="@+id/rl_quick_login"
+        layout="@layout/layout_quick_login" />
+
+</FrameLayout>

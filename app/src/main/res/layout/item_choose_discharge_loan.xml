@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/common14dp"
+    tools:viewBindingIgnore="true">
+
+    <TextView
+        android:id="@+id/tv_choose_discharge_loan_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common20dp"
+        android:layout_marginTop="@dimen/common15dp"
+        android:text="￥2000"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/sp25"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_blue_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common12dp"
+        android:src="@drawable/bg_blue_point"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_choose_discharge_loan_money"
+        app:layout_constraintTop_toBottomOf="@+id/tv_choose_discharge_loan_money" />
+
+    <TextView
+        android:id="@+id/tv_choose_discharge_loan_data_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common10dp"
+        android:layout_marginTop="@dimen/common5dp"
+        android:text="结清日期:"
+        android:textColor="@color/text_gray_dark"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintLeft_toRightOf="@+id/iv_blue_point"
+        app:layout_constraintTop_toBottomOf="@+id/tv_choose_discharge_loan_money" />
+
+    <TextView
+        android:id="@+id/tv_choose_discharge_loan_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common15dp"
+        android:layout_marginTop="@dimen/common5dp"
+        android:text="2019-9-8"
+        android:textColor="@color/text_gray_dark"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintLeft_toRightOf="@+id/tv_choose_discharge_loan_data_des"
+        app:layout_constraintTop_toBottomOf="@+id/tv_choose_discharge_loan_money" />
+
+    <ImageView
+        android:id="@+id/iv_red_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common18dp"
+        android:src="@drawable/bg_red_point"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_choose_discharge_loan_money"
+        app:layout_constraintTop_toBottomOf="@+id/iv_blue_point" />
+
+    <TextView
+        android:id="@+id/tv_choose_loan_data_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common10dp"
+        android:layout_marginTop="@dimen/common5dp"
+        android:text="贷款日期:"
+        android:textColor="@color/text_gray_dark"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintLeft_toRightOf="@+id/iv_red_point"
+        app:layout_constraintTop_toBottomOf="@+id/tv_choose_discharge_loan_data_des" />
+
+    <TextView
+        android:id="@+id/tv_choose_loan_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common15dp"
+        android:layout_marginTop="@dimen/common5dp"
+        android:text="2019-9-8"
+        android:textColor="@color/text_gray_dark"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintLeft_toRightOf="@+id/tv_choose_loan_data_des"
+        app:layout_constraintTop_toBottomOf="@+id/tv_choose_discharge_loan_data_des" />
+
+    <View
+        android:id="@+id/loan_divder"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp05"
+        android:layout_marginLeft="@dimen/common4dp"
+        android:layout_marginTop="@dimen/common15dp"
+        android:background="@color/divider"
+        app:layout_constraintLeft_toRightOf="@+id/iv_red_point"
+        app:layout_constraintTop_toBottomOf="@+id/tv_choose_loan_data_des" />
+
+    <ImageView
+        android:id="@+id/iv_gray_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common10dp"
+        android:src="@drawable/bg_gray_point"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_choose_discharge_loan_money"
+        app:layout_constraintTop_toBottomOf="@+id/loan_divder" />
+
+    <TextView
+        android:id="@+id/tv_loan_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common10dp"
+        android:layout_marginTop="@dimen/common5dp"
+        android:text="借据单号:"
+        android:textColor="@color/text_gray_light"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintLeft_toRightOf="@+id/iv_gray_point"
+        app:layout_constraintTop_toBottomOf="@+id/loan_divder" />
+
+    <TextView
+        android:id="@+id/tv_loan_order_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common10dp"
+        android:layout_marginTop="@dimen/common5dp"
+        android:text="342545455653656564563"
+        android:textColor="@color/text_gray_light"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintLeft_toRightOf="@+id/tv_loan_des"
+        app:layout_constraintTop_toBottomOf="@+id/loan_divder" />
+
+    <TextView
+        android:id="@+id/tv_apply_btn"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="@dimen/common20dp"
+        android:background="@drawable/bg_discharge_blue_btn"
+        android:gravity="center"
+        android:text="申请"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp16"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_faild_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common10dp"
+        android:layout_marginTop="@dimen/common5dp"
+        android:text="申请异常，请联系客服处理"
+        android:textColor="@color/ffff3202"
+        android:textSize="@dimen/sp12"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toRightOf="@+id/iv_gray_point"
+        app:layout_constraintTop_toBottomOf="@+id/tv_loan_des" />
+</androidx.constraintlayout.widget.ConstraintLayout>

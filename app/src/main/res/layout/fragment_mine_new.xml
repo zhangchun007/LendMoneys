@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff0f3f6">
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/srl_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.haiercash.gouhua.homepageview.GHRefreshHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:fillViewport="true"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_top_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="231dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_mine_top_bg"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <View
+                    android:id="@+id/status_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/img_user_avatar"
+                    android:layout_width="@dimen/common60dp"
+                    android:layout_height="@dimen/common60dp"
+                    android:layout_marginLeft="@dimen/common15dp"
+                    android:layout_marginTop="@dimen/common70dp"
+                    android:background="@drawable/bg_circle_white"
+                    android:padding="@dimen/common2dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_user_avatar"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/status_bar" />
+
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="@dimen/common4dp"
+                    android:text="登录/注册"
+                    android:textColor="@color/color_303133"
+                    android:textSize="@dimen/common20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@+id/img_user_avatar"
+                    app:layout_constraintTop_toTopOf="@+id/img_user_avatar" />
+
+                <ImageView
+                    android:id="@+id/img_vip_default_logo"
+                    android:layout_width="76dp"
+                    android:layout_height="21dp"
+                    android:layout_marginLeft="@dimen/common9dp"
+                    android:src="@drawable/img_vip_default_logo"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_user_name"
+                    app:layout_constraintLeft_toRightOf="@+id/tv_user_name"
+                    app:layout_constraintTop_toTopOf="@+id/tv_user_name" />
+
+                <TextView
+                    android:id="@+id/tv_user_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="@dimen/common4dp"
+                    android:text="登录可享更多精彩"
+                    android:textColor="@color/color_606166"
+                    android:textSize="@dimen/common14dp"
+                    app:layout_constraintLeft_toRightOf="@+id/img_user_avatar"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_user_name" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_vip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/common15dp"
+                    android:layout_marginTop="@dimen/common22dp"
+                    android:layout_marginEnd="@dimen/common15dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/transparent"
+                    app:cardCornerRadius="@dimen/common8dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_user_avatar">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/img_vip_default" />
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="45dp"
+                    app:layout_constrainedHeight="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/card_vip"
+                    app:layout_goneMarginTop="@dimen/common25dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/common200dp"
+                        android:background="@drawable/bg_white_top_radius20"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <!-- 借款/还款 -->
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layout_center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_resident_ribbon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/common15dp"
+                            android:layout_marginRight="@dimen/common15dp"
+                            android:overScrollMode="never"
+                            android:scrollbars="none"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:itemCount="3"
+                            tools:listitem="@layout/item_always_funs" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <!-- 7日待还 -->
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layout_seven_pay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common15dp"
+                        android:layout_marginTop="@dimen/common26dp"
+                        android:layout_marginRight="@dimen/common15dp"
+                        android:visibility="gone"
+                        android:background="@drawable/bg_white_radius8"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/layout_center"
+                        app:layout_goneMarginTop="@dimen/common6dp">
+
+                        <TextView
+                            android:id="@+id/tv_seven_pay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="20dp"
+                            android:text="7日待还"
+                            android:textColor="@color/color_303133"
+                            android:textSize="@dimen/common16dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/tv_yuan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="@dimen/common2dp"
+                            android:text="¥"
+                            android:textColor="@color/color_303133"
+                            android:textSize="@dimen/common22dp"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="@+id/tv_yuan_num"
+                            app:layout_constraintLeft_toLeftOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_yuan_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/common4dp"
+                            android:layout_marginTop="@dimen/common6dp"
+                            android:includeFontPadding="false"
+                            android:textColor="@color/color_303133"
+                            android:textSize="@dimen/common32dp"
+                            android:visibility="visible"
+                            app:layout_constraintLeft_toRightOf="@+id/tv_yuan"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_seven_pay"
+                            tools:text="32.18" />
+
+                        <TextView
+                            android:id="@+id/tv_warning_bubble"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/common4dp"
+                            android:layout_marginTop="@dimen/common16dp"
+                            android:background="@drawable/bg_warning_bubble"
+                            android:paddingLeft="@dimen/common6dp"
+                            android:paddingTop="@dimen/common1dp"
+                            android:paddingRight="@dimen/common6dp"
+                            android:paddingBottom="@dimen/common1dp"
+                            android:text="含往期逾期"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/common10dp"
+                            android:visibility="visible"
+                            app:layout_constraintLeft_toRightOf="@+id/tv_seven_pay"
+                            app:layout_constraintTop_toTopOf="@+id/tv_seven_pay" />
+
+
+                        <TextView
+                            android:id="@+id/tv_seven_tips"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/common15dp"
+                            android:layout_marginTop="@dimen/common8dp"
+                            android:layout_marginBottom="@dimen/common22dp"
+                            android:textColor="#909199"
+                            android:textSize="@dimen/common12dp"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_yuan_num"
+                            tools:text="最近还款日：2023年1月16日" />
+
+                        <TextView
+                            android:id="@+id/tv_seven_bubble"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/common5dp"
+                            android:background="@drawable/bg_seven_bubble"
+                            android:paddingLeft="@dimen/common8dp"
+                            android:paddingTop="@dimen/common1dp"
+                            android:paddingRight="@dimen/common8dp"
+                            android:paddingBottom="@dimen/common1dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/common10dp"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="@+id/tv_seven_tips"
+                            app:layout_constraintLeft_toRightOf="@+id/tv_seven_tips"
+                            app:layout_constraintTop_toTopOf="@+id/tv_seven_tips"
+                            tools:text="7天" />
+
+
+                        <TextView
+                            android:id="@+id/tv_no_payment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/common20dp"
+                            android:layout_marginTop="@dimen/common15dp"
+                            android:layout_marginBottom="@dimen/common30dp"
+                            android:text="暂无待还"
+                            android:textColor="@color/color_303133"
+                            android:textSize="@dimen/common20dp"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_seven_pay" />
+
+
+                        <TextView
+                            android:id="@+id/tv_repayment_now"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/common15dp"
+                            android:background="@drawable/bg_primary_color_radius19"
+                            android:paddingLeft="@dimen/common16dp"
+                            android:paddingTop="@dimen/common8dp"
+                            android:paddingRight="@dimen/common16dp"
+                            android:paddingBottom="@dimen/common8dp"
+                            android:text="立即还款"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/common15dp"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/tv_repayment_arrow"
+                            android:layout_width="@dimen/common10dp"
+                            android:layout_height="@dimen/common12dp"
+                            android:layout_marginRight="@dimen/common15dp"
+                            android:src="@drawable/arrow_big_right_gray"
+                            android:scaleType="fitXY"
+                            android:textColor="@color/colorPrimary"
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/common65dp"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <!-- 常用功能-->
+                    <TextView
+                        android:id="@+id/tv_always_func"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:text="常用功能"
+                        android:textColor="@color/color_303133"
+                        android:textSize="@dimen/common16dp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/layout_seven_pay"
+                        app:layout_goneMarginTop="@dimen/common26dp" />
+
+                    <FrameLayout
+                        android:id="@+id/layout_always_funs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common15dp"
+                        android:layout_marginTop="@dimen/common10dp"
+                        android:layout_marginRight="@dimen/common15dp"
+                        android:background="@drawable/bg_white_radius8"
+                        android:paddingTop="@dimen/common25dp"
+                        android:paddingBottom="@dimen/common5dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_always_func">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_always_func"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:overScrollMode="never"
+                            android:scrollbars="none"
+                            tools:itemCount="3"
+                            tools:listitem="@layout/item_always_funs" />
+                    </FrameLayout>
+
+                    <!--    关于我们    -->
+                    <TextView
+                        android:id="@+id/tv_about_us"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:text="关于我们"
+                        android:textColor="@color/color_303133"
+                        android:textSize="@dimen/common16dp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/layout_always_funs" />
+
+                    <ImageView
+                        android:id="@+id/iv_about_us"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="@dimen/common15dp"
+                        android:layout_marginTop="@dimen/common10dp"
+                        android:layout_marginRight="@dimen/common15dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_about_us"
+                        app:layout_constraintDimensionRatio="h,345:144"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_about_us" />
+
+                    <ImageView
+                        android:id="@+id/iv_slogan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common30dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_mine_slogan"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_about_us" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/common70dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_slogan" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+    <!--头部信息-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_top_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_top_user_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="img_top_avatar,tv_top_name,tv_top_num"></androidx.constraintlayout.widget.Group>
+
+        <ImageView
+            android:id="@+id/img_top_avatar"
+            android:layout_width="@dimen/common30dp"
+            android:layout_height="@dimen/common30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="@dimen/common40dp"
+            android:layout_marginBottom="@dimen/common12dp"
+            android:src="@drawable/img_user_avatar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_top_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/color_303133"
+            android:textSize="@dimen/common12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_top_avatar"
+            app:layout_constraintLeft_toRightOf="@+id/img_top_avatar"
+            app:layout_constraintTop_toTopOf="@+id/img_top_avatar"
+            tools:text="Hi,你好" />
+
+
+        <TextView
+            android:id="@+id/tv_top_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/color_606166"
+            android:textSize="@dimen/common12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_top_name"
+            app:layout_constraintLeft_toRightOf="@+id/tv_top_name"
+            app:layout_constraintTop_toTopOf="@+id/tv_top_name"
+            tools:text="137****7890" />
+
+
+        <ImageView
+            android:id="@+id/iv_message"
+            android:layout_width="@dimen/common22dp"
+            android:layout_height="@dimen/common22dp"
+            android:layout_marginTop="@dimen/common43dp"
+            android:layout_marginRight="@dimen/common12dp"
+            android:layout_marginBottom="@dimen/common17dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_message"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/iv_setting"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Space
+            android:id="@+id/id_space"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintLeft_toRightOf="@+id/iv_message"
+            app:layout_constraintTop_toTopOf="@id/iv_message" />
+
+
+        <FrameLayout
+            android:id="@+id/layout_num"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/id_space"
+            app:layout_constraintRight_toRightOf="@+id/id_space">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/notice_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_messge_notice_num_bg"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:textSize="9dp"
+                android:visibility="visible"
+                tools:text="99+" />
+        </FrameLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_setting"
+            android:layout_width="@dimen/common22dp"
+            android:layout_height="@dimen/common22dp"
+            android:layout_marginTop="@dimen/common43dp"
+            android:layout_marginRight="@dimen/common15dp"
+            android:layout_marginBottom="@dimen/common17dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_setting"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/rl_quick_apply"
+        layout="@layout/layout_quick_applyment" />
+    <!-- 指纹设置-->
+    <include
+        android:id="@+id/rl_quick_login"
+        layout="@layout/layout_quick_login" />
+
+</FrameLayout>

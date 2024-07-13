@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common50dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/common10dp"
+            android:src="@drawable/icon_close" />
+
+        <TextView
+            android:id="@+id/tv_title_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="请选择银行卡"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp17" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_des_card"
+        android:layout_width="match_parent"
+        android:layout_height="23dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/common15dp"
+            android:layout_marginRight="@dimen/common15dp"
+            android:background="@color/fffff9e0"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common15dp"
+                android:drawableLeft="@drawable/ic_exclamation_yellow"
+                android:drawablePadding="@dimen/common5dp"
+                android:text="还款日将从选择卡自动扣款，请保持余额充足。"
+                android:textColor="@color/fffb9d39"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <fragment
+        android:id="@+id/fl_container"
+        android:name="com.haiercash.gouhua.choosebank.ChooseBankCardFragment"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"></fragment>
+</LinearLayout>

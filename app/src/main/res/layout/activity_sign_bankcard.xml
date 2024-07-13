@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_sign"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_tl20_tr20"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/common33dp"
+            android:layout_height="@dimen/common33dp"
+            android:paddingStart="0dp"
+            android:paddingTop="@dimen/common20dp"
+            android:paddingEnd="@dimen/common20dp"
+            android:src="@drawable/icon_close_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBankCard"
+            android:layout_width="@dimen/common26dp"
+            android:layout_height="@dimen/common26dp"
+            android:layout_marginStart="@dimen/common15dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvSignBankCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvSignBankCard" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSignBankCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common5dp"
+            android:layout_marginTop="@dimen/common7dp"
+            android:layout_marginEnd="@dimen/common15dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_303133"
+            android:textSize="@dimen/sp22"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivBankCard"
+            app:layout_constraintTop_toBottomOf="@id/iv_back" />
+
+        <LinearLayout
+            android:id="@+id/ll_show_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common10dp"
+            android:layout_marginEnd="@dimen/common15dp"
+            android:background="@drawable/bg_fff9e0_8dp"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/common9dp"
+            android:paddingTop="@dimen/common8dp"
+            android:paddingEnd="@dimen/common9dp"
+            android:paddingBottom="@dimen/common8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSignBankCard">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/common17dp"
+                android:layout_height="@dimen/common17dp"
+                android:layout_marginEnd="@dimen/common7dp"
+                android:src="@drawable/icon_remind1" />
+
+            <TextView
+                android:id="@+id/tv_inter_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="为了不影响您正常还款，需短信验证此卡可正常使用；如银行预留手机号已变更，请更换手机号。"
+                android:textColor="@color/color_ffd28d01"
+                android:textSize="@dimen/sp12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common24dp"
+            android:layout_marginTop="@dimen/common15dp"
+            android:layout_marginEnd="@dimen/common24dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_show_msg">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="手机号"
+                android:textColor="@color/color_303133"
+                android:textSize="@dimen/dimen_18sp" />
+
+            <com.haiercash.gouhua.widget.DelEditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ellipsize="end"
+                android:hint="该银行卡的银行预留手机号"
+                android:lines="1"
+                android:maxLength="11"
+                android:paddingStart="@dimen/common20dp"
+                android:paddingTop="@dimen/common8dp"
+                android:paddingEnd="0dp"
+                android:paddingBottom="@dimen/common8dp"
+                android:textColor="@color/text_black"
+                android:textColorHint="@color/change_login_edt"
+                android:textCursorDrawable="@drawable/edittext_cursor"
+                android:textSize="@dimen/sp18"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <View
+            style="@style/Divider_0_33dp_E8EAEF"
+            android:layout_width="0dp"
+            app:layout_constraintEnd_toEndOf="@id/llPhone"
+            app:layout_constraintStart_toStartOf="@id/llPhone"
+            app:layout_constraintTop_toBottomOf="@id/llPhone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPhoneError"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/common20dp"
+            android:layout_marginTop="@dimen/common1dp"
+            android:textColor="@color/color_ff5151"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintEnd_toEndOf="@id/llPhone"
+            app:layout_constraintStart_toStartOf="@id/llPhone"
+            app:layout_constraintTop_toBottomOf="@id/llPhone" />
+
+        <LinearLayout
+            android:id="@+id/llCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common24dp"
+            android:layout_marginTop="@dimen/common20dp"
+            android:layout_marginEnd="@dimen/common24dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llPhone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="验证码"
+                android:textColor="@color/color_303133"
+                android:textSize="@dimen/dimen_18sp" />
+
+            <com.haiercash.gouhua.widget.DelEditText
+                android:id="@+id/edt_getcode"
+                style="@style/get_code_no"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:hint="短信验证码"
+                android:inputType="number"
+                android:maxLength="6"
+                android:paddingStart="@dimen/common20dp"
+                android:paddingTop="@dimen/common8dp"
+                android:paddingEnd="@dimen/common20dp"
+                android:paddingBottom="@dimen/common8dp"
+                android:textCursorDrawable="@drawable/edittext_cursor"
+                android:textSize="@dimen/sp18"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <com.haiercash.gouhua.sms.SmsTimeView
+                android:id="@+id/ttv_get_code"
+                android:layout_width="110dp"
+                android:layout_height="@dimen/common35dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/common10dp"
+                android:background="@drawable/bg_button_login_sms"
+                android:gravity="center"
+                android:textSize="@dimen/sp16"
+                app:enableTextColor="@color/text_hint"
+                app:highTextColor="@color/colorPrimary"
+                app:normalText="获取验证码"
+                app:refreshText="重新发送"
+                app:timeCount="90" />
+        </LinearLayout>
+
+        <View
+            style="@style/Divider_0_33dp_E8EAEF"
+            android:layout_width="0dp"
+            android:layout_marginEnd="@dimen/common120dp"
+            app:layout_constraintEnd_toEndOf="@id/llCode"
+            app:layout_constraintStart_toStartOf="@id/llCode"
+            app:layout_constraintTop_toBottomOf="@id/llCode" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCodeError"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/common20dp"
+            android:layout_marginTop="@dimen/common1dp"
+            android:layout_marginEnd="@dimen/common120dp"
+            android:textColor="@color/color_ff5151"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintEnd_toEndOf="@id/llCode"
+            app:layout_constraintStart_toStartOf="@id/llCode"
+            app:layout_constraintTop_toBottomOf="@id/llCode" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNotCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common10dp"
+            android:text="收不到验证码"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/dimen_13sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@id/llCode"
+            app:layout_constraintTop_toBottomOf="@id/llCode" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/common10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="wrap"
+            app:layout_constraintHeight_min="@dimen/common226dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNotCode">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCommit"
+                style="@style/commonButton"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/common42dp"
+                android:layout_marginStart="@dimen/common15dp"
+                android:layout_marginEnd="@dimen/common15dp"
+                android:layout_marginBottom="@dimen/common19dp"
+                android:text="下一步"
+                android:textSize="@dimen/sp15"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <include
+                layout="@layout/include_keyboardview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

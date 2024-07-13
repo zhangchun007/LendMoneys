@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background_img"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/common5dp"
+    android:layout_marginBottom="@dimen/common5dp"
+    android:addStatesFromChildren="true"
+    android:background="@drawable/backgdefaultd"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <LinearLayout
+        android:id="@+id/one"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="4"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/icon_bank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_circle_white"
+                android:contentDescription="TODO"
+                android:padding="@dimen/common3dp"
+                android:src="@drawable/logo_circle_abc"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_bankcardname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_station"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/common42dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center|right"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bank_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/one"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/common10dp"
+        android:paddingRight="@dimen/common10dp"
+        android:paddingBottom="14dp">
+
+    </LinearLayout>
+</LinearLayout>
+

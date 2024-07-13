@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="
+    @drawable/appsafekb_*,
+    @anim/appsafekb_*,
+    @id/appsafekb_*,
+    @integer/appsafekb_*,
+    @xml/appsafekb_*,
+    @style/appsafekb_*,
+    @layout/appsafekb_*,
+    @string/bcs_string*,
+    @drawable/bcs_icon*,
+    @drawable/bcs_bgx*,
+    @drawable/bcs_xicon*,
+ " />

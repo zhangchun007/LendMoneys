@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/build_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="版本号"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/build_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/build_version"
+        android:text="build info"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_megvii_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_weight="1"
+            android:paddingLeft="50dp">
+
+            <RadioButton
+                android:id="@+id/rb_v"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="竖屏" />
+
+            <RadioButton
+                android:id="@+id/rb_h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="横屏" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_weight="1"
+            android:paddingLeft="50dp">
+
+            <RadioButton
+                android:id="@+id/rb_front"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="人像面" />
+
+            <RadioButton
+                android:id="@+id/rb_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="国徽面" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_start"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/ll_megvii_rg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="开始检测"
+        android:textColor="@android:color/white"
+        android:textSize="22sp" />
+
+    <!--
+            android:background="@drawable/btn_start_select"
+    -->
+
+</RelativeLayout>

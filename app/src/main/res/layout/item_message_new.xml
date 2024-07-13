@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_f6f7f8"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tv_message_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/common20dp"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@drawable/bg_time_gray"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_4"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_4"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp12" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_message_time"
+        android:layout_marginLeft="@dimen/common20dp"
+        android:layout_marginTop="@dimen/common2dp"
+        android:layout_marginRight="@dimen/common20dp"
+        android:background="@drawable/bg_message_item"
+        android:orientation="vertical">
+
+        <com.haiercash.gouhua.view.OvalImageView
+            android:id="@+id/iv_message_introduce"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:id="@+id/ll_message_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/common20dp"
+            android:paddingTop="@dimen/common18dp"
+            android:paddingRight="@dimen/common20dp">
+
+            <TextView
+                android:id="@+id/tv_message_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_333333"
+                android:textSize="@dimen/sp17"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_message_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginBottom="@dimen/common18dp"
+                android:textColor="@color/gray_666666"
+                android:textSize="@dimen/sp_14" />
+
+            <LinearLayout
+                android:id="@+id/ll_has_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp05"
+                    android:background="@color/gray_e7e7e7" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common12dp"
+                    android:layout_marginBottom="@dimen/common12dp"
+                    android:drawableRight="@drawable/icon_right_more"
+                    android:text="@string/meg_details"
+                    android:textColor="@color/gray_999999"
+                    android:textSize="@dimen/sp13" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_message_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_message_time"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/common17dp"
+        android:layout_marginRight="@dimen/common17dp"
+        android:background="@drawable/bg_message_tip"
+        android:paddingLeft="@dimen/common12dp"
+        android:paddingRight="@dimen/common12dp"
+        android:text="HOT"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp12" />
+
+    <TextView
+        android:id="@+id/tv_tips_shade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_message_tip"
+        android:layout_alignTop="@+id/tv_message_tip"
+        android:layout_alignRight="@+id/tv_message_tip"
+        android:layout_alignBottom="@+id/tv_message_tip"
+        android:background="@drawable/bg_message_tip_shade"
+        android:textSize="@dimen/sp12" />
+
+
+</RelativeLayout>

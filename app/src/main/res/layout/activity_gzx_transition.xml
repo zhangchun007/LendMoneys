@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".gzx.GzxTransitionActivity">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="@dimen/common65dp"
+        android:layout_height="@dimen/common65dp"
+        android:src="@drawable/icon_gzx_pure"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:scaleType="fitXY"
+        android:layout_marginTop="235dp" />
+
+    <ImageView
+        android:id="@+id/iv_loading"
+        android:layout_width="@dimen/common48dp"
+        android:layout_height="@dimen/common36dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/gzx_loading"
+        app:layout_constraintTop_toBottomOf="@id/iv_logo" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="@string/jump_gzx_title"
+        android:layout_marginTop="@dimen/common10dp"
+        android:textSize="@dimen/sp16"
+        android:textColor="@color/gray_303133"
+        app:layout_constraintTop_toBottomOf="@id/iv_loading" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="@string/jump_gzx_msg"
+        android:lineHeight="@dimen/common20dp"
+        android:layout_marginTop="@dimen/common10dp"
+        android:textSize="@dimen/sp13"
+        android:gravity="center"
+        android:textColor="@color/gray_909199"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

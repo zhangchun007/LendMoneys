@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:maxHeight="474dp"
+    android:background="@color/transparent"
+    tools:viewBindingIgnore="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="46dp"
+        android:background="@drawable/bg_white_radius8"
+        android:minHeight="188dp">
+
+        <ImageView
+            android:id="@+id/tv_close"
+            android:layout_width="@dimen/common13dp"
+            android:layout_height="@dimen/common13dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/common12dp"
+            android:layout_marginEnd="@dimen/common12dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_close_grey" />
+
+        <TextView
+            android:id="@+id/tv_pop_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/common26dp"
+            android:gravity="center"
+            android:text="提示"
+            android:textColor="@color/color_303133"
+            android:textSize="@dimen/sp17" />
+
+        <ScrollView
+            android:id="@+id/sllv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_pop_title"
+            android:layout_marginTop="@dimen/common8dp"
+            android:fadingEdge="none"
+            android:minHeight="@dimen/common44dp"
+            android:overScrollMode="never"
+            android:paddingStart="@dimen/common20dp"
+            android:paddingEnd="@dimen/common20dp"
+            android:scrollbars="none">
+
+            <TextView
+                android:id="@+id/tv_content_interest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/color_303133"
+                android:textSize="@dimen/sp15" />
+        </ScrollView>
+
+
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="160dp"
+            android:layout_height="@dimen/common40dp"
+            android:layout_below="@+id/sllv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/common17dp"
+            android:background="@drawable/bg_quota_commit_radius21"
+            android:drawablePadding="@dimen/common8dp"
+            android:gravity="center"
+            android:paddingStart="@dimen/common20dp"
+            android:paddingEnd="@dimen/common20dp"
+            android:layout_marginBottom="@dimen/common30dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp16" />
+
+    </RelativeLayout>
+</LinearLayout>

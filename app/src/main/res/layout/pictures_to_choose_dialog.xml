@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTakingPictures"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common52dp"
+            android:background="@drawable/bg_white_tl20_tr20"
+            android:gravity="center"
+            android:text="拍照"
+            android:textColor="@color/gray_303133"
+            android:textSize="@dimen/sp16" />
+
+        <View style="@style/Divider05dp_E8EAEF" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPhotoAlbum"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common52dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="从手机相册选择"
+            android:textColor="@color/gray_303133"
+            android:textSize="@dimen/sp16" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_10"
+        android:background="@color/color_f5f7fa" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common52dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/gray_303133"
+        android:textSize="@dimen/sp16" />
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+package com.haiercash.gouhua.interfaces;
+
+/**
+ * ================================================================
+ * 作    者：L14-14<br/>
+ * 邮    箱：shixiangfei@haiercash.com/stonexiangfeishi@sina.cn<br/>
+ * 版    本：1.0<br/>
+ * 创建日期：2021/12/16-13:52<br/>
+ * 描    述：<br/>
+ * 修订历史：<br/>
+ * ================================================================
+ */
+public interface ICallBack {
+    public void back(Object obj);
+}

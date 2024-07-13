@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_banner"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    tools:ignore="MissingDefaultResource">
+
+    <View
+        android:id="@+id/viewSpace"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+
+    <com.haiercash.gouhua.unity.HRTitleBarComponent
+        android:id="@+id/tv_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/layout_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_goneMarginTop="15dp"
+        android:background="@drawable/bg_white_radius8"
+        android:orientation="horizontal"
+        app:cardCornerRadius="@dimen/common8dp"
+        app:cardElevation="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_bar"
+        tools:viewBindingIgnore="true">
+
+        <com.youth.banner.Banner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common90dp"
+            app:indicator_drawable_selected="@drawable/shape_indicator_select"
+            app:indicator_drawable_unselected="@drawable/shape_indicator_unselect"
+            app:indicator_width="9dp" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

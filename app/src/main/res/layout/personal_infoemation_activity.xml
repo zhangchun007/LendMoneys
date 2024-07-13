@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mineBackground"
+    android:orientation="vertical"
+    tools:context=".activity.personalinfor.PersonalInformationActivity"
+    tools:viewBindingIgnore="true">
+
+    <com.app.haiercash.base.bui.TitleBarView
+        android:id="@+id/bar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        style="@style/Divider_0_5dp"
+        android:layout_height="@dimen/dp05"
+        android:background="@color/color_EDEFF2" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llPersonalHeadPortrait"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common62dp"
+                android:layout_marginTop="@dimen/common10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/common15dp"
+                android:paddingEnd="@dimen/common15dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="头像"
+                    android:textColor="@color/color_303133"
+                    android:textSize="@dimen/sp16" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPersonalHeadPortrait"
+                    android:layout_width="@dimen/common40dp"
+                    android:layout_height="@dimen/common40dp"
+                    app:srcCompat="@drawable/iv_head_img" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/common10dp"
+                    android:layout_height="@dimen/common12dp"
+                    android:layout_marginStart="@dimen/common5dp"
+                    android:src="@drawable/icon_right_more" />
+            </LinearLayout>
+
+            <include layout="@layout/include_line_left_space" />
+
+            <LinearLayout
+                android:id="@+id/ll_account"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common62dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/common15dp"
+                android:paddingEnd="@dimen/common15dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="登录手机号"
+                    android:textColor="@color/change_login_pwd_tv"
+                    android:textSize="@dimen/sp17" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_account"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="188*******878"
+                    android:textColor="@color/color_909199"
+                    android:textSize="@dimen/sp15" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/common10dp"
+                    android:layout_height="@dimen/common12dp"
+                    android:layout_marginStart="@dimen/common5dp"
+                    android:src="@drawable/icon_right_more" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_authentication_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common15dp"
+                android:paddingTop="@dimen/common14dp"
+                android:layout_marginEnd="@dimen/common15dp"
+                android:paddingBottom="@dimen/common6dp"
+                android:text="实名认证"
+                android:textColor="@color/gray_909199"
+                android:textSize="@dimen/sp_14" />
+
+            <include
+                android:id="@+id/v_my_authentication"
+                layout="@layout/include_authentication"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_bank_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common15dp"
+                android:paddingTop="@dimen/common14dp"
+                android:layout_marginEnd="@dimen/common15dp"
+                android:paddingBottom="@dimen/common6dp"
+                android:text="银行卡"
+                android:textColor="@color/gray_909199"
+                android:textSize="@dimen/sp_14" />
+
+            <LinearLayout
+                android:id="@+id/ll_my_banks"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common62dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/common15dp"
+                android:paddingEnd="@dimen/common15dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="银行卡管理"
+                    android:textColor="@color/gray_303133"
+                    android:textSize="@dimen/sp16" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_bind_card_count"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_5"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:textColor="@color/gray_909199"
+                    android:textSize="@dimen/sp14" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/common10dp"
+                    android:layout_height="@dimen/common12dp"
+                    android:layout_marginStart="@dimen/common5dp"
+                    android:src="@drawable/icon_right_more" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/common15dp"
+    android:paddingEnd="@dimen/common15dp">
+
+    <TextView
+        android:id="@+id/tvRem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingStart="@dimen/common15dp"
+        android:paddingTop="@dimen/common10dp"
+        android:paddingEnd="@dimen/common10dp"
+        android:paddingBottom="@dimen/common10dp"
+        android:text="*详情还款计划以实际借款时生成为准"
+        android:textColor="@color/color_909199"
+        android:textSize="@dimen/sp12"
+        tools:viewBindingIgnore="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common76dp" />
+</LinearLayout>

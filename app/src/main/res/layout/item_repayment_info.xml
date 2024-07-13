@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common65dp">
+
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common16dp"
+        android:layout_marginTop="@dimen/common13dp"
+        android:textColor="#ff303133"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="第1期" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common3dp"
+        android:textColor="#ff909199"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_time"
+        app:layout_constraintTop_toBottomOf="@+id/tv_time"
+        tools:text="09/18" />
+    <!--时间轴-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_time"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/common72dp"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <ImageView
+            android:id="@+id/img_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common19dp"
+            android:src="@drawable/img_time_dot"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="#59bec2cd"
+            android:visibility="gone"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/img_dot"
+            app:layout_constraintRight_toRightOf="@+id/img_dot"
+            app:layout_constraintTop_toBottomOf="@+id/img_dot" />
+
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#59bec2cd"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="@+id/img_dot"
+            app:layout_constraintRight_toRightOf="@+id/img_dot" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="#59bec2cd"
+            android:visibility="gone"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toTopOf="@+id/img_dot"
+            app:layout_constraintLeft_toLeftOf="@+id/img_dot"
+            app:layout_constraintRight_toRightOf="@+id/img_dot"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_total_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common15dp"
+        android:textColor="#ff303133"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toRightOf="@+id/layout_time"
+        app:layout_constraintTop_toTopOf="@+id/tv_time"
+        tools:text="¥1,706.67" />
+
+    <TextView
+        android:id="@+id/tv_discount_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:textColor="#ffff5151"
+        android:textSize="13sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_total_money"
+        app:layout_constraintLeft_toRightOf="@+id/tv_total_money"
+        app:layout_constraintTop_toTopOf="@+id/tv_total_money"
+        tools:text="（优惠后1,666.67）" />
+
+    <TextView
+        android:id="@+id/tv_capital_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common3dp"
+        android:text="本金：1,666.67"
+        android:textColor="#ff909199"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_total_money"
+        app:layout_constraintTop_toBottomOf="@+id/tv_total_money" />
+
+    <TextView
+        android:id="@+id/tv_interest_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common15dp"
+        android:layout_marginTop="@dimen/common3dp"
+        android:text="利息：40.00"
+        android:textColor="#ff909199"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_capital_money"
+        app:layout_constraintTop_toBottomOf="@+id/tv_total_money" />
+</androidx.constraintlayout.widget.ConstraintLayout>

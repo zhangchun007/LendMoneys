@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--当编辑框被遮盖的时候需要移动视图，移动的动画毫秒-->
+    <integer name="appsafekb_adject_move_anim_ms">100</integer>
+</resources>

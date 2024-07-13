@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.app.haiercash.base.bui.TitleBarView
+        android:id="@+id/bar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tlAgreement"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common50dp"
+        android:background="@drawable/bg_white"
+        app:tabGravity="fill"
+        app:tabIndicator="@drawable/indicator_agreement_tab"
+        app:tabIndicatorColor="#FF1DA9FF"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorGravity="bottom"
+        app:tabIndicatorHeight="@dimen/common11dp"
+        app:tabMode="fixed"
+        app:tabRippleColor="@null"
+        app:tabSelectedTextColor="@color/color_303133"
+        app:tabTextColor="@color/color_909199" />
+
+    <FrameLayout
+        android:id="@+id/flContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vpAgreement"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <View style="@style/Shadow_down" />
+
+        <View
+            style="@style/Shadow_up"
+            android:layout_gravity="bottom" />
+    </FrameLayout>
+
+    <include
+        android:id="@+id/v_bottom"
+        layout="@layout/layout_agreement_common" />
+</LinearLayout>

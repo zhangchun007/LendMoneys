@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.haiercash.gouhua"> <!-- android:roundIcon="@mipmap/ic_launcher_round" -->
+    <!-- android:networkSecurityConfig="@xml/network_security_config" -->
+    <uses-sdk tools:overrideLibrary="com.example.mid" />
+
+    <uses-feature android:name="android.hardware.camera" /> <!-- 读取通话记录 -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
+    <!-- 读取联系人权限 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" /> <!-- 相机 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" /> <!-- 震动 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" /> <!-- 通用权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" /> <!-- 允许使用PowerManager的 WakeLocks保持进程在休眠时从屏幕消失 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- Android 8.0应用安装 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!-- 日历权限 -->
+    <uses-permission android:name="android.permission.READ_CALENDAR" /> <!-- 【常用】信鸽SDK 所需权限 -->
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+
+    <application
+        android:name=".base.AppApplication"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/GouAppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup">
+        <activity
+            android:name=".activity.RepayListDialogActivity"
+            android:exported="false"
+            android:theme="@style/Half_translucent_no_anim" />
+        <activity android:name=".gzx.GzxTransitionActivity" />
+        <activity
+            android:name=".gzx.GzxAgreementActivity"
+            android:theme="@style/Half_translucent_no_anim" />
+        <activity
+            android:name=".activity.login.LoginLoadingActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/Translucent_no_anim" />
+        <activity
+            android:name=".activity.login.PasswordWayLoginActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/Half_translucent_no_anim" />
+        <activity
+            android:name=".activity.login.SmsWayLoginActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/Half_translucent_no_anim" />
+        <activity
+            android:name=".activity.login.BaseLoginActivity"
+            android:theme="@style/Half_translucent_no_anim" />
+        <activity
+            android:name=".activity.SplashActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- web端调用入口 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Uri的格式如下：scheme://host:port/path -->
+                <data
+                    android:host="com.haiercash"
+                    android:scheme="gouhua" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="atm.18670957" />
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="tingyun.7000" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            tools:ignore="AppLinkUrlError">
+
+            <!-- web端调用入口 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="home"
+                    android:scheme="gouhua" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.advert.AdvertActivity" />
+        <activity android:name=".activity.ScanQrCodeActivity" />
+        <activity android:name=".activity.personalinfor.SocialBindActivity" /> <!-- 注册/登录 -->
+        <activity android:name=".activity.inenter.GuidePageActivity" />
+        <activity android:name=".activity.inenter.VerifyBiometricActivity" /> <!-- 引导页 -->
+        <activity android:name=".activity.inenter.VerifyWxActivity" /> <!-- 生物识别:指纹识别 -->
+        <activity android:name=".activity.checkdeviceid.CheckDeviceIdActivity" /> <!-- 微信验证登录 -->
+        <activity android:name=".activity.checkdeviceid.ChangeDeviceIdActivity" /> <!-- 解锁设备号第一步 -->
+        <activity android:name=".activity.contract.CheckContractActivity" /> <!-- 解锁设备号第二步 -->
+        <activity android:name=".activity.gesture.GesturesPasswordActivity" /> <!-- 合同或协议展示页面 -->
+        <activity android:name=".activity.gesture.GesturesSettingActivity" /> <!-- 手势密码验证 -->
+        <activity android:name=".activity.personalinfor.PersonalInformationActivity" /> <!-- 设置手势密码 -->
+        <activity android:name=".activity.bankcard.BankCardListActivity" /> <!-- 个人信息设置 -->
+        <activity
+            android:name=".activity.borrowmoney.GoBorrowMoneyActivity"
+            android:launchMode="singleTop" /> <!-- 支持银行卡列表 -->
+        <activity android:name=".bill.BillDetailsActivity" /> <!-- 去借钱 -->
+        <activity
+            android:name=".activity.RePayAndRecordActivity"
+            android:exported="false"
+            tools:ignore="AppLinkUrlError"> <!-- 账单列表 -->
+            <!-- web端调用入口 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Uri的格式如下：scheme://host:port/path -->
+                <data
+                    android:host="repayRecrd"
+                    android:scheme="gouhua"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.bankcard.MyCreditCardActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            tools:ignore="AppLinkUrlError">
+
+            <!-- web端调用入口 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Uri的格式如下：scheme://host:port/path -->
+                <data
+                    android:host="bankCardManager"
+                    android:scheme="gouhua"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity> <!-- 阿里native支付 -->
+        <!-- <activity -->
+        <!-- android:name="com.alipay.sdk.app.H5PayActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden|navigation" -->
+        <!-- android:exported="false" -->
+        <!-- android:screenOrientation="behind"></activity> -->
+        <!-- <activity -->
+        <!-- android:name="com.alipay.sdk.auth.AuthActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden|navigation" -->
+        <!-- android:exported="false" -->
+        <!-- android:screenOrientation="behind"></activity> -->
+        <!-- 为了使用 "通用跳转 SDK" 的能力，需要在你的 App 的 AndroidManifest.xml 中添加这一项 -->
+        <!-- 并合理设置 android:scheme 的值 -->
+        <activity
+            android:name="com.alipay.sdk.app.AlipayResultActivity"
+            tools:node="merge">
+            <intent-filter tools:node="replace">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="gouhuaalipay" />
+            </intent-filter>
+        </activity> <!-- 去还款 -->
+        <activity android:name=".activity.bankcard.BankCardDetailsActivity" /> <!-- 我的银行卡列表 -->
+        <activity
+            android:name=".activity.accountsettings.SafetySettingActivity"
+            android:theme="@style/Translucent_no_anim">
+
+            <!-- web端调用入口 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Uri的格式如下：scheme://host:port/path -->
+                <data
+                    android:host="accountSecurity"
+                    android:scheme="gouhua"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity> <!-- 银行卡详情 -->
+        <activity android:name=".activity.accountsettings.SetTransactionPwdActivity" /> <!-- 账号安全设置 -->
+        <activity
+            android:name=".activity.accountsettings.ChangeNewLoginPasswordActivity"
+            android:theme="@style/Translucent_no_anim" /> <!-- 设置交易密码 自动弹出键盘 -->
+        <activity android:name=".activity.accountsettings.ChangePhoneNumActivity" /> <!-- 设置新的登录密码 -->
+        <activity android:name=".activity.accountsettings.ChangeOld1PhoneActivity" /> <!-- 修改登录手机号 -->
+        <activity android:name=".activity.accountsettings.ChangeOld2PhoneActivity" /> <!-- 原手机号仍使用界面 -->
+        <activity android:name=".activity.borrowmoney.BorrowAgreementActivity" /> <!-- 借款协议 -->
+        <activity android:name=".activity.borrowmoney.RepaymentDetailsActivity" />
+        <activity
+            android:name=".activity.accountsettings.VerifyPwdActivity"
+            android:theme="@style/Translucent_no_anim" /> <!-- 交易密码  android:theme="@style/Translucency" -->
+        <activity
+            android:name=".activity.borrowmoney.BorrowPayPwdActivity"
+            android:theme="@style/Translucency" /> <!-- 借款-输入交易密码 ,自动弹出键盘 -->
+        <!-- android:windowSoftInputMode="stateVisible|stateAlwaysVisible" -->
+        <activity android:name=".activity.borrowmoney.BorrowingResultActivity" /> <!-- 输入验证码，提交订单 -->
+        <activity android:name=".activity.bankcard.AddBankCardInformaticaActivity" /> <!-- 借款结果页 -->
+        <activity
+            android:name=".choosebank.ChooseBankCardActivity"
+            android:theme="@style/Translucency" /> <!-- 添加银行卡 -->
+        <activity
+            android:name=".repayment.RepaymentActivity"
+            android:theme="@style/Translucency" />
+        <activity android:name=".repayment.RepaymentConfirmActivity" />
+        <activity
+            android:name=".repayment.SignBankCardActivity"
+            android:theme="@style/Translucency"
+            android:windowSoftInputMode="stateHidden|stateUnchanged|stateAlwaysHidden" />
+        <activity
+            android:name=".activity.CouponRuleActivity"
+            android:theme="@style/Translucent_anim" />
+        <activity
+            android:name=".activity.edu.NameAuthIdCardActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.edu.NameAuthStartActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="AppLinkUrlError">
+
+            <!-- web端调用入口 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="newuserexclusive"
+                    android:scheme="gouhua" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.edu.NameAuthIdCardPatchActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.edu.PerfectInfoActivity" />
+        <activity
+            android:name=".tplibrary.livedetect.FaceRecognitionActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".tplibrary.livedetect.FaceCheckActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" /> <!-- 人脸识别 -->
+        <activity android:name=".activity.edu.NameAuthBankCardActivity" /> <!-- 人脸识别 -->
+        <activity
+            android:name=".activity.comm.ContainerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <!--
+            android:configChanges="orientation|keyboardHidden|screenSize|keyboard"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+        -->
+        <activity android:name=".activity.edu.EduProgressActivity" />
+        <activity android:name=".activity.edu.PersonalCreditContractActivity" />
+        <activity android:name=".activity.edu.ApplyWaiting" />
+        <activity
+            android:name=".activity.contract.ForActiveShareActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            tools:ignore="AppLinkUrlError">
+
+            <!-- web端调用入口 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="springfestival"
+                    android:scheme="gouhua" />
+            </intent-filter>
+        </activity> <!-- <service android:name=".service.GhNetService" /> -->
+        <!-- 百度定位 -->
+        <activity
+            android:name=".activity.contract.SharePageActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:theme="@style/Translucency"
+            tools:ignore="AppLinkUrlError">
+
+            <!-- web端调用入口 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="showsharepage"
+                    android:scheme="gouhua" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.haiercash.gouhua"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" /> <!-- 信鸽 -->
+        <!-- 【必须】 信鸽service -->
+        <!-- 添加使用Apache HTTP client库 -->
+        <activity android:name=".activity.fingerprint.FingerprintPasswordActivity" />
+        <activity android:name=".activity.personalinfor.AnalysisActivity" />
+        <activity
+            android:name=".activity.OpenDischargeActivity"
+            android:windowSoftInputMode="adjustResize" /> <!-- 线上为：76E94FBDDD2A46ECAB76FDD4ED4AA45B -->
+        <!-- 测试为：87DED556698341EFBEB34E7B1404DF81 -->
+        <!-- 结清证明 -->
+        <activity android:name=".activity.ChooseDischargeLoanActivity" /> <!-- 结清证明 输入密码 -->
+        <activity
+            android:name=".activity.ChooseDischargeLoanPwdActivity"
+            android:theme="@style/Translucency" />
+        <activity
+            android:name=".activity.ApplySubmitSuccessOrFailActivity"
+            android:hardwareAccelerated="false" />
+        <activity android:name=".activity.DownStageUserReminderActivity" />
+        <activity android:name=".activity.DiscountCouponDetailActivity" />
+        <activity
+            android:name=".activity.CouponBagActivity"
+            android:exported="false"
+            tools:ignore="AppLinkUrlError">
+
+            <!-- web端调用入口 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="couponbagV1"
+                    android:scheme="gouhua" /> <!-- 携带参数tab，tab=1为展示免息券tab，其他默认 -->
+            </intent-filter>
+        </activity> <!-- 优惠券列表V2页面 -->
+        <activity
+            android:name=".activity.CouponBagActivityV2"
+            android:exported="false"
+            tools:ignore="AppLinkUrlError">
+
+            <!-- web端调用入口 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="couponbag"
+                    android:scheme="gouhua" /> <!-- 携带参数tab，tab=1为展示免息券tab，其他默认 -->
+            </intent-filter>
+        </activity> <!-- 信息保护液 -->
+        <activity
+            android:name=".activity.ProguardInfoActivity"
+            android:exported="false"
+            tools:ignore="AppLinkUrlError">
+
+            <!-- web端调用入口 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="infoProtect"
+                    android:scheme="gouhua" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.InterestFreeStampsGuideDialog"
+            android:launchMode="singleTop"
+            android:theme="@style/Translucent_no_anim" />
+        <activity
+            android:name=".activity.RepaymentAmountInfoActivity"
+            android:theme="@style/dialogstyle" />
+        <activity
+            android:name=".activity.RepaymentDetailsNewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/dialogstyle" />
+        <activity
+            android:name=".activity.RepaymentTypeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/dialogstyle" />
+        <activity
+            android:name=".activity.FilterCriteriaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/dialogstyle" />
+        <activity
+            android:name=".activity.login.SmsCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Half_translucent_no_anim" />
+        <activity
+            android:name=".activity.InterestFreeChooseListActivity"
+            android:theme="@style/Translucent_no_anim" />
+        <activity
+            android:name=".activity.accountsettings.SetLoginPwdVerifyMobileActivity"
+            android:theme="@style/Translucent_no_anim" />
+        <activity
+            android:name=".jsweb.JsWebBaseActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"
+            tools:ignore="AppLinkUrlError">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.haiercash.gouhua.push"
+                    android:path="/notify_detail"
+                    android:scheme="push_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".jsweb.JsWebPopActivity"
+            android:theme="@style/ThemeJsWebPop" />
+        <activity
+            android:name=".jsweb.WebPopLimitHeightActivity"
+            android:theme="@style/Half_translucent_no_anim" />
+        <activity
+            android:name=".activity.contract.ShowPrivicyActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.login.ProtocolActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Translucent_no_anim" />
+        <activity android:name=".activity.accountsettings.GestureManagerActivity" />
+        <activity android:name=".activity.accountsettings.RealNameInfoActivity" />
+        <activity android:name=".activity.setting.PermissionsActivity" />
+        <activity android:name=".activity.setting.MsgSettingActivity" />
+        <activity
+            android:name=".activity.accountsettings.AppealActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.accountsettings.OtherBindActivity" />
+        <activity android:name=".activity.setting.PrivateDescActivity" />
+        <activity android:name=".activity.setting.PushManagerActivity" />
+        <activity
+            android:name=".activity.gesture.GestureVerifyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.accountsettings.ChangePhoneResultActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.accountsettings.AppealResultActivity" /> <!-- 图片裁剪module -->
+        <activity
+            android:name="com.android.crop.CropImageActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="android:max_aspect"
+            android:value="2.1" /> <!-- 下载广播接收器 -->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" />
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="@string/locationKey" />
+        <meta-data
+            android:name="com.tencent.rdm.uuid"
+            android:value="39804993-ca65-409c-abd0-000ef2812090" />
+        <meta-data
+            android:name="TD_APP_ID"
+            android:value="76E94FBDDD2A46ECAB76FDD4ED4AA45B" />
+        <meta-data
+            android:name="TD_CHANNEL_ID"
+            android:value="haiercash" /> <!-- 运营业务线 -->
+        <meta-data
+            android:name="TD_BUSINESS_SMY"
+            android:value="X0" /> <!-- X1、X2 -->
+        <!-- 创意 -->
+        <meta-data
+            android:name="TD_IDEA_SMY"
+            android:value="" /> <!-- yuanyz、yuanyz2 -->
+        <!-- 注册载体 -->
+        <meta-data
+            android:name="TD_REGIS_VECTOR_SMY"
+            android:value="ghAPP" />
+        <meta-data
+            android:name="TD_HTTP_HEADERS"
+            android:value="" /> <!--格式：qd_id等于alibaba以及idea等于aaaa以及other等于otherali等于version等于1-->
+        <!--
+         1、ghAPP
+         2、xjAPP
+         3、bzH5
+         4、ghXcx
+         5、xjXcx
+         6、ghGzh
+         7、xjGzh
+        -->
+        <!-- 下载来源（投放渠道） -->
+        <meta-data
+            android:name="TD_APP_DOWN_FROM_SMY"
+            android:value="" /> <!-- douyin、douyin2 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.haiercash.gouhua.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider> <!-- 应用首次安装启动时即不会自启推送服务，直到调用了推送服务注册接口XGPushManager.registerPush() 才会开启 -->
+        <meta-data
+            android:name="XG_SERVICE_PULL_UP_OFF"
+            android:value="true" />
+
+        <receiver
+            android:name=".tplibrary.receiver.XgPushReceiver"
+            android:exported="false">
+            <intent-filter>
+
+                <!-- 接收消息透传 -->
+                <action android:name="com.tencent.android.xg.vip.action.PUSH_MESSAGE" />
+                <!-- 监听注册、反注册、设置/删除标签、通知被点击等处理结果 -->
+                <action android:name="com.tencent.android.xg.vip.action.FEEDBACK" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.app.haiercash.base.utils.system.Downloader$DownloadBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".service.GhLogService" />
+        <service android:name=".service.GhNetServer" />
+        <service android:name=".service.RiskNetServer" />
+        <service android:name=".service.RequestRiskInfoServer" />
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <service
+            android:name="com.talkingdata.sdk.TDAntiCheatingService"
+            android:exported="false"
+            android:process="com.talkingdata.sdk.TDAntiCheatingService"> <!-- 用户质量评估Service可以配置在主进程或者单独进程 -->
+            <intent-filter>
+                <action android:name="com.talkingdata.sdk.TDAntiCheatingService" />
+            </intent-filter>
+        </service>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+
+</manifest>

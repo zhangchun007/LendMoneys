@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|end"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/common13dp"
+    android:paddingEnd="@dimen/common13dp"
+    tools:viewBindingIgnore="true">
+
+    <LinearLayout
+        android:id="@+id/ll_feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_feedback_screenshot"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_screen"
+            android:layout_width="90dp"
+            android:layout_height="85dp"
+            android:contentDescription="@string/app_name"
+            android:maxHeight="150dp"
+            android:padding="@dimen/common8dp"
+            android:scaleType="matrix" />
+
+        <TextView
+            android:id="@+id/tv_feedback"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableStart="@drawable/icon_feedback_screen"
+            android:gravity="center"
+            android:paddingStart="@dimen/common12dp"
+            android:paddingTop="@dimen/common5dp"
+            android:paddingEnd="@dimen/common5dp"
+            android:paddingBottom="@dimen/common5dp"
+            android:text="问题反馈"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp12" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_customer_service"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_feedback"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/common10dp"
+        android:background="@drawable/bg_feedback_screenshot"
+        android:drawableStart="@drawable/icon_feedback_customer"
+        android:gravity="center"
+        android:paddingStart="@dimen/common12dp"
+        android:paddingTop="@dimen/common5dp"
+        android:paddingEnd="@dimen/common5dp"
+        android:paddingBottom="@dimen/common5dp"
+        android:text="在线客服"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp12" />
+</RelativeLayout>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA"
+    tools:context=".fragments.mine.AboutUsFragment"
+    tools:viewBindingIgnore="true">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/common1dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/common1dp">
+
+                <ImageView
+                    android:layout_width="@dimen/common115dp"
+                    android:layout_height="106dp"
+                    android:src="@drawable/logo" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common1dp"
+                    android:gravity="center"
+                    android:text="@string/app_name"
+                    android:textColor="@color/gray_303133"
+                    android:textSize="@dimen/sp16"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_version"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common2dp"
+                    android:gravity="center"
+                    android:text="版本号：xxx"
+                    android:textColor="@color/gray_303133"
+                    android:textSize="@dimen/sp12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common20dp"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/rl_homeUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/common15dp"
+                    android:paddingRight="@dimen/common15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="官方网站"
+                        android:textColor="@color/change_login_pwd_tv"
+                        android:textSize="@dimen/sp16" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/about_us_weburl"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/sp15" />
+                </LinearLayout>
+
+                <View
+                    style="@style/Divider_0_5dp"
+                    android:layout_marginLeft="@dimen/common15dp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_consumer_hotline"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:paddingLeft="@dimen/common15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="客服电话"
+                        android:textColor="@color/change_login_pwd_tv"
+                        android:textSize="@dimen/sp16" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingRight="@dimen/common15dp"
+                        android:text="@string/about_us_phone_number"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/sp15" />
+                </RelativeLayout>
+
+                <View
+                    style="@style/Divider_0_5dp"
+                    android:layout_marginLeft="@dimen/common15dp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_check_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:paddingLeft="@dimen/common15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="检测新版本"
+                        android:textColor="@color/change_login_pwd_tv"
+                        android:textSize="@dimen/sp16" />
+
+                    <ImageView
+                        android:id="@+id/iv_check_update"
+                        android:layout_width="6dp"
+                        android:layout_height="@dimen/common10dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/common15dp"
+                        android:src="@drawable/the_arrow_r_grey" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_version_update"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/iv_check_update"
+                        android:paddingRight="@dimen/common5dp"
+                        android:src="@drawable/ic_update"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:background="#F5F7FA"
+                android:paddingLeft="@dimen/common15dp"
+                android:paddingTop="@dimen/common8dp"
+                android:paddingBottom="@dimen/common15dp"
+                android:text="为您提供更契合您需求的产品或服务，提升使用体验"
+                android:textColor="#909199"
+                android:textSize="@dimen/sp13" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/common15dp"
+                    android:text="合规热线"
+                    android:textColor="@color/change_login_pwd_tv"
+                    android:textSize="@dimen/sp16" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/common15dp"
+                    android:text="www.haierchina.ethicspoint.com"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/sp15" />
+            </RelativeLayout>
+
+            <View
+                style="@style/Divider_0_5dp"
+                android:layout_marginStart="@dimen/common15dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/common15dp"
+                    android:text="合规邮箱"
+                    android:textColor="@color/change_login_pwd_tv"
+                    android:textSize="@dimen/sp16" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/common15dp"
+                    android:text="jubao@haier.com"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/sp15" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:text="工业和信息化部ICP备案 | 鲁ICP备15024964号-7A"
+        android:textColor="#909199 "
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

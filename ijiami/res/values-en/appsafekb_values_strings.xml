@@ -1,0 +1,16 @@
+<resources>
+    <string name="bcs_string_ok">OK</string>
+    <string name="bcs_string_more">More</string>
+    <string name="bcs_string_cancel">Cancel</string>
+    <string name="bcs_string_appname">GouHua Keyboard</string>
+    <string name="bcs_string_symbol">Symbol</string>
+    <string name="bcs_string_delete">Delete</string>
+    <string name="bcs_string_switch">Switch</string>
+    <string name="bcs_string_hidden">Hidden</string>
+    <string name="bcs_string_space">@string/bcs_string_appname</string>
+    <string name="bcs_string_shift">Shift</string>
+    <string name="bcs_string_complete">Complete</string>
+    <string name="bcs_string_appname_dight">@string/bcs_string_appname</string>
+    <string name="bcs_string_appname_symbols">@string/bcs_string_appname</string>
+    <string name="bcs_string_appname_letter">@string/bcs_string_appname</string>
+</resources>

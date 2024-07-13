@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:viewBindingIgnore="true">
+
+    <com.app.haiercash.base.bui.TitleBarView
+        android:id="@+id/bar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bar_header"
+        android:layout_marginTop="@dimen/dp05"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/common36dp"
+            android:layout_marginBottom="15dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/iv_check_mobile" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common15dp"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/common4dp"
+            android:textColor="@color/gray_303133"
+            android:textSize="@dimen/sp14"
+            tools:text="@string/text_check_mobile_rem" />
+
+        <TextView
+            android:id="@+id/tv_secretMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common36dp"
+            android:gravity="center"
+            android:paddingBottom="@dimen/common30dp"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp23"
+            android:textStyle="bold"
+            tools:text="188****8888" />
+
+        <LinearLayout
+            android:id="@+id/ll_input_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common15dp"
+            android:layout_marginRight="@dimen/common15dp"
+            android:layout_marginBottom="40dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.haiercash.gouhua.widget.NewNKeyBoardTextField
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common40dp"
+                android:background="@null"
+                android:hint="@string/please_input_psw"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:textColorHint="@color/text_hint"
+                android:textCursorDrawable="@drawable/edittext_cursor"
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/line_psw"
+                style="@style/Divider_0_33dp_selector_606166_cccccc" />
+
+            <TextView
+                android:id="@+id/tv_forget_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/common10dp"
+                android:text="@string/forget_password"
+                android:textColor="@color/gray_606166"
+                android:textSize="@dimen/sp15" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/bt_commit"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/common15dp"
+            android:layout_marginRight="@dimen/common15dp"
+            android:background="@drawable/selector_big_btn"
+            android:gravity="center"
+            android:text="开始验证"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_18sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_modify_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/common30dp"
+        android:padding="@dimen/common10dp"
+        android:text="收不到验证码"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp14" />
+</RelativeLayout>

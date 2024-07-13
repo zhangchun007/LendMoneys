@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <TextView
+        android:id="@+id/tv_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/common15dp"
+        android:layout_marginTop="@dimen/common15dp"
+        android:text="第1期"
+        android:textColor="@color/color_303133"
+        android:textSize="@dimen/dimen_16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_repayment_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/common11dp"
+        android:text="0000-00-00"
+        android:textColor="@color/color_909199"
+        android:textSize="@dimen/dimen_16sp"
+        app:layout_constraintStart_toStartOf="@id/tv_limit"
+        app:layout_constraintTop_toBottomOf="@id/tv_limit" />
+
+    <TextView
+        android:id="@+id/tv_repayment_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common24dp"
+        android:layout_marginEnd="@dimen/common15dp"
+        android:singleLine="true"
+        android:text="**.**"
+        android:textColor="@color/color_303133"
+        android:textSize="@dimen/sp20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_cost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common15dp"
+        android:layout_marginEnd="@dimen/common15dp"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/common7dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_repayment_date">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRepaymentDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textColor="@color/color_909199"
+            android:textSize="@dimen/sp14" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRepaymentCouponTip2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common15dp"
+        android:layout_marginEnd="@dimen/common15dp"
+        android:paddingBottom="@dimen/common6dp"
+        android:textColor="@color/color_ff5151"
+        android:textSize="@dimen/sp12"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_cost" />
+
+    <View
+        android:id="@+id/vBottomLine"
+        style="@style/Divider_0_33dp_E8EAEF"
+        android:layout_marginStart="@dimen/common15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

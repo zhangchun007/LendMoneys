@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_top_radius">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common40dp"
+            android:gravity="center"
+            android:text="还款金额信息"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp22"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:viewBindingIgnore="true" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivInterestClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common10dp"
+            android:layout_marginEnd="@dimen/common10dp"
+            android:paddingStart="@dimen/common10dp"
+            android:paddingTop="@dimen/common10dp"
+            android:paddingEnd="@dimen/common10dp"
+            android:paddingBottom="@dimen/common10dp"
+            android:src="@drawable/icon_close_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/common15dp"
+            android:gravity="center"
+            android:paddingStart="@dimen/common15dp"
+            android:paddingEnd="@dimen/common15dp"
+            android:text="本金"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+        <TextView
+            android:id="@+id/tvAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/common15dp"
+            android:gravity="center"
+            android:paddingStart="@dimen/common15dp"
+            android:paddingEnd="@dimen/common15dp"
+            android:text=""
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="@dimen/common10dp"
+            android:gravity="center"
+            android:paddingStart="@dimen/common15dp"
+            android:paddingEnd="@dimen/common15dp"
+            android:text="利息"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAmount" />
+
+        <TextView
+            android:id="@+id/tvRateAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="@dimen/common10dp"
+            android:gravity="center"
+            android:paddingStart="@dimen/common15dp"
+            android:paddingEnd="@dimen/common15dp"
+            android:text=""
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAmount" />
+
+        <LinearLayout
+            android:id="@+id/llCommissionAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRateAmount">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginTop="@dimen/common10dp"
+                android:gravity="center"
+                android:paddingStart="@dimen/common15dp"
+                android:paddingEnd="@dimen/common15dp"
+                android:text="分期利息"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp16" />
+
+            <TextView
+                android:id="@+id/tvCommissionAmount"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="@dimen/common10dp"
+                android:gravity="center|end"
+                android:paddingStart="@dimen/common15dp"
+                android:paddingEnd="@dimen/common15dp"
+                android:text=""
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llOdIntAmt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llCommissionAmount">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginTop="@dimen/common10dp"
+                android:gravity="center"
+                android:paddingStart="@dimen/common15dp"
+                android:paddingEnd="@dimen/common15dp"
+                android:text="逾期罚息"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp16" />
+
+            <TextView
+                android:id="@+id/tvOdIntAmt"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="@dimen/common10dp"
+                android:gravity="center|end"
+                android:paddingStart="@dimen/common15dp"
+                android:paddingEnd="@dimen/common15dp"
+                android:text=""
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llOdFeeAmt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llOdIntAmt">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginTop="@dimen/common10dp"
+                android:gravity="center"
+                android:paddingStart="@dimen/common15dp"
+                android:paddingEnd="@dimen/common15dp"
+                android:text="违约金及其他"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp16" />
+
+            <TextView
+                android:id="@+id/tvOdFeeAmt"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="@dimen/common10dp"
+                android:gravity="center|end"
+                android:paddingStart="@dimen/common15dp"
+                android:paddingEnd="@dimen/common15dp"
+                android:text=""
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llEarlyRepayAmt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llOdFeeAmt">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginTop="@dimen/common10dp"
+                android:gravity="center"
+                android:paddingStart="@dimen/common15dp"
+                android:paddingEnd="@dimen/common15dp"
+                android:text="提前还款手续费"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp16" />
+
+            <TextView
+                android:id="@+id/tvEarlyRepayAmt"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="@dimen/common10dp"
+                android:gravity="center|end"
+                android:paddingStart="@dimen/common15dp"
+                android:paddingEnd="@dimen/common15dp"
+                android:text=""
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp16" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvRepayAmountDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="@dimen/common10dp"
+            android:gravity="center"
+            android:paddingStart="@dimen/common15dp"
+            android:paddingEnd="@dimen/common15dp"
+            android:text="已还"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llEarlyRepayAmt" />
+
+        <TextView
+            android:id="@+id/tvRepayAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="@dimen/common10dp"
+            android:gravity="center"
+            android:paddingStart="@dimen/common15dp"
+            android:paddingEnd="@dimen/common15dp"
+            android:text=""
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llEarlyRepayAmt" />
+
+        <TextView
+            android:id="@+id/tvInterestFreeDes"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="@dimen/common10dp"
+            android:drawableEnd="@drawable/icon_des"
+            android:drawablePadding="@dimen/common5dp"
+            android:gravity="center"
+            android:paddingStart="@dimen/common15dp"
+            android:paddingEnd="@dimen/common15dp"
+            android:text="免息券"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp16"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRepayAmount" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rlInterestFreeAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common10dp"
+            android:minHeight="@dimen/common32dp"
+            android:paddingStart="@dimen/common15dp"
+            android:paddingEnd="@dimen/common15dp"
+            android:visibility="gone"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintHeight_min="@dimen/common32dp"
+            app:layout_constraintLeft_toRightOf="@+id/tvInterestFreeDes"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRepayAmount">
+
+            <TextView
+                android:id="@+id/tvInterestFreeAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/common17dp"
+                android:gravity="center|end"
+                android:text=""
+                android:textColor="@color/color_ff5151"
+                android:textSize="@dimen/sp16"
+                app:layout_constraintBottom_toTopOf="@id/tvCouponUseDesc"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCouponUseDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_borrow_coupon_desc"
+                android:gravity="end|center"
+                android:paddingStart="@dimen/common8dp"
+                android:paddingTop="@dimen/common2dp"
+                android:paddingEnd="@dimen/common8dp"
+                android:paddingBottom="@dimen/common2dp"
+                android:textColor="@color/color_ff5151"
+                android:textSize="@dimen/sp12"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tvInterestFreeAmount"
+                app:layout_constraintTop_toBottomOf="@id/tvInterestFreeAmount" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvInterestFreeAmountClick"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:drawableEnd="@drawable/arrow_big_right_gray"
+                android:drawablePadding="5dp"
+                android:gravity="center|end"
+                android:text=""
+                android:textColor="@color/color_ff5151"
+                android:textSize="@dimen/sp16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvSettleAwardAmtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="@dimen/common10dp"
+            android:gravity="center"
+            android:paddingStart="@dimen/common15dp"
+            android:paddingEnd="@dimen/common15dp"
+            android:text="结清奖励"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp16"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rlInterestFreeAmount" />
+
+        <TextView
+            android:id="@+id/tvSettleAwardAmt"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="@dimen/common10dp"
+            android:drawablePadding="5dp"
+            android:gravity="center|end"
+            android:paddingStart="@dimen/common15dp"
+            android:paddingEnd="@dimen/common15dp"
+            android:textColor="@color/ffff3202"
+            android:textSize="@dimen/sp16"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="@+id/tvInterestFreeDes"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rlInterestFreeAmount" />
+
+        <View
+            android:id="@+id/vShadow"
+            style="@style/Shadow_up"
+            android:layout_width="0dp"
+            app:layout_constraintBottom_toTopOf="@id/rlBottom"
+            app:layout_constraintEnd_toEndOf="@id/rlBottom"
+            app:layout_constraintStart_toStartOf="@id/rlBottom" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rlBottom"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/common60dp"
+            android:layout_marginTop="@dimen/common108dp"
+            android:background="@color/white"
+            android:paddingStart="@dimen/common28dp"
+            android:paddingEnd="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rlInterestFreeAmount">
+
+            <LinearLayout
+                android:id="@+id/llBottomMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/common2dp"
+                android:paddingBottom="@dimen/common2dp"
+                app:layout_constraintBottom_toTopOf="@id/tvHasDiscount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvTotalAmountTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="合计: "
+                    android:textColor="@color/color_303133"
+                    android:textSize="@dimen/sp15" />
+
+                <TextView
+                    android:id="@+id/tv_to_pay_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_ff5151"
+                    android:textSize="@dimen/sp16" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHasDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_333333"
+                android:textSize="@dimen/sp12"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/llBottomMoney"
+                app:layout_constraintTop_toBottomOf="@id/llBottomMoney" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnToPay"
+                android:layout_width="@dimen/common98dp"
+                android:layout_height="@dimen/common36dp"
+                android:layout_marginEnd="@dimen/common15dp"
+                android:background="@drawable/selector_big_btn_primary_color"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="立即还款"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp15"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

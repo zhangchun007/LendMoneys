@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_kumgang"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:viewBindingIgnore="true">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="@dimen/common28dp"
+        android:layout_height="@dimen/common28dp"
+        android:layout_marginTop="@dimen/common20dp"
+        android:src="@drawable/logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Space
+        android:id="@+id/id_space"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="9dp"
+        app:layout_constraintRight_toRightOf="@id/iv_logo"
+        app:layout_constraintTop_toTopOf="@id/iv_logo" />
+
+    <TextView
+        android:id="@+id/tv_bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-6dp"
+        android:background="@drawable/shape_bubble"
+        android:paddingLeft="@dimen/common6dp"
+        android:paddingTop="@dimen/common1dp"
+        android:paddingRight="@dimen/common6dp"
+        android:paddingBottom="@dimen/common1dp"
+        android:text="快到期"
+        android:textColor="@color/white"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/id_space"
+        app:layout_constraintLeft_toRightOf="@+id/id_space"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common6dp"
+        android:layout_marginBottom="@dimen/common5dp"
+        android:textColor="#303133"
+        android:textSize="@dimen/common12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="商城订单" />
+</androidx.constraintlayout.widget.ConstraintLayout>

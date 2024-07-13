@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/common10dp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/common130dp"
+            android:background="@drawable/bg_appeal_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_real_name"
+            android:layout_width="@dimen/common40dp"
+            android:layout_height="@dimen/common40dp"
+            android:layout_marginTop="@dimen/common20dp"
+            android:layout_marginEnd="@dimen/common25dp"
+            app:layout_constraintEnd_toStartOf="@id/iv_arrow"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_appeal_real_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_real_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common5dp"
+            android:text="@string/appeal_real_name"
+            android:textColor="@color/color_303133"
+            android:textSize="@dimen/sp12"
+            app:layout_constraintEnd_toEndOf="@id/iv_real_name"
+            app:layout_constraintStart_toStartOf="@id/iv_real_name"
+            app:layout_constraintTop_toBottomOf="@id/iv_real_name" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="@dimen/common87dp"
+            android:layout_height="@dimen/common10dp"
+            android:layout_marginTop="@dimen/common32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_appeal_arrow_high" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_bank_card"
+            android:layout_width="@dimen/common40dp"
+            android:layout_height="@dimen/common40dp"
+            android:layout_marginStart="@dimen/common25dp"
+            android:layout_marginTop="@dimen/common20dp"
+            app:layout_constraintStart_toEndOf="@id/iv_arrow"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_appeal_bank_card_high" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_bank_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common5dp"
+            android:text="@string/appeal_bank_card"
+            android:textColor="@color/color_303133"
+            android:textSize="@dimen/sp12"
+            app:layout_constraintEnd_toEndOf="@id/iv_bank_card"
+            app:layout_constraintStart_toStartOf="@id/iv_bank_card"
+            app:layout_constraintTop_toBottomOf="@id/iv_bank_card" />
+
+        <View
+            android:id="@+id/v_mid_shape"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/common30dp"
+            android:layout_marginTop="@dimen/common102dp"
+            android:background="@drawable/bg_white_tl15_tr15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_bank_card_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common15dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/appeal_real_name_title"
+            android:textColor="@color/color_606166"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintEnd_toStartOf="@id/tv_bank_card_support"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_mid_shape" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_bank_card_support"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/common15dp"
+            android:text="@string/appeal_bank_card_support"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp12"
+            app:layout_constraintBottom_toBottomOf="@id/tv_bank_card_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_bank_card_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/common42dp"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common15dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="@string/appeal_bank_card_number"
+            android:textColor="@color/color_303133"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_bank_card_title" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_bank_card"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/common42dp"
+            android:layout_marginStart="@dimen/common115dp"
+            android:layout_marginTop="@dimen/common15dp"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:hint="@string/appeal_bank_card_number_hint"
+            android:inputType="number"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:textColor="@color/color_303133"
+            android:textColorHint="@color/color_BFC2CC"
+            android:textCursorDrawable="@drawable/edittext_cursor"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_bank_card_title" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_bank_num_del"
+            android:layout_width="@dimen/common15dp"
+            android:layout_height="@dimen/common15dp"
+            android:layout_marginEnd="@dimen/common15dp"
+            app:layout_constraintBottom_toBottomOf="@id/et_bank_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/et_bank_card"
+            app:srcCompat="@drawable/icon_close_circle" />
+
+        <View
+            android:id="@+id/line_bank_card"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp05"
+            android:layout_marginStart="@dimen/common15dp"
+            android:background="@color/color_e8eaef"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_bank_card" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_bank_card_error"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/common17dp"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common3dp"
+            android:background="@null"
+            android:drawableStart="@drawable/icon_error_set_pwd"
+            android:drawablePadding="@dimen/common3dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@string/appeal_bank_card_error_card"
+            android:textColor="@color/color_ff5151"
+            android:textSize="@dimen/sp12"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line_bank_card" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/common42dp"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common30dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="@string/appeal_bank_card_phone"
+            android:textColor="@color/color_303133"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line_bank_card" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_phone"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/common42dp"
+            android:layout_marginStart="@dimen/common115dp"
+            android:layout_marginTop="@dimen/common30dp"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:textColor="@color/color_303133"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line_bank_card" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_phone_tip"
+            android:layout_width="@dimen/common15dp"
+            android:layout_height="@dimen/common15dp"
+            android:layout_marginEnd="@dimen/common15dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_phone"
+            app:srcCompat="@drawable/img_quan_dialog_tips" />
+
+        <View
+            android:id="@+id/line_phone"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp05"
+            android:layout_marginStart="@dimen/common15dp"
+            android:background="@color/color_e8eaef"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_phone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_next"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/common48dp"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common50dp"
+            android:layout_marginEnd="@dimen/common15dp"
+            android:background="@drawable/selector_bg_btn_appeal"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="@string/appeal_next"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line_phone" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

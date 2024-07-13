@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common20dp"
+        android:layout_marginTop="@dimen/common15dp"
+        android:layout_marginEnd="@dimen/common15dp"
+        android:text="当前定位"
+        android:textColor="@color/color_606166"
+        android:textSize="@dimen/dimen_13sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common20dp"
+        android:layout_marginTop="@dimen/common7dp"
+        android:layout_marginBottom="@dimen/common30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/common15dp"
+            android:layout_height="@dimen/common17dp"
+            app:srcCompat="@drawable/icon_location" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLocationDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common5dp"
+            android:layout_marginEnd="@dimen/common15dp"
+            android:layout_weight="1"
+            android:textColor="@color/color_606166"
+            android:textSize="@dimen/sp13" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRelocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/common19dp"
+            android:text="重新定位"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp13"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOpenLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/common15dp"
+            android:text="去开启"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp13"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

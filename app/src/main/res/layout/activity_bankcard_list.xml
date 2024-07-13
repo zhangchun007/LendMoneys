@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <com.app.haiercash.base.bui.TitleBarView
+        android:id="@+id/bar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.haiercash.gouhua.widget.MarqueeTextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common38dp"
+        android:background="@color/color_fff4d4"
+        android:drawableStart="@drawable/icon_remind1"
+        android:drawablePadding="@dimen/common4_5dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="start|center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingStart="@dimen/common16dp"
+        android:paddingEnd="@dimen/common16dp"
+        android:singleLine="true"
+        android:text="此最高额度为参考值，具体以各银行渠道实际限额为准，最终解释权归海尔消费金融公司所有。"
+        android:textColor="@color/color_975200"
+        android:textSize="@dimen/sp14"
+        tools:ignore="TextContrastCheck" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/common3dp"
+        android:background="@drawable/bg_white_shadow" />
+</LinearLayout>

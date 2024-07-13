@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.haiercash.gouhua",
+  "variantName": "processSealingBDebugResources",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "versionCode": 503,
+      "versionName": "5.0.3",
+      "outputFile": "gouhua_测试B_v5.0.3.apk"
+    }
+  ]
+}

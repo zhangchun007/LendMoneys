@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+
+<base-config cleartextTrafficPermitted="true">
+        <base includeSubdomains="true">182.254.116.117</base>
+        <base includeSubdomains="true">pingma.qq.com</base>
+        <base includeSubdomains="true">shop-stg.haiercash.com</base>
+        <base includeSubdomains="true">shop-p2.haiercash.com</base>
+
+        <trust-anchors>
+            <certificates src="system" overridePins="true" /> <!--信任系统证书-->
+            <certificates src="user" overridePins="true" /> <!--信任用户证书-->
+        </trust-anchors>
+    </base-config>
+</network-security-config>
+

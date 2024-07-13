@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common15dp"
+        android:layout_marginTop="@dimen/common20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/common10dp"
+            android:layout_height="@dimen/common12dp"
+            app:srcCompat="@drawable/icon_real_name_safe" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common4dp"
+            android:text="已实名"
+            android:textColor="@color/gray_303133"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common15dp"
+        android:layout_marginTop="@dimen/common10dp"
+        android:layout_marginEnd="@dimen/common15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_303133"
+            android:textSize="@dimen/sp16" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_cert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common10dp"
+            android:textColor="@color/gray_303133"
+            android:textSize="@dimen/sp14" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/common10dp"
+        android:paddingTop="@dimen/common5dp"
+        android:paddingEnd="@dimen/common10dp"
+        android:paddingBottom="@dimen/common15dp">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_person_info_authentication_shadow"
+            android:padding="@dimen/common5dp">
+
+            <RelativeLayout
+                android:id="@+id/v_idcard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_person_info_authentication"
+                android:paddingBottom="@dimen/common12dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/image_idcard"
+                    android:layout_width="@dimen/common40dp"
+                    android:layout_height="@dimen/common40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/common15dp"
+                    app:srcCompat="@drawable/icon_id_card" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_idcard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_idcard"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/common6dp"
+                    android:gravity="center"
+                    android:text="@string/person_info_id_card"
+                    android:textColor="@color/color_303133"
+                    android:textSize="@dimen/sp14" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_idcard_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_idcard"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/common2dp"
+                    android:gravity="center"
+                    android:text="@string/person_info_no_complete"
+                    android:textColor="@color/color_ff5151"
+                    android:textSize="@dimen/sp10" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_idcard_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/common5dp"
+                    android:layout_marginRight="@dimen/common7dp"
+                    android:background="@drawable/bg_person_info_label"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/common6dp"
+                    android:paddingTop="@dimen/common1dp"
+                    android:paddingEnd="@dimen/common6dp"
+                    android:paddingBottom="@dimen/common1dp"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp10"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_person_info_authentication_shadow"
+            android:padding="@dimen/common5dp">
+
+            <RelativeLayout
+                android:id="@+id/v_face"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_person_info_authentication"
+                android:paddingBottom="@dimen/common12dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/image_face"
+                    android:layout_width="@dimen/common40dp"
+                    android:layout_height="@dimen/common40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/common15dp"
+                    app:srcCompat="@drawable/icon_face" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_face"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_face"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/common6dp"
+                    android:gravity="center"
+                    android:text="@string/person_info_face_repair"
+                    android:textColor="@color/color_303133"
+                    android:textSize="@dimen/sp14" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_face_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_face"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/common2dp"
+                    android:gravity="center"
+                    android:text="@string/person_info_no_complete"
+                    android:textColor="@color/color_ff5151"
+                    android:textSize="@dimen/sp10" />
+            </RelativeLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_person_info_authentication_shadow"
+            android:padding="@dimen/common5dp">
+
+            <RelativeLayout
+                android:id="@+id/v_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_person_info_authentication"
+                android:paddingBottom="@dimen/common12dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/image_info"
+                    android:layout_width="@dimen/common40dp"
+                    android:layout_height="@dimen/common40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/common15dp"
+                    app:srcCompat="@drawable/icon_person_info" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_info"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/common6dp"
+                    android:gravity="center"
+                    android:text="@string/person_info_person_detail"
+                    android:textColor="@color/color_303133"
+                    android:textSize="@dimen/sp14" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_info_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_info"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/common2dp"
+                    android:gravity="center"
+                    android:text="@string/person_info_update"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/sp10" />
+            </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

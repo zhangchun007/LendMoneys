@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.accountsettings.SetLoginPwdVerifyMobileActivity">
+
+    <com.app.haiercash.base.bui.TitleBarView
+        android:id="@+id/bar_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_verify_mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common20dp"
+        android:layout_marginTop="@dimen/common30dp"
+        android:text="@string/set_login_pwd_verify_mobile"
+        android:textColor="@color/gray_333333"
+        android:textSize="@dimen/sp22"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bar_header" />
+
+    <LinearLayout
+        android:id="@+id/ll_verify_mobile_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common20dp"
+        android:layout_marginTop="@dimen/common10dp"
+        android:layout_marginEnd="@dimen/common20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_verify_mobile">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_verify_mobile_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/common10dp"
+            android:layout_weight="1"
+            android:textColor="@color/color_909199"
+            android:textSize="@dimen/sp15" />
+
+        <com.haiercash.gouhua.sms.SmsTimeView
+            android:id="@+id/tv_verify_mobile_get"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp15"
+            app:afterTimerText="s"
+            app:normalText="重新获取"/>
+    </LinearLayout>
+    <!-- 验证码-->
+    <com.haiercash.gouhua.activity.login.SplitEditTextView
+        android:id="@+id/splitEdit"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/common43dp"
+        android:layout_marginStart="@dimen/common19dp"
+        android:layout_marginTop="@dimen/common35dp"
+        android:layout_marginEnd="@dimen/common19dp"
+        android:inputType="number"
+        android:textColor="@color/color_303133"
+        android:textSelectHandleLeft="@android:color/transparent"
+        android:textSelectHandleRight="@android:color/transparent"
+        android:textSize="@dimen/sp24"
+        app:borderColor="@color/colorPrimary"
+        app:borderSize="@dimen/common1dp"
+        app:contentNumber="6"
+        app:contentShowMode="text"
+        app:cursorColor="@color/colorPrimary"
+        app:cursorHeight="@dimen/common21dp"
+        app:cursorWidth="@dimen/common2dp"
+        app:inputBoxStyle="underline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_verify_mobile_detail"
+        app:spaceSize="11dp"
+        app:underlineFocusColor="@color/color_606166"
+        app:underlineNormalColor="@color/color_e8eaef" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_verify_mobile_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common20dp"
+        android:layout_marginTop="@dimen/common5dp"
+        android:layout_marginEnd="@dimen/common20dp"
+        android:drawableStart="@drawable/icon_error_set_pwd"
+        android:drawablePadding="@dimen/common3dp"
+        android:gravity="center_vertical"
+        android:text="验证码错误"
+        android:textColor="@color/color_ff5151"
+        android:textSize="@dimen/sp12"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/splitEdit" />
+
+    <TextView
+        android:id="@+id/tv_remark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="@+id/splitEdit"
+        app:layout_constraintTop_toBottomOf="@+id/tv_verify_mobile_error"
+        android:layout_marginTop="@dimen/common30dp"
+        android:text="收不到验证码？"
+        android:textColor="@color/gray_606166"
+        android:textSize="@dimen/sp13" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

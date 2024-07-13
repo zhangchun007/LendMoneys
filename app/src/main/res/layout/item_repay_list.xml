@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cl_repay_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_white_radius8"
+    android:paddingStart="@dimen/common15dp"
+    android:paddingEnd="@dimen/common15dp"
+    android:paddingTop="@dimen/common15dp"
+    android:paddingBottom="@dimen/common15dp"
+    android:layout_marginBottom="@dimen/common15dp">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="由海尔消费金融提供金融服务"
+        android:textColor="@color/gray_333333"
+        android:textSize="@dimen/sp13" />
+
+    <TextView
+        android:id="@+id/tv_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="0.00"
+        android:textColor="@color/gray_333333"
+        android:layout_marginTop="@dimen/dp_4"
+        android:textSize="@dimen/sp20" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_amount"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="最近还款日：2023年1月16日"
+        android:textColor="@color/gray_999999"
+        android:layout_marginTop="@dimen/dp_4"
+        android:textSize="@dimen/sp13" />
+
+    <ImageView
+        android:id="@+id/iv_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_arrow_right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_repay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/diaolg_bg_shap1"
+        android:text="@string/repay_now"
+        android:textSize="@dimen/sp15"
+        android:textColor="@color/colorPrimary"
+        android:paddingStart="@dimen/common16dp"
+        android:paddingEnd="@dimen/common16dp"
+        android:paddingTop="@dimen/common8dp"
+        android:paddingBottom="@dimen/common8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

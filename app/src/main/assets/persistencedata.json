@@ -1,0 +1,38 @@
+{
+  "configs": [
+    {
+      "data": [
+        {
+          "cid": "571",
+          "forwardUrl": "",
+          "imgUrl": "",
+          "name": "333"
+        },
+        {
+          "cid": "571",
+          "forwardUrl": "",
+          "imgUrl": "",
+          "name": "333"
+        },
+        {
+          "cid": "571",
+          "forwardUrl": "",
+          "imgUrl": "",
+          "name": "333"
+        }
+      ],
+      "title": "专享福利",
+      "type": "general"
+    },
+    {
+      "data": [
+        {
+          "forwardUrl": "",
+          "imgUrl": ""
+        }
+      ],
+      "title": "海尔够花",
+      "type": "bottom"
+    }
+  ]
+}

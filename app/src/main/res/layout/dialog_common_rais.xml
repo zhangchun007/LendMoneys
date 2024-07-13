@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_head"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common130dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_rais"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_head" />
+
+        <TextView
+            android:id="@+id/tv_dialog_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rais_dialog_bottom"
+            android:text="以上奖励已发放至“我的-券包”"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="@dimen/sp12"
+            android:paddingBottom="@dimen/common14dp"
+            android:paddingTop="@dimen/common14dp"
+
+            android:layout_below="@+id/rv_rais" />
+
+        <ImageView
+            android:id="@+id/iv_close_dialog"
+            android:layout_width="@dimen/common32dp"
+            android:layout_height="@dimen/common32dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_dialog_bottom"
+            android:layout_marginTop="@dimen/common20dp"
+            android:src="@drawable/icon_dialog_bottom_close" />
+
+    </RelativeLayout>
+
+</LinearLayout>

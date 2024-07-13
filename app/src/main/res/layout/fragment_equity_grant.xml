@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <View style="@style/Divider_0_5dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/common15dp"
+        android:paddingTop="@dimen/common27dp"
+        android:paddingEnd="@dimen/common15dp"
+        android:text="暂时不能提供借款服务"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/sp25"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/common15dp"
+        android:paddingEnd="@dimen/common15dp"
+        android:text="请积累信用，30天后再次尝试"
+        android:textColor="@color/text_gray_dark"
+        android:textSize="@dimen/sp16" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common15dp"
+        android:paddingStart="@dimen/common15dp"
+        android:paddingEnd="@dimen/common15dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/app_name"
+                android:gravity="center_vertical"
+                android:src="@drawable/src_equity_grant" />
+
+            <ImageView
+                android:id="@+id/iv_eg1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common120dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/common15dp"
+                android:contentDescription="@string/app_name"
+                android:gravity="center_vertical"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_eg2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common120dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/common15dp"
+                android:contentDescription="@string/app_name"
+                android:gravity="center_vertical"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_eg3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common120dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/common15dp"
+                android:contentDescription="@string/app_name"
+                android:gravity="center_vertical"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common45dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/common20dp"
+                android:layout_marginBottom="@dimen/common20dp"
+                android:background="@drawable/selector_big_btn"
+                android:gravity="center"
+                android:text="返回首页"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_18sp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/transparent"
+    tools:viewBindingIgnore="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/common45dp"
+        android:layout_marginEnd="@dimen/common45dp"
+        android:background="@drawable/bg_white_radius13">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="@dimen/common15dp"
+            android:layout_height="@dimen/common15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/common15dp"
+            android:layout_marginEnd="@dimen/common15dp"
+            android:src="@drawable/icon_close_small" />
+
+        <TextView
+            android:id="@+id/tv_pop_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/common15dp"
+            android:gravity="center"
+            android:text="提示"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp18"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_pop_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/common16dp"
+            android:lineSpacingMultiplier="1.35"
+            android:paddingLeft="@dimen/common20dp"
+            android:paddingRight="@dimen/common20dp"
+            android:text="暂时只针对社会人群开放，请在校同学点击左上角退出申请，谢谢理解"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp15" />
+
+        <View
+            android:id="@+id/view_divider"
+            style="@style/Divider_0_5dp"
+            android:layout_height="@dimen/dp05"
+            android:layout_below="@+id/tv_content"
+            android:layout_marginTop="@dimen/common20dp"
+            android:background="@color/ffdddddd" />
+
+        <TextView
+            android:id="@+id/tv_commit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_divider"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/common15dp"
+            android:layout_marginBottom="@dimen/common15dp"
+            android:drawablePadding="@dimen/common8dp"
+            android:gravity="center"
+            android:text="不是学生，继续申请"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp16"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</LinearLayout>

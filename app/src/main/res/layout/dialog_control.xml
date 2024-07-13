@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/dialog_img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="h,375:494"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_loan_credit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="205dp"
+        android:gravity="center"
+        android:text="200,000"
+        android:textColor="#303133"
+        android:textSize="40sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dialog_img" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/v_coupon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/dialog_img"
+        app:layout_constraintEnd_toEndOf="@id/dialog_img"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/dialog_img"
+        app:layout_constraintTop_toTopOf="@id/dialog_img"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_coupon_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_coupon_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/color_d9ffffff"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_coupon_kind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_control_coupon_kind"
+            android:textColor="@color/color_d9ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_money_char"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_control_coupon_money_char"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_coupon_value"
+            app:layout_constraintBottom_toBottomOf="@id/tv_coupon_value"
+            app:layout_constraintEnd_toStartOf="@id/tv_coupon_value"
+            app:layout_constraintStart_toStartOf="@id/tv_coupon_kind" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_coupon_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/tv_coupon_unit"
+            app:layout_constraintStart_toEndOf="@id/tv_money_char"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_coupon_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tv_coupon_value"
+            app:layout_constraintEnd_toEndOf="@id/tv_coupon_kind"
+            app:layout_constraintStart_toEndOf="@id/tv_coupon_value"
+            app:layout_constraintTop_toTopOf="@id/tv_coupon_value" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/v_btn_group"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintDimensionRatio="h,375:40"
+        app:layout_constraintEnd_toEndOf="@id/dialog_img"
+        app:layout_constraintStart_toStartOf="@id/dialog_img"
+        app:layout_constraintTop_toTopOf="@id/dialog_img">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="57" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="120"
+            android:gravity="center"
+            android:textSize="@dimen/sp16" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="28" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="120"
+            android:gravity="center"
+            android:textSize="@dimen/sp16" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="57" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/v_btn_group_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/dialog_img"
+        app:layout_constraintStart_toStartOf="@id/dialog_img"
+        app:layout_constraintTop_toTopOf="@id/dialog_img">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_1_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="46"
+            android:gravity="center"
+            android:textSize="@dimen/sp16" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="3" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_2_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="46"
+            android:gravity="center"
+            android:textSize="@dimen/sp16" />
+    </LinearLayout>
+    <!-- 模版5-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_template5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="210dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dialog_img">
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25000元"
+            android:textColor="#FF0000"
+            android:textSize="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="专享临时额度已到账"
+            android:textColor="#E06C1E"
+            android:textSize="19dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_price" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 模版6-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_template6"
+        android:layout_width="208dp"
+        android:layout_height="62dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="239dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dialog_img">
+
+        <TextView
+            android:id="@+id/tv_original_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="原额度(元)"
+            android:textColor="#61391A"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_original_price"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_original_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25000"
+            android:textColor="#693711"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_real_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="现额度(元)"
+            android:textColor="#ffffff"
+            android:textSize="10dp"
+            app:layout_constraintLeft_toLeftOf="@+id/tv_real_price"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_real_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="250"
+            android:textColor="#ffffff"
+            android:textSize="22dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_real_tip" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/common32dp"
+        android:layout_height="@dimen/common32dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/dialog_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

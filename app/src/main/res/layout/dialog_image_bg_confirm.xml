@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/bg_wechat_confirm" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-65dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_cancel"
+            style="@style/commonButton"
+            android:layout_width="@dimen/common110dp"
+            android:layout_height="@dimen/common40dp"
+            android:layout_marginStart="@dimen/common20dp"
+            android:background="@drawable/bg_primary_color_line_r20_w1"
+            android:text="@string/cancel"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp15" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_go"
+            style="@style/commonButton"
+            android:layout_width="@dimen/common110dp"
+            android:layout_height="@dimen/common40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/common20dp"
+            android:text="@string/go_now"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15" />
+    </RelativeLayout>
+
+
+</LinearLayout>

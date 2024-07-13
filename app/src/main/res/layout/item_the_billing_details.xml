@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/common15dp"
+    android:paddingEnd="0dp"
+    tools:viewBindingIgnore="true">
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common15dp"
+        android:includeFontPadding="false"
+        android:text="1/6期"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTime1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common16dp"
+        android:includeFontPadding="false"
+        android:text="2017-01-20"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTime" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCouponUseDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common10dp"
+        android:background="@drawable/bg_borrow_coupon_desc"
+        android:paddingStart="@dimen/common7_5dp"
+        android:paddingTop="@dimen/common4_5dp"
+        android:paddingEnd="@dimen/common7_5dp"
+        android:paddingBottom="@dimen/common4dp"
+        android:text="已绑定免息券"
+        android:textColor="@color/color_ff5151"
+        android:textSize="@dimen/sp12"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tvState"
+        app:layout_constraintEnd_toStartOf="@id/tvState"
+        app:layout_constraintTop_toTopOf="@+id/tvState" />
+
+    <TextView
+        android:id="@+id/tvState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common15dp"
+        android:includeFontPadding="false"
+        android:paddingTop="@dimen/common15dp"
+        android:paddingBottom="@dimen/common15dp"
+        android:text="已还"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common1dp"
+        android:layout_marginEnd="@dimen/common5_5dp"
+        android:gravity="end"
+        android:includeFontPadding="false"
+        android:text="15000.00元"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintEnd_toStartOf="@+id/iv_info"
+        app:layout_constraintTop_toBottomOf="@+id/tvState" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_info"
+        android:layout_width="@dimen/common14dp"
+        android:layout_height="@dimen/common14dp"
+        android:layout_marginEnd="@dimen/common15dp"
+        android:src="@drawable/icon_tips"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvMoney" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_discount_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common12dp"
+        android:layout_marginEnd="@dimen/common15dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="@string/app_name"
+        android:visibility="gone"
+        android:textColor="@color/color_ff5151"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintTop_toBottomOf="@+id/iv_info" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common4dp"
+        android:paddingStart="@dimen/common8dp"
+        android:paddingRight="@dimen/common8dp"
+        android:paddingTop="@dimen/common5dp"
+        android:paddingBottom="@dimen/common5dp"
+        android:textSize="@dimen/sp12"
+        android:text="按时还款可享"
+        android:visibility="gone"
+        android:textColor="@color/color_ff5151"
+        android:background="@drawable/bg_discount_tag"
+        app:layout_constraintEnd_toStartOf="@+id/tv_discount_info"
+        app:layout_constraintTop_toTopOf="@+id/tv_discount_info"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_discount_info" />
+
+    <View
+        style="@style/Divider1dp_con"
+        android:layout_marginTop="@dimen/common16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_discount_info" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    tools:viewBindingIgnore="true">
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common10dp"
+        android:paddingLeft="@dimen/common10dp"
+        android:text="123"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/sp18"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common5dp"
+        android:paddingLeft="@dimen/common20dp"
+        android:text="456"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/sp15"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_1" />
+
+    <TextView
+        android:id="@+id/tv_borrow_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/common10dp"
+        android:paddingRight="@dimen/common15dp"
+        android:text="789"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/sp22"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_borrow_statue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="right"
+        android:layout_marginTop="@dimen/common1dp"
+        android:paddingRight="@dimen/common15dp"
+        android:text="jqk"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_borrow_money" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp05"
+        android:layout_marginLeft="@dimen/common20dp"
+        android:layout_marginTop="@dimen/common10dp"
+        android:background="@color/windowBackground"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

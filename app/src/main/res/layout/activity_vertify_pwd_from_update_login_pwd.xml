@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <com.app.haiercash.base.bui.TitleBarView
+        android:id="@+id/bar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common20dp"
+        android:layout_marginTop="@dimen/common30dp"
+        android:text="输入原登录密码"
+        android:textColor="@color/gray_333333"
+        android:textSize="@dimen/sp22" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_mobile_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common20dp"
+        android:layout_marginTop="@dimen/common10dp"
+        android:layout_marginEnd="@dimen/common20dp"
+        android:textColor="@color/color_909199"
+        android:textSize="@dimen/sp15" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/common20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="@dimen/common20dp"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <com.haiercash.gouhua.widget.NewNKeyBoardTextField
+            android:id="@+id/edt_old_pwd"
+            style="@style/change_login_edt_pwd"
+            android:maxLength="20" />
+
+        <CheckBox
+            android:id="@+id/passwordCheckBox"
+            android:layout_width="@dimen/common20dp"
+            android:layout_height="@dimen/common20dp"
+            android:layout_gravity="center"
+            android:background="@color/transparent"
+            android:button="@drawable/bg_pwd_show_hide"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp05"
+        android:layout_marginStart="@dimen/common20dp"
+        android:layout_marginEnd="@dimen/common20dp"
+        android:background="@color/color_606166" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common10dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_forget_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/common20dp"
+            android:gravity="end"
+            android:text="忘记密码"
+            android:textColor="@color/color_606166"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tvSetOK"
+            style="@style/bigButton"
+            android:layout_height="@dimen/common48dp"
+            android:layout_marginStart="@dimen/common20dp"
+            android:layout_marginTop="@dimen/common30dp"
+            android:layout_marginEnd="@dimen/common20dp"
+            android:enabled="false"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp18" />
+    </LinearLayout>
+</LinearLayout>

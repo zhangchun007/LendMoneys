@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/button_pressed" android:state_pressed="true" />
+    <!--shape_button_pressed-->
+    <!--shape_button_enabled-->
+    <!--shape_button_default-->
+    <item android:drawable="@drawable/button_enabled" android:state_enabled="false" />
+    <item>
+        <shape>
+            <solid android:color="#3158f8" />
+            <corners android:radius="@dimen/common25dp" />
+        </shape>
+    </item>
+</selector>

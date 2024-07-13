@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackground"
+    tools:viewBindingIgnore="true">
+
+    <View
+        android:id="@+id/limit_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp05"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/rl_limit"
+        android:layout_width="0dp"
+        android:layout_height="135dp"
+        android:layout_marginLeft="@dimen/common15dp"
+        android:layout_marginTop="@dimen/common10dp"
+        android:layout_marginRight="@dimen/common15dp"
+        android:background="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/limit_line">
+
+        <TextView
+            android:id="@+id/tv_limit_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/common20dp"
+            android:text="我的额度(元)"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_limit_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_limit_des"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/common5dp"
+            android:text="12,444.00"
+            android:textColor="@color/text_black"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/_tv_promote_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common15dp"
+        android:layout_marginTop="@dimen/common20dp"
+        android:text="至高可提升至"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_limit" />
+
+    <TextView
+        android:id="@+id/tv_promot_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common20dp"
+        android:text="200,000"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintLeft_toRightOf="@+id/_tv_promote_des"
+        app:layout_constraintTop_toBottomOf="@+id/rl_limit" />
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        style="@style/bigButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="@dimen/common30dp"
+        android:layout_marginRight="15dp"
+        android:text="提升额度"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp17"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_tv_promote_des" />
+</androidx.constraintlayout.widget.ConstraintLayout>

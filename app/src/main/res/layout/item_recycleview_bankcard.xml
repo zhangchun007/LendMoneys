@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/common15dp"
+    tools:viewBindingIgnore="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/common14dp"
+        android:paddingEnd="@dimen/common15dp"
+        android:paddingBottom="@dimen/common14dp">
+
+        <ImageView
+            android:id="@+id/iv_icon_bankcard"
+            android:layout_width="@dimen/common24dp"
+            android:layout_height="@dimen/common24dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="TODO"
+            android:src="@drawable/logo_circle_icbc" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_toEndOf="@+id/iv_icon_bankcard"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name_bankcard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common1dp"
+                android:text="中国建设银行(44444)"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/dimen_16sp" />
+
+            <TextView
+                android:id="@+id/tv_limit_bankcard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common1dp"
+                android:paddingTop="@dimen/common2dp"
+                android:text="单笔限额5万元"
+                android:textColor="@color/text_gray_light"
+                android:textSize="@dimen/sp12" />
+        </LinearLayout>
+        <!--icon_select_cashier_false-->
+        <ImageView
+            android:id="@+id/iv_choose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:contentDescription="TODO"
+            android:src="@drawable/cb_single_enable72" />
+    </RelativeLayout>
+
+    <View
+        style="@style/Divider_0_5dp"
+        android:layout_marginLeft="@dimen/common38dp" />
+</LinearLayout>

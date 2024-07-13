@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <View style="@style/Divider_0_5dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common30dp"
+        android:lineSpacingMultiplier="1.2"
+        android:paddingStart="@dimen/common15dp"
+        android:paddingEnd="@dimen/common15dp"
+        android:text="①若您存在海尔消费金融在途业务（包含所有审批中状态以及贷款未结清），需先完成；\n\n②如果您和海尔消费金融合作的相关三方有未结清的贷款，仍需继续履行与合作方的还款协议与义务；\n\n③注销后90天内，不允许同一号码再次注册：\n\n④如果有黑卡权益、海星会员权益、优惠券或免息券等未使用，注销账号则视为放弃上述权益，权益随账户一并注销。"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/sp15" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/common15dp"
+        android:layout_marginTop="@dimen/common40dp"
+        android:layout_marginEnd="@dimen/common15dp"
+        android:layout_marginBottom="@dimen/common30dp"
+        android:background="@drawable/selector_big_btn"
+        android:gravity="center"
+        android:text="同意并注销"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimen_18sp" />
+</LinearLayout>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_pop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#77000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="37.5dp"
+        android:layout_marginRight="37.5dp"
+        android:background="@drawable/bg_repayment_detail"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/common10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common55dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="还款金额详情"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp15" />
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="@dimen/common15dp"
+                android:layout_height="@dimen/common15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/common15dp"
+                android:gravity="right"
+                android:src="@drawable/icon_close2" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common45dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp05"
+                android:background="@color/divider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/common30dp"
+                android:text="本金"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/common30dp"
+                android:text="0.00元"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp15" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common45dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp05"
+                android:layout_marginLeft="@dimen/common30dp"
+                android:layout_marginRight="@dimen/common30dp"
+                android:background="@color/divider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/common30dp"
+                android:text="利息"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/tv_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/common30dp"
+                android:text="0.00元"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp15" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common45dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp05"
+                android:layout_marginLeft="@dimen/common30dp"
+                android:layout_marginRight="@dimen/common30dp"
+                android:background="@color/divider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/common30dp"
+                android:text="手续费"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/tv_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/common30dp"
+                android:text="0.00元"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp15" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common45dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp05"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/common30dp"
+                android:layout_marginRight="@dimen/common30dp"
+                android:background="@color/divider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/common30dp"
+                android:text="提前还款手续费"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/tv_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/common30dp"
+                android:text="0.00元"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp15" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl5"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common45dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp05"
+                android:layout_marginLeft="@dimen/common30dp"
+                android:layout_marginRight="@dimen/common30dp"
+                android:background="@color/divider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/common30dp"
+                android:text="逾期罚息"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/tv_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/common30dp"
+                android:text="0.00元"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp15" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl6"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common45dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp05"
+                android:layout_marginLeft="@dimen/common30dp"
+                android:layout_marginRight="@dimen/common30dp"
+                android:background="@color/divider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/common30dp"
+                android:text="违约金及其他"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/tv6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/common30dp"
+                android:text="0.00元"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp15" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common45dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp05"
+                android:layout_marginLeft="@dimen/common30dp"
+                android:layout_marginRight="@dimen/common30dp"
+                android:background="@color/divider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/common30dp"
+                android:text="已还"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/tv7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/common30dp"
+                android:text="0.00元"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp15" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

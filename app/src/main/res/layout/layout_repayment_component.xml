@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.haiercash.gouhua.unity.HRTitleBarComponent
+        android:id="@+id/tv_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </com.haiercash.gouhua.unity.HRTitleBarComponent>
+
+    <!-- 本月待还  -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll_month_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_radius8"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_bar">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="12月待还(元)"
+            android:textColor="@color/color_303133"
+            android:textSize="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--  viewSpace与 tv_warning_bubble是一一对应出现      -->
+        <View
+            android:id="@+id/viewSpace"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_yuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="2dp"
+            android:text="¥"
+            android:textColor="@color/color_303133"
+            android:textSize="22dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_content"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:maxWidth="190dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:layout_marginTop="8dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/color_303133"
+            android:textSize="32dp"
+            android:visibility="visible"
+            app:layout_constraintLeft_toRightOf="@+id/tv_yuan"
+            app:layout_constraintTop_toBottomOf="@+id/viewSpace"
+            tools:text="32.18" />
+
+        <Space
+            android:id="@+id/id_space"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintRight_toRightOf="@id/tv_content"
+            app:layout_constraintTop_toTopOf="@id/tv_content" />
+
+        <TextView
+            android:id="@+id/tv_bubble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_warning_bubble"
+            android:paddingLeft="6dp"
+            android:paddingTop="1dp"
+            android:paddingRight="6dp"
+            android:paddingBottom="1dp"
+            android:text="含往期逾期"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/id_space"
+            app:layout_constraintLeft_toRightOf="@+id/id_space" />
+
+
+        <TextView
+            android:id="@+id/tv_sub_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="22dp"
+            android:textColor="#909199"
+            android:textSize="12dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_content"
+            tools:text="最近还款日：2023年1月16日" />
+
+        <TextView
+            android:id="@+id/tv_sub_bubble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/bg_seven_bubble"
+            android:paddingLeft="8dp"
+            android:paddingTop="1dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="1dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="10dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_sub_title"
+            app:layout_constraintLeft_toRightOf="@+id/tv_sub_title"
+            app:layout_constraintTop_toTopOf="@+id/tv_sub_title"
+            tools:text="7天" />
+
+        <TextView
+            android:id="@+id/btn_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/bg_primary_color_radius19"
+            android:paddingLeft="27dp"
+            android:paddingTop="7dp"
+            android:paddingRight="27dp"
+            android:paddingBottom="7dp"
+            android:text="立即还款"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- 暂无待还   -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll_no_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_radius8"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_bar">
+
+        <TextView
+            android:id="@+id/tv_no_pay_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="12月待还(元)"
+            android:textColor="@color/color_303133"
+            android:textSize="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_no_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="30dp"
+            android:drawableRight="@drawable/img_no_pay_arrow"
+            android:text="本月已还清"
+            android:textColor="@color/color_303133"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_no_pay_title" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

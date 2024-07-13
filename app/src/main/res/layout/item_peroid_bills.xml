@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common100dp"
+    tools:viewBindingIgnore="true">
+
+    <CheckBox
+        android:id="@+id/cb_select"
+        android:layout_width="@dimen/common20dp"
+        android:layout_height="@dimen/common20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/common14dp"
+        android:background="@drawable/cb_single"
+        android:button="@null"
+        android:gravity="center_vertical" />
+
+    <TextView
+        android:id="@+id/tv_periods_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common8dp"
+        android:layout_marginTop="@dimen/common16dp"
+        android:layout_toEndOf="@+id/cb_select"
+        android:text="第n期待还"
+        android:textColor="@color/color_303133"
+        android:textSize="@dimen/sp14" />
+
+    <TextView
+        android:id="@+id/tv_repaymenting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_periods_pay"
+        android:layout_marginStart="@dimen/common6dp"
+        android:layout_marginTop="@dimen/common1dp"
+        android:layout_toEndOf="@+id/tv_periods_pay"
+        android:background="@drawable/bg_repaymenting"
+        android:gravity="center"
+        android:paddingStart="@dimen/common5dp"
+        android:paddingTop="@dimen/common2dp"
+        android:paddingEnd="@dimen/common5dp"
+        android:paddingBottom="@dimen/common2dp"
+        android:text="还款中"
+        android:textColor="#FFFF9B00"
+        android:textSize="@dimen/sp10"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_periods_pay"
+        android:layout_marginStart="@dimen/common7dp"
+        android:layout_toEndOf="@+id/cb_select"
+        android:text="¥1999.90"
+        android:textColor="@color/color_303133"
+        android:textSize="@dimen/sp20" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCouponUseDis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_amount"
+        android:layout_alignBottom="@id/tv_amount"
+        android:layout_marginStart="@dimen/common4dp"
+        android:layout_marginTop="@dimen/common3dp"
+        android:layout_marginBottom="@dimen/common3dp"
+        android:layout_toEndOf="@id/tv_amount"
+        android:background="@drawable/bg_borrow_coupon_desc"
+        android:gravity="center"
+        android:paddingStart="@dimen/common8dp"
+        android:paddingEnd="@dimen/common8dp"
+        android:text="优惠后¥"
+        android:textColor="@color/color_ffff5151"
+        android:textSize="@dimen/sp12"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_bill_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_amount"
+        android:layout_alignStart="@+id/tv_periods_pay"
+        android:layout_marginTop="@dimen/common4dp"
+        android:text="2017-12-02  借1000.00元  共6期"
+        android:textColor="@color/color_909199"
+        android:textSize="@dimen/sp12" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_last_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/common13dp"
+        android:drawableEnd="@drawable/arrow_r_grey_w10_h12"
+        android:drawablePadding="@dimen/common2dp"
+        android:gravity="center_vertical|end"
+        android:paddingStart="@dimen/common20dp"
+        android:paddingTop="@dimen/common20dp"
+        android:paddingEnd="0dp"
+        android:paddingBottom="@dimen/common20dp"
+        android:text="剩余19天"
+        android:textColor="@color/color_909199"
+        android:textSize="@dimen/sp14" />
+
+    <View
+        android:id="@+id/line_bottom"
+        style="@style/Divider_0_33dp_E8EAEF"
+        android:layout_below="@+id/tv_bill_details"
+        android:layout_marginStart="@dimen/common15dp"
+        android:layout_marginTop="@dimen/common17dp" />
+</RelativeLayout>

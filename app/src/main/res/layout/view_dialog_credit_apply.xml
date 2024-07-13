@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#77000000"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <RelativeLayout
+        android:layout_width="345dp"
+        android:layout_height="220dp"
+        android:background="@drawable/bg_circle_radius3_eee">
+
+        <TextView
+            android:id="@+id/tv_popo_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/common15dp"
+            android:text=""
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/dimen_18sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/v_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/tv_popo_title"
+            android:layout_marginLeft="@dimen/common23dp"
+            android:layout_marginTop="@dimen/common10dp"
+            android:layout_marginRight="@dimen/common23dp"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:id="@+id/ll_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/v_line"
+            android:layout_marginLeft="@dimen/common23dp"
+            android:layout_marginTop="@dimen/common14dp"
+            android:layout_marginRight="@dimen/common23dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:drawableLeft="@drawable/icon_blue_t"
+                android:drawablePadding="@dimen/common10dp"
+                android:text="即将联合登录至够花的合作机构,由合作"
+                android:textColor="@color/text_gray_dark"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingTop="@dimen/common5dp"
+                android:text="机构为您提供贷款服务;点击“确定登录”按"
+                android:textColor="@color/text_gray_dark"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingTop="@dimen/common5dp"
+                android:text="钮,表示您同意用户授权协议。"
+                android:textColor="@color/text_gray_dark"
+                android:textSize="@dimen/sp15" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_submit_agree"
+            android:layout_width="300dp"
+            android:layout_height="@dimen/common50dp"
+            android:layout_below="@+id/ll_des"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/common23dp"
+            android:layout_marginTop="@dimen/common14dp"
+            android:layout_marginRight="@dimen/common23dp"
+            android:background="@drawable/bg_blue_radius"
+            android:gravity="center"
+            android:text="确定登录"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp17" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_close_detail"
+        android:layout_width="@dimen/common30dp"
+        android:layout_height="@dimen/common30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/common30dp"
+        android:src="@drawable/close_pop_white" />
+
+
+</LinearLayout>

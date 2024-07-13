@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/common8dp"
+    tools:viewBindingIgnore="true">
+
+    <TextView
+        android:id="@+id/tv_dialog_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:lineSpacingMultiplier="1.3"
+        android:text=""
+        android:textColor="@color/text_black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common5dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center_horizontal"
+        android:text="《银行卡扣款授权书》"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp" />
+
+</LinearLayout>

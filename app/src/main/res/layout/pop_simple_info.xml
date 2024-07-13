@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/rl_root"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common512dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_white_tl20_tr20"
+        android:paddingBottom="@dimen/common20dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/common32dp"
+            android:layout_height="@dimen/common34dp"
+            android:paddingStart="@dimen/common15dp"
+            android:paddingTop="@dimen/common20dp"
+            android:paddingEnd="@dimen/common5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_back_grey"
+            android:visibility="invisible" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tv_close"
+            android:layout_width="@dimen/common33dp"
+            android:layout_height="@dimen/common33dp"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="@dimen/common5dp"
+            android:paddingTop="@dimen/common20dp"
+            android:paddingEnd="@dimen/common15dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_close_grey" />
+
+        <TextView
+            android:id="@+id/tv_pop_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_back"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common10dp"
+            android:text="使用规则"
+            android:textColor="@color/gray_333333"
+            android:textSize="@dimen/sp22"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:id="@+id/sllv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tvOk"
+            android:layout_below="@+id/tv_pop_title"
+            android:layout_marginTop="@dimen/common10dp"
+            android:fadingEdge="none"
+            android:minHeight="@dimen/common44dp"
+            android:overScrollMode="never"
+            android:paddingStart="@dimen/common15dp"
+            android:paddingEnd="@dimen/common15dp"
+            android:paddingBottom="@dimen/common5dp"
+            android:scrollbars="none">
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/gray_333333"
+                android:textSize="@dimen/sp13" />
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOk"
+            style="@style/commonButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common42dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common20dp"
+            android:layout_marginEnd="@dimen/common15dp" />
+    </RelativeLayout>
+</LinearLayout>

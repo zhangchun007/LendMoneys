@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<FrameLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+    android:id="@+id/appsafekb_keyboard_layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:layout_gravity="bottom"
+    android:orientation="vertical">
+<!--test-->
+    <LinearLayout
+
+        android:gravity="top"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:orientation="vertical">
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#dedfe3" />
+
+
+        <com.appsafekb.safekeyboard.view.ShadowParentView
+            android:id="@+id/appsafekb_keyboard_head_layout"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+
+
+      />
+
+        <com.appsafekb.safekeyboard.view.ShadowParentView
+
+            android:id="@+id/appsafekb_keyboard_body_layout"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="150dp"
+            />
+
+
+
+    </LinearLayout>
+</FrameLayout>
+
+

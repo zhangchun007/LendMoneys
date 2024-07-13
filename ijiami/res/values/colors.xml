@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <color name="white">#ffffffff</color>
+    <color name="grey">#ffcccccc</color>
+
+    <color name="safeskb_nomal_bg">#d1d5db</color>
+    <color name="safeskb_click_bg">#8c8c8c</color>
+
+    <color name="safeskb_bg_grey">#d2d5db</color>
+    <color name="safeskb_bg_grey_click">#d9d9d9</color>
+    <color name="safeskb_bg_new_grey">#adb4bd</color>
+
+    <color name="black">#ff000000</color>
+
+    <color name="bcs_safeskb_bg_grey">#f0f0f0</color>
+    <color name="bcs_safeskb_bg_blue">#1f72ce</color>
+    <color name="bcs_safeskb_key_colors">#666666</color>
+
+    &lt;!&ndash;  字母键盘完成背景色 &ndash;&gt;
+    <color name="safe_complete_bg">#519dda</color>
+
+    &lt;!&ndash;  标题字体颜色 &ndash;&gt;
+    <color name="safe_skbtitle_font">#999999</color>
+    &lt;!&ndash;  标题背景颜色 &ndash;&gt;
+    <color name="safe_skbtitle_gb">#fafafa</color>
+
+    &lt;!&ndash; 数字键盘默认背景颜色 &ndash;&gt;
+    <color name="safe_numskb_bg">#8c8c8c</color>
+
+    &lt;!&ndash;  数字键盘点击颜色 &ndash;&gt;
+    <color name="safe_numskb_click_bg">#d9d9d9</color>
+
+    &lt;!&ndash;  数字键盘完成和删除前景色 &ndash;&gt;
+    <color name="safe_numskb_specialkey_foreground">#d1d5db</color>
+
+
+    <color name="bcs_safeskb_key_qd">#125ca9</color>
+
+    &lt;!&ndash;  标题字体颜色 &ndash;&gt;
+    <color name="bcs_safe_skbtitle_font">#999999</color>
+    &lt;!&ndash;透明色 &ndash;&gt;
+    <color name="bcs_safe_skbtitle_transparent">#00000000</color>-->
+</resources>

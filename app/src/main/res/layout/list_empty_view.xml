@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mineBackground"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <View
+        android:id="@+id/v_line"
+        style="@style/Divider_0_5dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_pic"
+        android:layout_width="@dimen/common220dp"
+        android:layout_height="@dimen/common150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/common75dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/img_empty_normal" />
+
+    <TextView
+        android:id="@+id/tv_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:gravity="center"
+        android:text="网络开小差了～"
+        android:textColor="@color/gray_909199"
+        android:textSize="14sp" />
+</LinearLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:layout_gravity="bottom"
+    android:background="@drawable/bg_top_radius"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_sms_code_top_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 顶部关闭返回布局-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common45dp"
+        android:layout_marginLeft="@dimen/common20dp"
+        android:layout_marginRight="@dimen/common20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:id="@+id/fl_back"
+            android:layout_width="@dimen/common45dp"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common20dp"
+                android:src="@drawable/img_back_black" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/fl_close"
+            android:layout_width="@dimen/common45dp"
+            android:layout_height="match_parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="@dimen/common20dp"
+                android:src="@drawable/img_close_back" />
+        </FrameLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 中间文案-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common20dp"
+        android:layout_marginRight="@dimen/common20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_top">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="请输入短信验证码"
+            android:textColor="@color/text_black"
+            android:textSize="22dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            tools:text="验证码已发送至188****5678"
+            android:textColor="@color/text_black"
+            android:textSize="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <com.haiercash.gouhua.sms.SmsTimeView
+            android:id="@+id/tv_countdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15dp"
+            app:normalText="重新获取"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_tips"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_tips" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- 验证码-->
+    <com.haiercash.gouhua.activity.login.SplitEditTextView
+        android:id="@+id/splitEdit"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="@dimen/common30dp"
+        android:layout_marginRight="20dp"
+        android:inputType="number"
+        android:textColor="#303133"
+        android:textSelectHandleLeft="@android:color/transparent"
+        android:textSelectHandleRight="@android:color/transparent"
+        android:textSize="24dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:borderColor="@color/colorPrimary"
+        app:borderSize="1dp"
+        app:contentNumber="6"
+        app:contentShowMode="text"
+        app:cursorColor="@color/colorPrimary"
+        app:cursorHeight="@dimen/common21dp"
+        app:cursorWidth="@dimen/common2dp"
+        app:inputBoxStyle="underline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_center"
+        app:spaceSize="11dp"
+        app:underlineFocusColor="#606166"
+        app:underlineNormalColor="#E8EAEF" />
+
+    <TextView
+        android:id="@+id/tv_error_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="@dimen/common6dp"
+        android:layout_marginRight="20dp"
+        android:background="@null"
+        android:text="验证码错误"
+        android:textColor="@color/color_ff5151"
+        android:textSize="12sp"
+        android:drawableStart="@drawable/icon_error_set_pwd"
+        android:drawablePadding="@dimen/common3dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/splitEdit"
+        android:visibility="gone" />
+</androidx.constraintlayout.widget.ConstraintLayout>

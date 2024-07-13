@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="@dimen/common10dp"
+    android:layout_marginLeft="@dimen/common10dp"
+    android:layout_marginRight="@dimen/common10dp"
+    android:background="@drawable/back_item_rais"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="@dimen/common76dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_cash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:paddingBottom="@dimen/common2dp"
+                android:text="¥"
+                android:textColor="@color/color_ff5151"
+                android:textSize="@dimen/sp12" />
+
+            <TextView
+                android:id="@+id/tv_rais"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="888"
+                android:textColor="@color/color_ff5151"
+                android:textSize="@dimen/sp20"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_condition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:text="满2000可用"
+            android:textColor="@color/color_ff5151"
+            android:textSize="@dimen/sp12" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="@dimen/common48dp"
+            android:layout_height="@dimen/common48dp"
+            android:src="@mipmap/ic_launcher"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common15dp"
+            android:layout_marginLeft="@dimen/common8dp"
+            tools:text="贷款满600元可用贷款满600元可用"
+            android:textSize="@dimen/sp13"
+            android:singleLine="true"
+            android:maxEms="9"
+            android:textStyle="bold"
+            android:textColor="@color/gray_ff303133" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_info"
+            android:layout_marginTop="@dimen/common5dp"
+            android:layout_marginLeft="@dimen/common8dp"
+            tools:text="贷款满600元可用免…"
+            android:textSize="@dimen/sp12"
+            android:textColor="@color/gray_909199" />
+
+        <TextView
+            android:id="@+id/tv_go"
+            android:layout_width="@dimen/common60dp"
+            android:layout_height="@dimen/common25dp"
+            android:layout_marginRight="@dimen/common10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:background="@drawable/bg_red_radius13"
+            android:text="立即查看"
+            android:textSize="@dimen/sp12"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</LinearLayout>

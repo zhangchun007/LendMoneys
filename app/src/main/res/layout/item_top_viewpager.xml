@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    tools:viewBindingIgnore="true">
+
+    <ImageView
+        android:id="@+id/iv_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common6dp"
+        android:src="@drawable/iv_arrow_blue_right"
+        android:visibility="gone"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/tv_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common16dp"
+        android:ems="1"
+        android:text="左滑查看"
+        android:textColor="@color/text_gray_light"
+        android:textSize="@dimen/sp13"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common3dp"
+        android:ems="1"
+        android:text="更多申请记录"
+        android:textColor="@color/text_gray_light"
+        android:textSize="@dimen/sp13"
+        tools:ignore="RtlHardcoded" />
+</LinearLayout>
+

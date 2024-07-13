@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_notice"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common38dp"
+    android:layout_marginStart="@dimen/common15dp"
+    android:layout_marginEnd="@dimen/common15dp"
+    android:layout_marginBottom="@dimen/common20dp"
+    android:background="@drawable/bg_white_radius8"
+    android:gravity="center"
+    tools:viewBindingIgnore="true">
+
+
+    <ImageView
+        android:id="@+id/iv_notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/common10dp"
+        android:layout_marginEnd="@dimen/common5dp"
+        android:src="@drawable/src_home_notice" />
+
+    <com.haiercash.gouhua.widget.ScrollTextSwitcher
+        android:id="@+id/ts_notice"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/iv_circle"
+        android:layout_toEndOf="@+id/iv_notice"
+        android:inAnimation="@anim/push_up_in"
+        android:outAnimation="@anim/push_up_out"
+        android:layout_marginEnd="@dimen/common5dp" />
+
+    <View
+        android:id="@+id/iv_circle"
+        android:layout_width="@dimen/common6dp"
+        android:layout_height="@dimen/common6dp"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/iv_right"
+        android:background="@drawable/shape_circle_ff3737" />
+
+    <ImageView
+        android:id="@+id/iv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/app_name"
+        android:paddingStart="@dimen/common5dp"
+        android:paddingEnd="@dimen/common10dp"
+        android:src="@drawable/icon_right_more" />
+</RelativeLayout>

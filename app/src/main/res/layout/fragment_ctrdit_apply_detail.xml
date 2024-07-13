@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/sv_apply"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadingEdge="none"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_mine_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="240dp"
+                        android:background="@drawable/bg_apply_detail_top"
+                        android:minHeight="240dp"
+                        android:paddingTop="@dimen/common40dp">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_title_mine"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:id="@+id/iv_back"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:paddingLeft="@dimen/common10dp"
+                                android:src="@drawable/iv_back_white" />
+
+                            <TextView
+                                android:id="@+id/tv_title_apply_detail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:text="123"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/sp18" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_apply_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_ed_start"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2000"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/sp40"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="额度范围(元)"
+                                android:textColor="#c2dbff"
+                                android:textSize="@dimen/sp14" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_mine_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_mine_banner"
+                        android:layout_marginStart="@dimen/common15dp"
+                        android:layout_marginTop="-70dp"
+                        android:layout_marginEnd="@dimen/common15dp"
+                        android:background="@drawable/bg_mine_card"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/common15dp"
+                            android:layout_marginTop="@dimen/common14dp"
+                            android:layout_marginBottom="@dimen/common5dp"
+                            android:gravity="center_vertical">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="@dimen/common12dp"
+                                    android:layout_height="@dimen/common12dp"
+                                    android:layout_marginLeft="@dimen/common30dp"
+                                    android:src="@drawable/icon_blue" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="55dp"
+                                android:layout_height="0.5dp"
+                                android:background="@drawable/iv_halving_line" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="@dimen/common12dp"
+                                    android:layout_height="@dimen/common12dp"
+                                    android:src="@drawable/icon_blue" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="55dp"
+                                android:layout_height="0.5dp"
+                                android:background="@drawable/iv_halving_line" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="@dimen/common12dp"
+                                    android:layout_height="@dimen/common12dp"
+                                    android:layout_marginRight="@dimen/common30dp"
+                                    android:src="@drawable/icon_blue" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_detail_rate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/text_black"
+                                    android:textSize="@dimen/sp18" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/common5dp"
+                                    android:gravity="center"
+                                    android:text="最低日息"
+                                    android:textColor="@color/text_gray_light"
+                                    android:textSize="@dimen/sp12" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_detail_date"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/text_black"
+                                    android:textSize="@dimen/sp18" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/common5dp"
+                                    android:gravity="center"
+                                    android:text="贷款期限"
+                                    android:textColor="@color/text_gray_light"
+                                    android:textSize="@dimen/sp12" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_detail_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/text_black"
+                                    android:textSize="@dimen/sp18" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/common5dp"
+                                    android:gravity="center"
+                                    android:text="放款时长"
+                                    android:textColor="@color/text_gray_light"
+                                    android:textSize="@dimen/sp12" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common15dp"
+                        android:layout_marginTop="@dimen/common15dp"
+                        android:gravity="center_vertical">
+
+                        <View
+                            android:layout_width="@dimen/common3dp"
+                            android:layout_height="@dimen/common12dp"
+                            android:background="#ff8245" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/common6dp"
+                            android:text="贷款条件"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/sp16"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="@dimen/common25dp"
+                        android:layout_marginTop="@dimen/common10dp"
+                        android:background="@color/divider" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_loan_terms"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common24dp"
+                        android:layout_marginTop="@dimen/common5dp"
+                        android:layout_marginRight="@dimen/common24dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/ll_child_loan_terms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|top"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/circle_gray" />
+
+                            <TextView
+                                android:id="@+id/tv_loanterms1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/common10dp"
+                                android:text=""
+                                android:textColor="@color/text_gray_dark"
+                                android:textSize="@dimen/sp14" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common15dp"
+                        android:layout_marginTop="@dimen/common10dp"
+                        android:gravity="center_vertical">
+
+                        <View
+                            android:layout_width="@dimen/common3dp"
+                            android:layout_height="@dimen/common12dp"
+                            android:background="#8de022" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/common6dp"
+                            android:text="申请资料"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/sp16"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="@dimen/common25dp"
+                        android:layout_marginTop="@dimen/common10dp"
+                        android:background="@color/divider" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_loan_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common24dp"
+                        android:layout_marginTop="@dimen/common5dp"
+                        android:layout_marginRight="@dimen/common24dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/ll_child_loan_data"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|top"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/circle_gray" />
+
+                            <TextView
+                                android:id="@+id/tv_loan_data1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/common10dp"
+                                android:text=""
+                                android:textColor="@color/text_gray_dark"
+                                android:textSize="@dimen/sp14" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common15dp"
+                        android:layout_marginTop="@dimen/common10dp"
+                        android:gravity="center_vertical">
+
+                        <View
+                            android:layout_width="@dimen/common3dp"
+                            android:layout_height="@dimen/common12dp"
+                            android:background="@color/colorPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/common6dp"
+                            android:text="其他"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/sp16"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="@dimen/common25dp"
+                        android:layout_marginTop="@dimen/common10dp"
+                        android:background="@color/divider" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_other"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common24dp"
+                        android:layout_marginTop="@dimen/common5dp"
+                        android:layout_marginRight="@dimen/common24dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/ll_child_other"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|top"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/circle_gray" />
+
+                            <TextView
+                                android:id="@+id/tv_other"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/common10dp"
+                                android:text=""
+                                android:textColor="@color/text_gray_dark"
+                                android:textSize="@dimen/sp14" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rl_title_white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common72dp"
+            android:layout_alignParentTop="true"
+            android:alpha="0.0"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_back_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/common10dp"
+                android:paddingTop="@dimen/common27dp"
+                android:src="@drawable/iv_back_arrow_blues" />
+
+            <TextView
+                android:id="@+id/tv_title_apply_detail_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:paddingTop="@dimen/common27dp"
+                android:text="1234"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp18" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/ll_agreement_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <CheckBox
+                android:id="@+id/cb_loan_greement"
+                android:layout_width="@dimen/common25dp"
+                android:layout_height="@dimen/common25dp"
+                android:button="@drawable/selector_checkbox1"
+                android:checked="false"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_gray_light" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="同意"
+                android:textColor="@color/text_gray_light"
+                android:textSize="@dimen/sp16" />
+
+            <TextView
+                android:id="@+id/tv_old_loan_agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="《联合注册授权书》"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp16" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_submit_detail_apply"
+            android:layout_width="345dp"
+            android:layout_height="@dimen/common50dp"
+            android:layout_below="@+id/ll_agreement_apply"
+            android:layout_marginTop="@dimen/common15dp"
+            android:background="@drawable/bg_gray_radius"
+            android:gravity="center"
+            android:text="立即申请"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp17" />
+    </RelativeLayout>
+</LinearLayout>

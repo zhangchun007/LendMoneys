@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@layout/hms_download_progress,@drawable/screen_off,@layout/upsdk*,@drawable/liveness*,
+    @drawable/umcsdk_load_dot_white,@drawable/gt_one_login_*,@drawable/img_one_key_login_*,@drawable/shape_one_key_login_*,@layout/gt_*,@xml/network_security_config,@color/gt_*,@anim/gt_*,@string/gt_*,@style/GtOneLoginTheme,@id/gt_one_login_*"
+    tools:shrinkMode="strict" />

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.haiercash.gouhua.view.BankCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bankcardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/common16dp"
+    android:layout_marginRight="@dimen/common16dp"
+    app:text_style="cipher_text"
+    tools:viewBindingIgnore="true" />
+

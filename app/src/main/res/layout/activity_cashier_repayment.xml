@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.app.haiercash.base.bui.TitleBarView
+        android:id="@+id/bar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:viewBindingIgnore="true" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btRepayment"
+        android:layout_below="@+id/bar_header"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <View
+                style="@style/Divider_0_5dp"
+                android:layout_width="match_parent" />
+
+            <TextView
+                android:id="@+id/tvAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common20dp"
+                android:layout_marginBottom="@dimen/common5dp"
+                android:gravity="center"
+                android:text="****.**"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp48"
+                android:textStyle="bold" />
+            <!-- android:drawableRight="@drawable/iv_gray_details"-->
+            <TextView
+                android:id="@+id/tvDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="@dimen/common6dp"
+                android:text="还款金额详情"
+                android:textColor="@color/text_gray_light"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:id="@+id/tvMoneyDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="还款金额(元)"
+                android:textColor="@color/text_gray_light"
+                android:textSize="@dimen/sp14"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/common15dp"
+                android:paddingTop="@dimen/common45dp"
+                android:paddingBottom="@dimen/common15dp"
+                android:text="支付方式"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp20"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:id="@+id/viewDividerRepay"
+                style="@style/Divider_0_5dp"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/common50dp"
+                android:background="@color/divider" />
+
+            <RelativeLayout
+                android:id="@+id/rlWxPay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/common15dp"
+                android:paddingTop="@dimen/common14dp"
+                android:paddingEnd="@dimen/common15dp"
+                android:paddingBottom="@dimen/common14dp">
+
+                <ImageView
+                    android:id="@+id/iv_icon_bankcard"
+                    android:layout_width="@dimen/common24dp"
+                    android:layout_height="@dimen/common24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/logo_circle_wx" />
+
+                <TextView
+                    android:id="@+id/tvWxTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/common15dp"
+                    android:layout_marginBottom="@dimen/common1dp"
+                    android:layout_toEndOf="@+id/iv_icon_bankcard"
+                    android:text="微信支付"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/dimen_16sp" />
+
+                <TextView
+                    android:id="@+id/tvWxTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/common20dp"
+                    android:layout_toRightOf="@+id/tvWxTitle"
+                    android:background="#fff4ca"
+                    android:gravity="center"
+                    android:padding="@dimen/common5dp"
+                    android:text="暂不支持多笔合并还款"
+                    android:textColor="#ff9b00"
+                    android:textSize="@dimen/sp10"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvWxDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvWxTitle"
+                    android:layout_marginStart="@dimen/common15dp"
+                    android:layout_marginTop="@dimen/common1dp"
+                    android:layout_toEndOf="@+id/iv_icon_bankcard"
+                    android:paddingTop="@dimen/common5dp"
+                    android:text="微信安全还款"
+                    android:textColor="@color/text_gray_light"
+                    android:textSize="@dimen/sp12" />
+                <!--icon_select_cashier_false-->
+                <ImageView
+                    android:id="@+id/ivChoose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/cb_single_enable72" />
+            </RelativeLayout>
+
+            <View
+                style="@style/Divider_0_5dp"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/common50dp"
+                android:background="@color/divider" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btRepayment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/common15dp"
+        android:layout_marginTop="@dimen/common25dp"
+        android:layout_marginEnd="@dimen/common15dp"
+        android:layout_marginBottom="@dimen/common25dp"
+        android:background="@drawable/selector_big_btn"
+        android:enabled="false"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="确认还款"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp17" />
+</RelativeLayout>

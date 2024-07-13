@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:background="@android:color/transparent"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common50dp"
+        android:background="@color/white"
+        android:padding="@dimen/common5dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/common20dp"
+            android:layout_height="@dimen/common20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/common10dp"
+            android:src="@drawable/icon_close2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="请输入交易密码"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/dimen_18sp" />
+    </RelativeLayout>
+
+    <View
+        style="@style/Divider_0_5dp"
+        android:layout_width="match_parent" />
+
+
+    <com.haiercash.gouhua.view.CustomCodeView
+        android:id="@+id/view_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="@dimen/common15dp"
+        android:paddingBottom="@dimen/common15dp" />
+
+
+    <TextView
+        android:id="@+id/tv_forget_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="right"
+        android:paddingRight="15dp"
+        android:paddingBottom="@dimen/common15dp"
+        android:text="忘记密码?"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp" />
+</LinearLayout>

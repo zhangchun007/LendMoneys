@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+<!--    <View style="@style/Divider_0_5dp" />-->
+
+    <TextView
+        android:text="验证身份"
+        android:textColor="#303133"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/common50dp"
+        android:layout_marginLeft="@dimen/common25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common25dp"
+        android:layout_marginRight="@dimen/common25dp"
+        android:layout_marginTop="45dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical">
+
+
+            <com.haiercash.gouhua.widget.DelEditText
+                android:id="@+id/name"
+                style="@style/get_verify_identity"
+                android:hint="输入您的姓名"
+                android:textCursorDrawable="@drawable/edittext_cursor" />
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="7dp"
+            style="@style/Divider_0_5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/common30dp"
+            android:gravity="center_vertical">
+
+            <com.haiercash.gouhua.widget.DelEditText
+                android:id="@+id/idcard"
+                style="@style/get_verify_identity"
+                android:hint="输入您的身份证号"
+                android:textCursorDrawable="@drawable/edittext_cursor" />
+
+        </LinearLayout>
+        <View
+            android:layout_marginTop="7dp"
+            style="@style/Divider_0_5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/common25dp"
+        android:layout_marginRight="@dimen/common25dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvSetOK"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common48dp"
+            android:text="下一步"
+            android:background="@drawable/selector_big_btn"
+            android:layout_marginTop="40dp"
+            android:textSize="@dimen/sp18"
+            android:enabled="false"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

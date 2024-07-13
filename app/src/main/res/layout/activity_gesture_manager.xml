@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.app.haiercash.base.bui.TitleBarView
+        android:id="@+id/bar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View style="@style/Divider05dp_EDEFF2" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mineBackground"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/common10dp">
+
+            <LinearLayout
+                android:id="@+id/v_gesture_switch"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common64dp"
+                android:layout_marginTop="@dimen/common10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/common15dp"
+                android:paddingEnd="@dimen/common15dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/gesture_manager_gesture_switch"
+                    android:textColor="@color/color_303133"
+                    android:textSize="@dimen/sp16" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_gesture_switch"
+                    android:layout_width="@dimen/common40dp"
+                    android:layout_height="@dimen/common22dp"
+                    android:layout_marginStart="@dimen/common10dp"
+                    app:srcCompat="@drawable/togglebutton_off" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/v_update_gesture"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common62dp"
+                android:layout_marginTop="@dimen/common10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/common15dp"
+                android:paddingEnd="@dimen/common15dp"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/gesture_manager_update_gesture"
+                    android:textColor="@color/color_303133"
+                    android:textSize="@dimen/sp16" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/common10dp"
+                    android:layout_height="@dimen/common12dp"
+                    android:layout_marginStart="@dimen/common10dp"
+                    app:srcCompat="@drawable/icon_right_more" />
+            </LinearLayout>
+
+            <include
+                android:id="@+id/line_gesture_way"
+                layout="@layout/include_line_left_space"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/v_gesture_way_switch"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common62dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/common15dp"
+                android:paddingEnd="@dimen/common15dp"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/gesture_manager_show_way_switch"
+                    android:textColor="@color/color_303133"
+                    android:textSize="@dimen/sp16" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_gesture_way_switch"
+                    android:layout_width="@dimen/common40dp"
+                    android:layout_height="@dimen/common22dp"
+                    android:layout_marginStart="@dimen/common10dp"
+                    app:srcCompat="@drawable/togglebutton_on" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

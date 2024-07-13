@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/common15dp"
+    android:background="@drawable/bg_white_radius8"
+    android:paddingStart="@dimen/common14dp"
+    android:paddingEnd="@dimen/common15dp"
+    android:paddingBottom="@dimen/common17dp">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="@dimen/common22dp"
+        android:layout_height="@dimen/common20dp"
+        android:layout_marginTop="@dimen/common15dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common3dp"
+        android:layout_marginTop="@dimen/common15dp"
+        android:layout_toEndOf="@+id/iv_logo"
+        android:textColor="@color/gray_303133"
+        android:textSize="@dimen/sp16"
+        android:textStyle="bold"
+        tools:text="京东借钱" />
+
+    <TextView
+        android:id="@+id/tv_total_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_logo"
+        android:layout_marginTop="@dimen/common5dp"
+        android:text="最高额度"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp18"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/rl_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_logo"
+        android:layout_alignBaseline="@+id/tv_total_des"
+        android:layout_marginTop="@dimen/common5dp"
+        android:layout_toEndOf="@+id/tv_total_des">
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_4"
+            android:layout_alignBaseline="@+id/tv_total"
+            android:layout_alignStart="@+id/tv_total"
+            android:layout_alignEnd="@+id/tv_total"
+            android:layout_marginTop="@dimen/common18dp"
+            android:background="#DDE6FF" />
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp18"
+            android:textStyle="bold"
+            tools:text="200，000" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_interest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_total"
+        android:layout_marginTop="5dp"
+        android:text="最低日利率1.66%起"
+        android:textColor="@color/color_909199"
+        android:textSize="@dimen/dimen_12sp" />
+
+    <TextView
+        android:id="@+id/tv_apply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_radius18_primary_color"
+        android:gravity="center"
+        android:paddingStart="@dimen/common15dp"
+        android:paddingTop="@dimen/common5dp"
+        android:paddingEnd="@dimen/common15dp"
+        android:paddingBottom="@dimen/common5dp"
+        android:text="我要借款"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp14" />
+</RelativeLayout>

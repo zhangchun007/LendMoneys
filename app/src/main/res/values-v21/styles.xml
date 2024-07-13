@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--   2dp深度的阴影-->
+    <style name="Elevation_2dp">
+        <item name="android:elevation">1dp</item>
+    </style>
+    <!--字体间距-0.15-->
+    <style name="LetterSpacing_1">
+        <item name="android:letterSpacing">-0.1</item>
+    </style>
+</resources>

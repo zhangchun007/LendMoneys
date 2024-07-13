@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    tools:viewBindingIgnore="true">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.2"
+        android:background="@color/transparent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="7.6"
+        android:background="@drawable/layout_dialog_theme_shape"
+        android:gravity="center_horizontal"
+        android:minWidth="250dp"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/common25dp">
+
+        <RelativeLayout
+            android:id="@+id/ll_dialog_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_dialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="26dp"
+                android:text="提示"
+                android:textColor="@color/color_303133"
+                android:textSize="17sp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_close"
+                android:layout_width="@dimen/common23dp"
+                android:layout_height="@dimen/common23dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/common7dp"
+                android:layout_marginEnd="@dimen/common7dp"
+                android:padding="@dimen/common5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_close_small" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_dialog_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fadingEdge="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common8dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_dialog_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal|left"
+                        android:lineSpacingMultiplier="1.3"
+                        android:paddingStart="@dimen/common20dp"
+                        android:paddingEnd="@dimen/common20dp"
+                        android:text=""
+                        android:textColor="@color/color_303133"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_dialog_btn1"
+            style="@style/commonButton"
+            android:layout_width="@dimen/common160dp"
+            android:layout_height="@dimen/common40dp"
+            android:layout_marginTop="@dimen/common16dp"
+            android:gravity="center"
+            android:text="去设置"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_dialog_btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common5dp"
+            android:gravity="center"
+            android:padding="@dimen/common5dp"
+            android:text="以后再说"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.2"
+        android:background="@color/transparent" />
+</LinearLayout>

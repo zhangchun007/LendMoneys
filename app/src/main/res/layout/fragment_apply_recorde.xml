@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackground"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <com.app.haiercash.base.bui.TitleBarView
+        android:id="@+id/bar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp05" />
+
+    <RelativeLayout
+        android:id="@+id/ll_yellow_expire"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#fff4ca"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="温馨提示:申请多个产品,更容易获批哦"
+            android:textColor="#ff9b00"
+            android:textSize="@dimen/sp12" />
+
+        <ImageView
+            android:id="@+id/iv_close_yellow"
+            android:layout_width="@dimen/common10dp"
+            android:layout_height="@dimen/common10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/common11dp"
+            android:src="@drawable/iv_close" />
+    </RelativeLayout>
+
+    <include
+        layout="@layout/fragment_comm_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

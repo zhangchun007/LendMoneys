@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mineBackground"
+    tools:context=".fragments.mine.ToolsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:layout_marginTop="@dimen/common10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_bank"
+            style="@style/PersonalItem"
+            android:text="@string/bank" />
+
+        <View style="@style/Divider1dp_ffe8eaef_with_15_margin"
+            android:layout_height="0.33dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_certificate"
+            style="@style/PersonalItem"
+            android:text="@string/certificate_of_settlement" />
+
+        <View style="@style/Divider1dp_ffe8eaef_with_15_margin"
+            android:layout_height="0.33dp"/>
+
+        <TextView
+            android:id="@+id/tv_account_security"
+            style="@style/PersonalItem"
+            android:text="@string/account_security" />
+
+        <View style="@style/Divider1dp_ffe8eaef_with_15_margin"
+            android:layout_height="0.33dp"/>
+
+        <TextView
+            android:id="@+id/tv_loan_calculator"
+            style="@style/PersonalItem"
+            android:text="@string/loan_calculator" />
+
+    </LinearLayout>
+
+
+</FrameLayout>

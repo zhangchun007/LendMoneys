@@ -1,0 +1,75 @@
+apply plugin: 'com.android.library'
+
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        flavorDimensions rootProject.ext.android.versionName
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+
+        //防止so被压缩
+        packagingOptions {
+            doNotStrip "**/*.so"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+    viewBinding.enabled = true
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation rootProject.ext.dependencies["appcompat-androidx"]
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation rootProject.ext.dependencies["junit"]
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+
+
+    //androidTestImplementation rootProject.ext.dependencies["runner"]
+    androidTestImplementation rootProject.ext.dependencies["espresso_core"]
+    api rootProject.ext.dependencies["rxjava2"]
+    api rootProject.ext.dependencies["rxjava2:rxandroid"]
+    implementation rootProject.ext.dependencies["retrofit2"]
+    api rootProject.ext.dependencies["converter-gson"]
+    api rootProject.ext.dependencies["adapter-rxjava2"]
+    api rootProject.ext.dependencies["rxlifecycle-components"]
+    api rootProject.ext.dependencies["rxrelay"]
+    api rootProject.ext.dependencies["rxpermissions"]
+    //数据库
+    implementation rootProject.ext.dependencies["room"]
+    annotationProcessor rootProject.ext.dependencies["room_compiler"]
+
+    api rootProject.ext.dependencies["arouter"]
+    api rootProject.ext.dependencies["picker_view"]
+
+    api rootProject.ext.dependencies["butterknife"]
+    api rootProject.ext.dependencies["apng"]
+    //本地modul
+    //implementation project(path: ':pulltorefreshlibrary')
+    //api (name:'pulltorefreshlibrary', ext:'aar')
+
+    api project(':android-crop')
+}

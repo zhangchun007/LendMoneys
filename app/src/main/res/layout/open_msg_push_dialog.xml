@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    tools:viewBindingIgnore="true">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:background="@color/transparent" />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="7"
+        android:background="@drawable/layout_dialog_theme_shape"
+        android:gravity="center_horizontal"
+        android:minWidth="250dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="@dimen/common5dp"
+                android:text="开启推送通知"
+                android:textColor="@color/text_black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View style="@style/Divider_0_5dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_dialog_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fadingEdge="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common15dp"
+                    android:layout_marginRight="@dimen/common15dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginBottom="@dimen/common13dp"
+                        android:gravity="center_horizontal"
+                        android:lineSpacingMultiplier="1.3"
+                        android:text="优惠券、免息活动，一个都不错过"
+                        android:textColor="@color/text_black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+
+        <View style="@style/Divider_0_5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="45dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_cancle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:padding="6dp"
+                android:text="暂时不要"
+                android:textColor="@color/text_gray_dark"
+                android:textSize="16sp" />
+
+            <View
+                style="@style/Divider1dp_portrait"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_open"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:padding="6dp"
+                android:text="开启"
+                android:textColor="@color/fffc594c"
+                android:textSize="16sp"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:background="@color/transparent" />
+</LinearLayout>

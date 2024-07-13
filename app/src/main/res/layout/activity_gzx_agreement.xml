@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="413dp"
+    android:layout_gravity="bottom"
+    android:background="@drawable/bg_top_radius"
+    tools:context=".gzx.GzxAgreementActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_gzx_agreement_top_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common17dp"
+        android:layout_marginEnd="@dimen/common20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_close_grey"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common15dp"
+        android:layout_marginTop="@dimen/common40dp"
+        android:text="@string/service_authorization"
+        android:textColor="@color/gray_303133"
+        android:textSize="@dimen/sp22"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_next"
+        android:layout_width="@dimen/common24dp"
+        android:layout_height="@dimen/common17dp"
+        android:layout_marginTop="@dimen/common37dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_next_two"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <ImageView
+        android:id="@+id/iv_haiercash"
+        android:layout_width="@dimen/common50dp"
+        android:layout_height="@dimen/common50dp"
+        android:layout_marginEnd="@dimen/common30dp"
+        android:layout_marginTop="@dimen/common20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_haiercash"
+        app:layout_constraintEnd_toStartOf="@+id/iv_next"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <ImageView
+        android:layout_width="@dimen/common50dp"
+        android:layout_height="@dimen/common50dp"
+        android:layout_marginStart="@dimen/common30dp"
+        android:layout_marginTop="@dimen/common20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_gzx"
+        app:layout_constraintStart_toEndOf="@+id/iv_next"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <View
+        android:id="@+id/view_dash_line"
+        android:layout_width="0dp"
+        android:layout_height="1.5dp"
+        android:layout_marginTop="@dimen/common35dp"
+        android:layout_marginStart="@dimen/common15dp"
+        android:layout_marginEnd="@dimen/common15dp"
+        android:background="@drawable/shape_dash_line_e8eaef"
+        app:layout_constraintTop_toBottomOf="@+id/iv_haiercash"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common15dp"
+        android:layout_marginTop="@dimen/common24dp"
+        android:text="@string/agree_gzx_authorization"
+        android:textColor="@color/gray_303133"
+        android:textSize="@dimen/sp18"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_dash_line" />
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common15dp"
+        android:layout_marginTop="@dimen/common12dp"
+        android:text="@string/agree_gzx_info"
+        android:includeFontPadding="true"
+        android:lineSpacingExtra="@dimen/common5dp"
+        android:textColor="@color/gray_606166"
+        android:textSize="@dimen/sp15"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="@dimen/common15dp"
+        android:layout_marginEnd="@dimen/common15dp"
+        android:layout_marginBottom="@dimen/common15dp"
+        android:text="@string/confirm_authorization"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp18"
+        android:background="@drawable/selector_big_btn" />
+
+    <TextView
+        android:id="@+id/tv_agreement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/tv_submit"
+        android:layout_marginStart="@dimen/common15dp"
+        android:layout_marginEnd="@dimen/common15dp"
+        android:layout_marginBottom="@dimen/common10dp"
+        android:text="@string/confirm_authorization"
+        android:textColor="@color/gray_606166"
+        android:textSize="@dimen/sp12" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common6dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_agreement"
+        android:layout_marginBottom="@dimen/common10dp"
+        android:background="@drawable/shadow_up" />
+</androidx.constraintlayout.widget.ConstraintLayout>

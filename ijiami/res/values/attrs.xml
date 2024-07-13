@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="NKeyBoardTextField">
+        <attr name="json_name" format="reference|string" />
+        <attr name="autoLoad" format="reference|boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="appsafekbShadowView">
+        <attr name="shadowX" format="reference|dimension" />
+        <attr name="shadowY" format="reference|dimension" />
+        <attr name="shadowRadius" format="reference|dimension" />
+        <attr name="viewRadius" format="reference|dimension" />
+        <attr name="shadowYTop" format="reference|dimension" />
+        <attr name="shadowXleft" format="reference|dimension" />
+        <attr name="appsafekbShadowColor" format="reference|color" />
+        <attr name="viewColor" format="reference|color" />
+        <attr name="shadowAlpha" format="reference|float" />
+    </declare-styleable>
+
+
+
+</resources>

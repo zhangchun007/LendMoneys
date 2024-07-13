@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mineBackground"
+    android:clipChildren="false"
+    tools:context=".fragments.main.MainFragment">
+
+    <LinearLayout
+        android:id="@+id/llEmptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f5f7fa"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_empty" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common20dp"
+            android:text="数据获取失败，请重新加载"
+            android:textColor="@color/color_babcc2"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/tv_reload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common20dp"
+            android:background="@drawable/bg_btn_commit"
+            android:paddingLeft="@dimen/common18dp"
+            android:paddingTop="@dimen/common5dp"
+            android:paddingRight="@dimen/common18dp"
+            android:paddingBottom="@dimen/common5dp"
+            android:text="重新加载"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp12" />
+    </LinearLayout>
+
+    <com.haiercash.gouhua.widget.UnLoadUpDownViewPage
+        android:id="@+id/uudvpContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/vHomeTopBg0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@id/vHomeTopBg"
+                android:layout_marginBottom="@dimen/common170dp"
+                android:background="@color/white" />
+
+            <View
+                android:id="@+id/vHomeTopBg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common170dp"
+                android:layout_above="@id/rvHomepage"
+                android:layout_marginBottom="-63dp"
+                android:background="@drawable/bg_home_theme" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_theme"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common300dp"
+                android:layout_marginTop="-193dp"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:id="@+id/llRefreshDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/common20dp"
+                android:layout_alignBottom="@id/iv_theme"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/common16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivRefreshDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/home_refresh_01" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvRefreshDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/common3dp"
+                    android:text="下拉进入详情"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/vSpace"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common16dp"
+                android:layout_alignBottom="@id/iv_theme"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_f5f7fa_tl15_tr15"
+                android:visibility="invisible" />
+
+            <com.haiercash.gouhua.widget.HomeRecyclerView
+                android:id="@+id/rvHomepage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/iv_theme"
+                android:overScrollMode="never" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_home_cache" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/common20dp"
+                android:drawableLeft="@drawable/icon_wold_home"
+                android:drawablePadding="@dimen/common5dp"
+                android:gravity="center"
+                android:text="继续上滑 精彩呈现"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp14" />
+        </RelativeLayout>
+    </com.haiercash.gouhua.widget.UnLoadUpDownViewPage>
+
+    <LinearLayout
+        android:id="@+id/llUpAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/common10dp"
+        android:layout_marginBottom="222dp"
+        android:background="@drawable/src_main_up_amount"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common12dp"
+            android:contentDescription="提额文字"
+            android:src="@drawable/src_main_up_amount_word" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlVipVideo"
+        android:layout_width="73dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/common10dp"
+        android:layout_marginBottom="150dp">
+
+        <ImageView
+            android:id="@+id/ivVipClose"
+            android:layout_width="@dimen/common14dp"
+            android:layout_height="@dimen/common14dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/icon_close_vip_main" />
+
+        <ImageView
+            android:layout_width="@dimen/common72dp"
+            android:layout_height="@dimen/common72dp"
+            android:layout_below="@+id/ivVipClose"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="-5dp"
+            android:src="@drawable/src_vip_video" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlHeadTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common111dp"
+        android:alpha="1"
+        android:background="@color/white">
+
+        <View
+            android:id="@+id/viewHeadBack"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/common15dp"
+            android:paddingTop="@dimen/common45dp">
+
+            <ImageView
+                android:id="@+id/ivHeadImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/icon_logo_black" />
+
+            <TextView
+                android:id="@+id/tvLogoInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common8dp"
+                android:text="海尔消金旗下持牌信用分期平台"
+                android:textColor="@color/color_606166" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/common25dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivScan"
+                android:layout_width="@dimen/common22dp"
+                android:layout_height="@dimen/common22dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/icon_scan_black" />
+
+            <ImageView
+                android:id="@+id/ivMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common32dp"
+                android:layout_marginTop="40dp"
+                android:contentDescription="消息中心"
+                android:src="@drawable/icon_message_black" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

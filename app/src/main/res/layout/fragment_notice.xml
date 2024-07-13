@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    tools:viewBindingIgnore="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp05"
+            android:background="@color/divider" />
+
+        <TextView
+            android:id="@+id/tv_notice_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common20dp"
+            android:layout_marginTop="@dimen/common15dp"
+            android:layout_marginRight="@dimen/common20dp"
+            android:text="@string/app_name"
+            android:lineSpacingExtra="3dp"
+            android:textColor="@color/color_verify_identity"
+            android:textSize="@dimen/sp22"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common20dp"
+            android:layout_marginTop="@dimen/common8dp"
+            android:layout_marginRight="@dimen/common20dp"
+            android:layout_marginBottom="@dimen/common14dp"
+            android:text="@string/app_name"
+            android:textColor="#606166"
+            android:textSize="@dimen/sp13" />
+
+        <com.haiercash.gouhua.view.CollapsedTextView
+            android:id="@+id/tv_sub_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:paddingLeft="@dimen/common20dp"
+            android:paddingRight="@dimen/common20dp"
+            android:text="这是正文内容这是正文内容这是正文内容，这这是正文内容这是正文内容这是正文内容，这这是正文内容这是正文内容这是正文内容，这这是正文内容这是正文内容这是正文内容，这"
+            android:textColor="#909199"
+            android:textSize="@dimen/common14dp"
+            android:lineSpacingExtra="4dp"
+            app:collapsedLines="2"
+            app:expandedDrawable="@drawable/img_message_open"
+            app:expandedText="展开"
+            app:tipsColor="@color/colorPrimary"
+            app:tipsUnderline="false" />
+
+        <View
+            android:id="@+id/v_line"
+            style="@style/Divider_0_5dp"
+            android:layout_marginStart="@dimen/common15dp"
+            android:visibility="gone" />
+
+        <com.haiercash.gouhua.x5webview.CusWebView
+            android:id="@+id/notice_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/common20dp"
+            android:layout_marginTop="@dimen/common20dp"
+            android:layout_marginRight="@dimen/common20dp"
+            android:scrollbars="none" />
+    </LinearLayout>
+
+
+</ScrollView>

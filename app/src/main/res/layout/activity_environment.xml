@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".activity.comm.SetEnvironment"
+    tools:viewBindingIgnore="true">
+
+
+    <TextView
+        android:id="@+id/tv_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|start"
+        android:layout_marginBottom="@dimen/common20dp"
+        android:textSize="@dimen/sp16" />
+
+    <RadioGroup
+        android:id="@+id/rg_environment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common50dp"
+            android:background="@drawable/environment_radiobutton"
+            android:button="@null"
+            android:gravity="center"
+            android:tag="1"
+            android:text="生产环境"
+            android:textColor="@drawable/environment_text"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common50dp"
+            android:layout_marginTop="@dimen/common10dp"
+            android:background="@drawable/environment_radiobutton"
+            android:button="@null"
+            android:gravity="center"
+            android:tag="2"
+            android:text="测试环境"
+            android:textColor="@drawable/environment_text"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common50dp"
+            android:layout_marginTop="@dimen/common10dp"
+            android:background="@drawable/environment_radiobutton"
+            android:button="@null"
+            android:gravity="center"
+            android:tag="3"
+            android:text="封测环境"
+            android:textColor="@drawable/environment_text"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+</LinearLayout>

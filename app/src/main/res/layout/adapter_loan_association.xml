@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <View
+        android:id="@+id/v_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common10dp"
+        android:background="@color/windowBackground" />
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/rl1"
+            android:layout_alignBottom="@+id/rl1"
+            android:layout_marginStart="@dimen/common18dp"
+            android:background="@color/transparent"
+            android:button="@drawable/cb_single"
+            android:paddingStart="@dimen/common1dp"
+            android:paddingTop="@dimen/common18dp"
+            android:paddingEnd="@dimen/common18dp" />
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/common18dp"
+            android:layout_marginBottom="@dimen/common18dp"
+            android:layout_toEndOf="@+id/cb"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/common18dp">
+
+            <TextView
+                android:id="@+id/tv_loan_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:singleLine="true"
+                android:text="借据号："
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp14" />
+
+            <View
+                style="@style/Divider_0_5dp"
+                android:layout_below="@+id/tv_loan_no"
+                android:layout_marginTop="@dimen/common14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_loan_no"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/common28dp"
+                android:lineSpacingMultiplier="1.2"
+                android:text="贷款时间\n贷款金额\n已关联银行卡"
+                android:textColor="@color/text_gray_dark"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:id="@+id/tv_more_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_loan_no"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/common28dp"
+                android:layout_marginEnd="@dimen/common30dp"
+                android:gravity="end"
+                android:lineSpacingMultiplier="1.2"
+                android:text=""
+                android:textColor="@color/text_gray_dark"
+                android:textSize="@dimen/sp14" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

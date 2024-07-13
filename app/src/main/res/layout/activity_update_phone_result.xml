@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.haiercash.gouhua.view.StatusBar
+        android:id="@+id/status_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_complete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common1dp"
+        android:minLines="1"
+        android:padding="@dimen/common15dp"
+        android:text="@string/update_phone_complete"
+        android:textColor="@color/color_303133"
+        android:textSize="@dimen/sp15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/status_bar" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_result"
+        android:layout_width="@dimen/common60dp"
+        android:layout_height="@dimen/common60dp"
+        android:layout_marginTop="@dimen/common25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_complete"
+        app:srcCompat="@drawable/img_appeal_result_success" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common30dp"
+        android:maxLines="1"
+        android:text="@string/update_phone_success"
+        android:textColor="@color/color_303133"
+        android:textSize="@dimen/sp18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_result" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common10dp"
+        android:textColor="@color/color_909199"
+        android:textSize="@dimen/sp13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_result" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

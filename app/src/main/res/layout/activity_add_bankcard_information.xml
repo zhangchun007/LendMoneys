@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <com.app.haiercash.base.bui.TitleBarView
+        android:id="@+id/bar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View style="@style/Divider_0_5dp" />
+
+    <TextView
+        android:id="@+id/tv_add_name_bank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/common23dp"
+        android:text=""
+        android:textColor="@color/text_black"
+        android:textSize="22sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/common6dp"
+        android:text="为保证资金安全 只能绑定认证用户本人的储蓄卡"
+        android:textColor="@color/text_gray_light"
+        android:textSize="@dimen/sp12" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/common15dp">
+
+        <com.haiercash.gouhua.view.BankCardView
+            android:id="@+id/bankcardview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:text_style="clear_text" />
+
+        <TextView
+            android:id="@+id/tv_card_des"
+            style="@style/StyleKey"
+            android:layout_marginTop="@dimen/common15dp"
+            android:text="银行卡号"
+            android:textColor="@color/text_gray_light"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bankcardview" />
+
+
+        <com.haiercash.gouhua.widget.DelEditText
+            android:id="@+id/et_bankcard_code"
+            style="@style/StyleValue"
+            android:layout_marginTop="@dimen/common10dp"
+            android:hint="请输入本人储蓄卡号"
+            android:inputType="number"
+            android:maxLength="23"
+            android:textSize="@dimen/sp20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_card_des" />
+
+        <View
+            android:id="@+id/viewline"
+            style="@style/Divider1dp_con"
+            android:layout_marginTop="@dimen/common12dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_bankcard_code" />
+
+        <TextView
+            android:id="@+id/tv_phone_des"
+            style="@style/StyleKey"
+            android:layout_marginTop="@dimen/common15dp"
+            android:text="手机号"
+            android:textColor="@color/text_gray_light"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewline" />
+
+        <com.haiercash.gouhua.widget.DelEditText
+            android:id="@+id/et_phone"
+            android:layout_width="290dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="@dimen/common10dp"
+            android:background="@null"
+            android:hint="请输入该卡银行预留手机号"
+            android:inputType="phone"
+            android:maxLength="13"
+            android:textColor="@color/text_black"
+            android:textColorHint="@color/change_login_edt"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_phone_des" />
+
+        <ImageView
+            android:id="@+id/iv_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/common9dp"
+            android:src="@drawable/ic_sign_tips"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/et_phone" />
+
+        <View
+            android:id="@+id/viewLine1"
+            style="@style/Divider1dp_con"
+            android:layout_marginTop="@dimen/common12dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_phone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_greement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingTop="@dimen/common12dp"
+        android:visibility="gone">
+
+        <CheckBox
+            android:id="@+id/cb_greement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common15dp"
+            android:button="@drawable/selector_checkbox1"
+            android:checked="false"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingTop="@dimen/common10dp"
+            android:paddingBottom="@dimen/common10dp"
+            android:text="我已阅读并同意"
+            android:textColor="@color/text_gray_dark"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_greement1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/common10dp"
+            android:paddingBottom="@dimen/common10dp"
+            android:text="《银行卡快捷支付协议》"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvSetOK"
+            style="@style/bigButton"
+            android:layout_marginLeft="@dimen/common15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="@dimen/common15dp"
+            android:enabled="false"
+            android:text="确定"
+            android:textSize="@dimen/dimen_18sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.app.haiercash.base.bui.TitleBarView
+        android:id="@+id/bar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View style="@style/Divider_0_5dp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mineBackground"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/common10dp">
+
+            <LinearLayout
+                android:id="@+id/ll_wx_bind"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common50dp"
+                android:layout_marginTop="@dimen/common10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/common15dp"
+                android:paddingEnd="@dimen/common15dp"
+                tools:ignore="UselessParent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/common20dp"
+                    android:layout_height="@dimen/common16dp"
+                    android:layout_marginEnd="@dimen/common5dp"
+                    app:srcCompat="@drawable/icon_other_bind_wx" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="@string/other_bind_wx"
+                    android:textColor="@color/color_303133"
+                    android:textSize="@dimen/sp16" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_wx_bind_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/common5dp"
+                    android:layout_marginEnd="@dimen/common5dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    android:singleLine="true"
+                    android:textColor="@color/color_606166"
+                    android:textSize="@dimen/sp16" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/common10dp"
+                    android:layout_height="@dimen/common12dp"
+                    app:srcCompat="@drawable/icon_right_more" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/common15dp"
+    android:layout_marginRight="@dimen/common15dp"
+    android:layout_marginBottom="@dimen/common15dp"
+    android:background="@drawable/bg_loan_market_list"
+    android:orientation="horizontal"
+    tools:viewBindingIgnore="true">
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common200dp"
+    android:scaleType="fitXY"
+    android:src="@drawable/img_loan_market_back" />
+
+    <ImageView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_loan_market_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/common20dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_loan_market"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginStart="@dimen/common15dp"
+        android:layout_marginEnd="@dimen/common15dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rv_loan_market"
+        android:text="@string/loan_market_info"
+        android:layout_marginTop="@dimen/common10dp"
+        android:textColor="@color/gray_606166"
+        android:textSize="@dimen/sp12"
+        android:layout_marginStart="@dimen/common15dp"
+        android:layout_marginEnd="@dimen/common15dp"
+        android:layout_marginBottom="@dimen/common20dp" />
+
+</RelativeLayout>

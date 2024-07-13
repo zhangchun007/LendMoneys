@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_white_tl20_tr20"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivClose"
+            android:layout_width="@dimen/common23dp"
+            android:layout_height="@dimen/common23dp"
+            android:layout_marginTop="@dimen/common15dp"
+            android:layout_marginEnd="@dimen/common15dp"
+            android:padding="@dimen/common5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_close_grey" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common2dp"
+            android:text="服务协议"
+            android:textColor="@color/color_303133"
+            android:textSize="@dimen/sp22"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivClose" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAgreement"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/common15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="wrap"
+            app:layout_constraintHeight_max="@dimen/common450dp"
+            app:layout_constraintHeight_min="@dimen/common185dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_E0C28A"
+    tools:viewBindingIgnore="true">
+
+    <com.app.haiercash.base.bui.TitleBarView
+        android:id="@+id/bar_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divder"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp05"
+        android:background="@color/divider"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bar_header" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_coupon_details_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divder" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/common15dp"
+        android:layout_marginTop="@dimen/common15dp"
+        android:layout_marginRight="@dimen/common15dp"
+        android:layout_marginBottom="@dimen/common15dp"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divder">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_disountt1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_copon_detail_top_bg">
+
+                <ImageView
+                    android:id="@+id/iv_dicount_detail"
+                    android:layout_width="@dimen/common50dp"
+                    android:layout_height="@dimen/common50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/common25dp"
+                    android:layout_marginTop="@dimen/common25dp"
+                    android:layout_marginBottom="@dimen/common3dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/img_discount_defaule"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/iv_dicount_detail_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/common10dp"
+                    android:layout_marginRight="@dimen/common10dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/color_verify_identity"
+                    android:textSize="@dimen/sp18"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_dicount_detail"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintLeft_toRightOf="@+id/iv_dicount_detail"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/iv_dicount_detail"
+                    tools:text="法国红石干红葡萄酒兑换券点点滴滴点点滴滴" />
+
+                <TextView
+                    android:id="@+id/iv_dicount_detail_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common30dp"
+                    android:layout_marginTop="@dimen/common26dp"
+                    android:layout_marginRight="@dimen/common30dp"
+                    android:gravity="center"
+                    android:inputType="textMultiLine"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/sp20"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_dicount_detail"
+                    tools:text="幸福西饼50元券" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_dicount_detail_sub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_dicount_detail_title">
+
+                    <TextView
+                        android:id="@+id/iv_dicount_detail_sub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/color_ff5151"
+                        android:textSize="36dp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="50" />
+
+                    <TextView
+                        android:id="@+id/iv_dicount_detail_sub_yuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="元"
+                        android:textColor="@color/color_ff5151"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/iv_dicount_detail_sub"
+                        app:layout_constraintLeft_toRightOf="@+id/iv_dicount_detail_sub"
+                        tools:text="元" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_coupon_detail_middle" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_copon_detail_bottom_bg"
+                android:paddingBottom="@dimen/common15dp">
+
+                <LinearLayout
+                    android:id="@+id/rl_coupon_code_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common15dp"
+                    android:layout_marginRight="@dimen/common15dp"
+                    android:paddingBottom="@dimen/common15dp"
+                    android:paddingTop="@dimen/common15dp"
+                    android:background="@drawable/shape_copon_detail_middle_bg"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_coupon_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_coupon_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/common15dp"
+                            android:layout_marginRight="@dimen/common10dp"
+                            android:layout_toLeftOf="@+id/tv_copy_code"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/color_6B3E31"
+                            android:textSize="@dimen/sp14"
+                            tools:text="券码：8936378389392" />
+
+                        <TextView
+                            android:id="@+id/tv_copy_code"
+                            android:layout_width="60dp"
+                            android:layout_height="27dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/common15dp"
+                            android:background="@drawable/shape_copon_copy_bg"
+                            android:gravity="center"
+                            android:text="复制"
+                            android:textColor="@color/color_6B3E31"
+                            android:textSize="@dimen/sp12" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_coupon_pwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common8dp">
+
+                        <TextView
+                            android:id="@+id/tv_coupon_pwd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/common15dp"
+                            android:layout_marginRight="@dimen/common10dp"
+                            android:layout_toLeftOf="@+id/tv_copy_pwd"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/color_6B3E31"
+                            android:textSize="@dimen/sp14"
+                            tools:text="卡密：89363783893924849" />
+
+                        <TextView
+                            android:id="@+id/tv_copy_pwd"
+                            android:layout_width="60dp"
+                            android:layout_height="27dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/common15dp"
+                            android:background="@drawable/shape_copon_copy_bg"
+                            android:gravity="center"
+                            android:text="复制"
+                            android:textColor="@color/color_6B3E31"
+                            android:textSize="@dimen/sp12" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_start_end_data_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/common15dp"
+                    android:layout_marginTop="@dimen/common25dp"
+                    android:text="有效期"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/sp14"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rl_coupon_code_bg" />
+
+                <TextView
+                    android:id="@+id/tv_start_end_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/common15dp"
+                    android:layout_marginTop="@dimen/common5dp"
+                    android:text=""
+                    android:textColor="@color/text_gray_dark"
+                    android:textSize="@dimen/sp14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_start_end_data_title"
+                    tools:text="2121.08.10-2021.12.1" />
+
+                <TextView
+                    android:id="@+id/tv_dicount_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/common15dp"
+                    android:layout_marginTop="@dimen/common20dp"
+                    android:text="优惠券使用说明"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/sp16"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_start_end_data" />
+
+                <TextView
+                    android:id="@+id/tv_dicount_des_content"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/common15dp"
+                    android:layout_marginTop="@dimen/common5dp"
+                    android:layout_marginEnd="@dimen/common15dp"
+                    android:layout_marginBottom="@dimen/common15dp"
+                    android:inputType="textMultiLine"
+                    android:lineSpacingMultiplier="0.9"
+                    android:text=""
+                    android:textColor="@color/text_gray_dark"
+                    android:textSize="@dimen/sp14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_dicount_des"
+                    tools:text="1.星巴克38元券； \n2.使用时间：领券\n2.使用时间：领券\n3.使用时间：领券\n4.使用时间：领券" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

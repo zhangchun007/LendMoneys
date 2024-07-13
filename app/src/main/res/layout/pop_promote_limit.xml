@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#77000000"
+    android:gravity="center"
+    tools:viewBindingIgnore="true">
+
+    <RelativeLayout
+        android:layout_width="280dp"
+        android:layout_height="275dp"
+        android:background="@drawable/bg_promote_limit_pop">
+
+        <TextView
+            android:id="@+id/tv_top_limit_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/common25dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp22"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_limit_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_top_limit_des"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/common5dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp13" />
+
+        <TextView
+            android:id="@+id/tv_promot_limit_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_limit_des"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22.5dp"
+            android:text="+3000"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp40"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_limit_load_or_load"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tv_limit_des"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22.5dp" />
+
+        <TextView
+            android:id="@+id/tv_limit_comite"
+            android:layout_width="240dp"
+            android:layout_height="@dimen/common50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/common15dp"
+            android:background="@drawable/bg_limit_radius_2175f4"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp17" />
+    </RelativeLayout>
+</LinearLayout>

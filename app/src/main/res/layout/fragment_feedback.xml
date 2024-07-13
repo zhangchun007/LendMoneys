@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nestedScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.mine.FeedBackFragment"
+    tools:viewBindingIgnore="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/common10dp">
+
+        <View style="@style/Divider_0_5dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common20dp"
+            android:layout_marginBottom="@dimen/common10dp"
+            android:text="反馈类型"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp16"
+            android:textStyle="bold" />
+
+        <com.haiercash.gouhua.widget.FlowRadioGroup
+            android:id="@+id/frg_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginEnd="@dimen/common15dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common10dp"
+            android:layout_marginTop="@dimen/common20dp"
+            android:background="@color/app_bg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common15dp"
+            android:layout_marginEnd="@dimen/common15dp"
+            android:text="内容描述"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp16"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_feed_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common10dp"
+            android:layout_marginEnd="@dimen/common15dp"
+            android:background="@drawable/bg_feedback_edit"
+            android:gravity="top"
+            android:hint="您在使用APP的过程中遇到的任何问题，影响您的使用体验或者改进意见，均可在此处反馈。"
+            android:maxLength="300"
+            android:maxLines="7"
+            android:minLines="7"
+            android:padding="@dimen/common10dp"
+            android:scrollbarStyle="outsideInset"
+            android:textCursorDrawable="@drawable/edittext_cursor"
+            android:scrollbars="vertical"
+            android:textColor="@color/text_black"
+            android:textColorHint="@color/text_gray_light"
+            android:textSize="@dimen/sp15" />
+
+        <TextView
+            android:id="@+id/tv_sum_words"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="@dimen/common5dp"
+            android:layout_marginEnd="@dimen/common15dp"
+            android:background="@color/white"
+            android:gravity="right"
+            android:paddingBottom="@dimen/common10dp"
+            android:text="0/300"
+            android:textSize="@dimen/sp15" />
+
+        <View
+            android:id="@+id/v_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common10dp"
+            android:background="@color/app_bg" />
+
+        <TextView
+            android:id="@+id/tv_screenshot_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common10dp"
+            android:layout_marginBottom="@dimen/common8dp"
+            android:text="截图附件(选填)"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp16"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/ll_screenshot_img"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginStart="@dimen/common15dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginEnd="@dimen/common15dp">
+
+                <ImageView
+                    android:id="@+id/iv_image1"
+                    android:layout_width="@dimen/common80dp"
+                    android:layout_height="@dimen/common80dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/src_feedback_1" />
+
+                <ImageView
+                    android:id="@+id/iv_image_close1"
+                    android:layout_width="@dimen/common20dp"
+                    android:layout_height="@dimen/common20dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/src_feedback_close"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginEnd="@dimen/common15dp">
+
+                <ImageView
+                    android:id="@+id/iv_image2"
+                    android:layout_width="@dimen/common80dp"
+                    android:layout_height="@dimen/common80dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/src_feedback_2"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_image_close2"
+                    android:layout_width="@dimen/common20dp"
+                    android:layout_height="@dimen/common20dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/src_feedback_close"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginEnd="@dimen/common15dp">
+
+                <ImageView
+                    android:id="@+id/iv_image3"
+                    android:layout_width="@dimen/common80dp"
+                    android:layout_height="@dimen/common80dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/src_feedback_3"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_image_close3"
+                    android:layout_width="@dimen/common20dp"
+                    android:layout_height="@dimen/common20dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/src_feedback_close"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

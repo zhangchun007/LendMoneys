@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/src_feedback_type_select" android:state_checked="true" />
+    <item android:state_checked="false">
+        <shape android:shape="rectangle">
+            <stroke android:width="@dimen/dp05" android:color="#C7C7C7" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <stroke android:width="@dimen/dp05" android:color="#C7C7C7" />
+        </shape>
+    </item>
+</selector>

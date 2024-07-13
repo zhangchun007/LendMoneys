@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    tools:viewBindingIgnore="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common10dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <com.haiercash.gouhua.widget.DelEditText
+                android:id="@+id/et_name"
+                style="@style/write_first_et_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common50dp"
+                android:gravity="start|center"
+                android:hint="请输入本人姓名"
+                android:maxLength="20"
+                android:textCursorDrawable="@drawable/edittext_cursor"
+                android:paddingStart="@dimen/common15dp"
+                android:paddingEnd="@dimen/common15dp"
+                android:textSize="@dimen/sp16" />
+
+            <View
+                style="@style/Divider_0_5dp"
+                android:layout_marginStart="@dimen/common15dp" />
+
+            <com.haiercash.gouhua.widget.DelEditText
+                android:id="@+id/et_id_number"
+                style="@style/write_first_et_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common50dp"
+                android:gravity="start|center"
+                android:hint="请输入本人身份证号"
+                android:textCursorDrawable="@drawable/edittext_cursor"
+                android:maxLength="18"
+                android:paddingStart="@dimen/common15dp"
+                android:paddingEnd="@dimen/common15dp"
+                android:textSize="@dimen/sp16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common10dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <com.haiercash.gouhua.widget.DelEditText
+                android:id="@+id/et_card_number"
+                style="@style/write_first_et_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common50dp"
+                android:gravity="start|center"
+                android:hint="请输入本人银行的储蓄卡号"
+                android:textCursorDrawable="@drawable/edittext_cursor"
+                android:inputType="number"
+                android:paddingStart="@dimen/common15dp"
+                android:paddingEnd="@dimen/common15dp"
+                android:textSize="@dimen/sp16" />
+
+            <TextView
+                android:id="@+id/tv_bank_station"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common18dp"
+                android:layout_marginEnd="@dimen/common18dp"
+                android:drawablePadding="@dimen/common8dp"
+                android:gravity="start|center"
+                android:paddingTop="@dimen/common10dp"
+                android:paddingBottom="@dimen/common10dp"
+                android:textColor="@color/text_gray_dark"
+                android:textSize="@dimen/sp14"
+                android:visibility="gone" />
+
+            <View
+                style="@style/Divider_0_5dp"
+                android:layout_marginStart="@dimen/common15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common50dp"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/common15dp"
+                android:paddingEnd="@dimen/common15dp">
+
+                <com.haiercash.gouhua.widget.DelEditText
+                    android:id="@+id/et_phone"
+                    style="@style/write_first_et_end"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center"
+                    android:hint="请输入银行预留手机号"
+                    android:textCursorDrawable="@drawable/edittext_cursor"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:textSize="@dimen/sp16" />
+
+                <ImageView
+                    android:id="@+id/iv_tips"
+                    android:layout_width="@dimen/common40dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/common10dp"
+                    android:src="@drawable/icon_tips" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_support_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:padding="@dimen/common15dp"
+            android:text="查看支持银行"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/bt_next"
+            style="@style/bigButton"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginEnd="@dimen/common15dp"
+            android:enabled="false"
+            android:text="下一步" />
+
+    </LinearLayout>
+</ScrollView>

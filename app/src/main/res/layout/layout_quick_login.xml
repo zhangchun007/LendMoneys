@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_quick_login"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common44dp"
+    android:layout_gravity="bottom"
+    android:layout_marginStart="@dimen/common15dp"
+    android:layout_marginEnd="@dimen/common15dp"
+    android:layout_marginBottom="@dimen/common16dp"
+    android:visibility="gone"
+    android:background="@drawable/bg_ff000000_8dp"
+    >
+
+    <ImageView
+        android:id="@+id/iv_quick_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/common10dp"
+        android:src="@drawable/icon_quick_login" />
+
+    <TextView
+        android:id="@+id/tv_quick_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/common5dp"
+        android:layout_toEndOf="@+id/iv_quick_login"
+        android:text="@string/quick_login_biometric_hint"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp14" />
+
+    <TextView
+        android:id="@+id/tv_go_setting"
+        android:layout_width="@dimen/common60dp"
+        android:layout_height="@dimen/common24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/common32dp"
+        android:background="@drawable/bg_3f7dff_1555ff_radius12"
+        android:clickable="true"
+        android:focusable="false"
+        android:gravity="center"
+        android:text="@string/go_setting"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp12" />
+
+    <LinearLayout
+        android:id="@+id/ll_close_quick"
+        android:layout_width="@dimen/common22dp"
+        android:layout_height="@dimen/common20dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/bg_gray_radius_lb_rb"
+        android:clickable="true"
+        android:focusable="false"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common6dp"
+            android:src="@drawable/icon_close_grey" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,181 @@
+{
+  "appid": "gouhua",
+  "pageId": "xiaojinGH",
+  "pageName": "首页",
+  "version": "1",
+  "componentList": [
+    {
+      "description": "通知",
+      "type": "NoticeComponent",
+      "defaultShow": "${notice.isShow}",
+      "data": {
+        "title": {
+          "content": "",
+          "defaultShow": "1"
+        },
+        "showMore": {
+          "content": "",
+          "defaultShow": "0"
+        },
+        "cmsData": "${notice}",
+        "event": {
+          "event_id": "SystemNoticeOpen_Click",
+          "page_name_cn": "消金_首页",
+          "button_name": "通知的id(从server通知数据中取)"
+        }
+      }
+    },
+    {
+      "description": "CMSBanner",
+      "type": "CMSBannerComponent",
+      "defaultShow": "${banner.isShow}",
+      "data": {
+        "title": {
+          "content": "",
+          "defaultShow": "0"
+        },
+        "showMore": {
+          "content": "",
+          "defaultShow": "0"
+        },
+        "cmsData": "${banner}",
+        "event": {
+          "event_id": "HomeAdPosition_Click",
+          "page_name_cn": "消金_首页",
+          "ad_name": "中部banner"
+        },
+        "exposure": {
+          "event_id": "HomeAdPosition_Exposure",
+          "page_name_cn": "消金_首页",
+          "ad_name": "中部banner"
+        }
+      }
+    },
+    {
+      "description": "专享福利",
+      "type": "BenefitComponent",
+      "defaultShow": "${general.isShow}",
+      "data": {
+        "title": {
+          "content": "专享福利",
+          "defaultShow": "1"
+        },
+        "showMore": {
+          "content": "",
+          "defaultShow": "0"
+        },
+        "cmsData": "${general}",
+        "event": {
+          "event_id": "Xj_Home_UsualBanner_Click",
+          "page_name_cn": "消金_首页",
+          "ad_name": "三分位"
+        },
+        "exposure": {
+          "event_id": "Xj_Home_UsualBanner_Exposure",
+          "page_name_cn": "消金_首页",
+          "ad_name": "三分位"
+        }
+      }
+    },
+    {
+      "description": "消保动态",
+      "type": "ConsumerComponent",
+      "defaultShow": "${dynamic.isShow}",
+      "data": {
+        "title": {
+          "content": "消保动态",
+          "defaultShow": "1"
+        },
+        "showMore": {
+          "content": "更多动态",
+          "action": {
+            "actionType": "jumpH5",
+            "jumpUrl": "${dynamic.forwardUrl}",
+            "needLogin": false,
+            "needRealName": false,
+            "realNameUrl": ""
+          },
+          "defaultShow": "1"
+        },
+        "cmsData": "${dynamic}",
+        "event": {
+          "event_id": "XJ_Protection_Click",
+          "page_name_cn": "消金-首页"
+        }
+      }
+    },
+    {
+      "description": "banner",
+      "type": "BannerComponent",
+      "defaultShow": "1",
+      "data": {
+        "title": {
+          "content": "关于我们",
+          "defaultShow": "1"
+        },
+        "sourceList": [
+          {
+            "image": {
+              "imageUrl": "${imgSourceApi}/csmp-manager/image/icon_xj_about_brand.png",
+              "imgWidth": "345",
+              "imgHeight": "197",
+              "imgRatio": 0.571
+            },
+            "cid": "xxx",
+            "action": {
+              "actionType": "jumpH5",
+              "jumpUrl": "${h5PmApiHost}/h5ActivityCenter/xiaojinService",
+              "needLogin": false,
+              "needRealName": false,
+              "realNameUrl": "https://standardpay-p2.haiercash.com/quotaResult",
+              "event": {
+                "event_id": "Xj_Home_BottonBanner_Click",
+                "page_name_cn": "消金首页",
+                "button_name_cn": "品牌"
+              }
+            },
+            "customerGroupId": ""
+          }
+        ]
+      }
+    },
+    {
+      "description": "客服",
+      "type": "ServiceComponent",
+      "defaultShow": "1",
+      "data":{
+        "sourceList":[
+          {
+            "action": {
+              "actionType": "onlineService",
+              "jumpUrl": "",
+              "needLogin": true,
+              "needRealName": false,
+              "realNameUrl": "",
+              "event": {
+                "event_id":"CustService_Click",
+                "page_name_cn": "消金首页",
+                "button_name_cn":"在线客服"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "description": "底部slogan",
+      "type": "FooterComponent",
+      "defaultShow": true,
+      "data": {
+        "sourceList": [
+          {
+            "image": {
+              "imageUrl": "${imgSourceApi}/csmp-manager/iconapp/footerSlogan.png",
+              "imgRatio": 0.0633
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

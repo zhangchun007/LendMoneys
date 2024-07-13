@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="日志: 为了文件不被覆盖，请输入唯一的文件前缀"
+            android:textColor="#333333"
+            android:textSize="@dimen/sp16"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="埋点页面匹配：eg  #pageName1#pageName2#"
+            android:inputType="text"
+            android:textColor="#333333" />
+
+        <EditText
+            android:id="@+id/etEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="自定义匹配：eg  #Event1#Event2#"
+            android:inputType="text"
+            android:textColor="#333333" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etPrefix"
+                android:layout_width="@dimen/common110dp"
+                android:layout_height="wrap_content"
+                android:hint="日志文件前缀"
+                android:inputType="text"
+                android:maxLength="5"
+                android:textColor="#333333" />
+
+            <CheckBox
+                android:id="@+id/cbLogSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:button="@drawable/selector_checkbox1"
+                android:checked="false"
+                android:padding="@dimen/dp_10"
+                android:text="开启新日志" />
+
+            <TextView
+                android:id="@+id/tvConfirm"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/common38dp"
+                android:layout_marginStart="@dimen/common15dp"
+                android:background="@drawable/bg_blue_radius25"
+                android:gravity="center"
+                android:paddingStart="@dimen/common15dp"
+                android:paddingEnd="@dimen/common15dp"
+                android:text="提交上传"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etWebUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入要打开的H5链接"
+            android:textColor="#333333" />
+
+        <TextView
+            android:id="@+id/tvWebView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common38dp"
+            android:layout_marginStart="@dimen/common15dp"
+            android:background="@drawable/bg_blue_radius25"
+            android:gravity="center"
+            android:paddingStart="@dimen/common15dp"
+            android:paddingEnd="@dimen/common15dp"
+            android:text="打开WebView"
+            android:layout_marginTop="@dimen/common8dp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tvCoupon"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common38dp"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common15dp"
+            android:background="@drawable/bg_blue_radius25"
+            android:gravity="center"
+            android:paddingStart="@dimen/common15dp"
+            android:paddingEnd="@dimen/common15dp"
+            android:text="优惠券包"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tvGoBorrow"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common38dp"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common15dp"
+            android:background="@drawable/bg_blue_radius25"
+            android:gravity="center"
+            android:paddingStart="@dimen/common15dp"
+            android:paddingEnd="@dimen/common15dp"
+            android:text="支用"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tvGoEdAgreement"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common38dp"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common15dp"
+            android:background="@drawable/bg_blue_radius25"
+            android:gravity="center"
+            android:paddingStart="@dimen/common15dp"
+            android:paddingEnd="@dimen/common15dp"
+            android:text="申额协议"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tvGoEdProgress"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common38dp"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common15dp"
+            android:background="@drawable/bg_blue_radius25"
+            android:gravity="center"
+            android:paddingStart="@dimen/common15dp"
+            android:paddingEnd="@dimen/common15dp"
+            android:text="额度申请结果页"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tvGoPerfectInfo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common38dp"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common15dp"
+            android:background="@drawable/bg_blue_radius25"
+            android:gravity="center"
+            android:paddingStart="@dimen/common15dp"
+            android:paddingEnd="@dimen/common15dp"
+            android:text="个人资料"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tvGoSevenBill"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common38dp"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common15dp"
+            android:background="@drawable/bg_blue_radius25"
+            android:gravity="center"
+            android:paddingStart="@dimen/common15dp"
+            android:paddingEnd="@dimen/common15dp"
+            android:text="七日待还"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tvGoAllBill"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common38dp"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common15dp"
+            android:background="@drawable/bg_blue_radius25"
+            android:gravity="center"
+            android:paddingStart="@dimen/common15dp"
+            android:paddingEnd="@dimen/common15dp"
+            android:text="全部待还"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tvShowDevice64Or32"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common38dp"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common15dp"
+            android:background="@drawable/bg_blue_radius25"
+            android:gravity="center"
+            android:paddingStart="@dimen/common15dp"
+            android:paddingEnd="@dimen/common15dp"
+            android:text="64位 or 32位"
+            android:textColor="@color/white" />
+        <TextView
+            android:id="@+id/tvShowUserId"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common38dp"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common15dp"
+            android:background="@drawable/bg_blue_radius25"
+            android:gravity="center"
+            android:paddingStart="@dimen/common15dp"
+            android:paddingEnd="@dimen/common15dp"
+            android:text="deviceId、userId、X0/X1/X2"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tvAny"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common38dp"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common15dp"
+            android:background="@drawable/bg_blue_radius25"
+            android:gravity="center"
+            android:paddingStart="@dimen/common15dp"
+            android:paddingEnd="@dimen/common15dp"
+            android:text="未知"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tvCode"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common38dp"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common15dp"
+            android:background="@drawable/bg_blue_radius25"
+            android:gravity="center"
+            android:paddingStart="@dimen/common15dp"
+            android:paddingEnd="@dimen/common15dp"
+            android:text="获取微信code"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

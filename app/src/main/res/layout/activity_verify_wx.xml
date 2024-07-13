@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/common100dp"
+        android:layout_marginBottom="@dimen/common17dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/src_verify_wx_login_top" />
+
+    <ImageView
+        android:id="@+id/iv_wx_login"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/common35dp"
+        android:layout_marginTop="@dimen/common17dp"
+        android:layout_marginBottom="@dimen/common8dp"
+        android:contentDescription="微信登录"
+        android:src="@drawable/src_verify_wx_login" />
+
+    <ImageView
+        android:id="@+id/iv_wx_phone_login"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/common35dp"
+        android:layout_marginTop="@dimen/common8dp"
+        android:contentDescription="手机号的登录"
+        android:src="@drawable/src_verify_wx_login_phone" />
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/bg_dialog_edu_back_top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_bl8_br_8"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/common20dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common17dp"
+            android:text="为您准备了200,000元额度"
+            android:textColor="@color/color_303133"
+            android:textSize="@dimen/sp17"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common8dp"
+            android:text="真的放弃吗？"
+            android:textColor="@color/color_606166"
+            android:textSize="@dimen/sp15" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnContinue"
+            style="@style/commonButton"
+            android:layout_width="@dimen/common202dp"
+            android:layout_height="@dimen/common40dp"
+            android:layout_marginTop="@dimen/common20dp"
+            android:text="继续获取额度"
+            android:textSize="@dimen/sp15" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnGiveUp"
+            android:layout_width="@dimen/common202dp"
+            android:layout_height="@dimen/common40dp"
+            android:layout_marginTop="@dimen/common8dp"
+            android:background="@drawable/bg_primary_color_line_r20_w1"
+            android:text="放弃了"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp15" />
+    </LinearLayout>
+</LinearLayout>

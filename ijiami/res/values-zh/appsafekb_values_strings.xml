@@ -1,0 +1,19 @@
+<resources>
+    <string name="bcs_string_ok">确定</string>
+    <string name="bcs_string_more">更多</string>
+    <string name="bcs_string_cancel">取消</string>
+    <string name="bcs_string_appname">够花安全键盘</string>
+    <string name="bcs_string_symbol">符号</string>
+    <string name="bcs_string_complete">完成</string>
+    <string name="bcs_string_delete">删除</string>
+    <string name="bcs_string_switch">切换</string>
+    <string name="bcs_string_hidden">隐藏</string>
+    <string name="bcs_string_space">@string/bcs_string_appname</string>
+
+    <string name="bcs_string_shift">shift</string>
+
+
+    <string name="bcs_string_appname_dight">@string/bcs_string_appname</string>
+    <string name="bcs_string_appname_symbols">@string/bcs_string_appname</string>
+    <string name="bcs_string_appname_letter">@string/bcs_string_appname</string>
+</resources>

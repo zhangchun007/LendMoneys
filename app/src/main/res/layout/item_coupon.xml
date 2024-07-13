@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlItemRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/common11dp"
+    tools:viewBindingIgnore="true">
+
+    <View
+        android:id="@+id/vBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@id/rlTop"
+        android:layout_alignBottom="@id/llBottom"
+        android:layout_marginStart="@dimen/common15dp"
+        android:layout_marginEnd="@dimen/common15dp" />
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common74dp"
+        android:layout_alignStart="@id/vBg"
+        android:layout_alignEnd="@id/vBg"
+        android:layout_marginTop="@dimen/common4dp"
+        android:orientation="horizontal"
+        android:paddingStart="0dp"
+        android:paddingEnd="@dimen/common15dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivDiscountLogo"
+            android:layout_width="@dimen/common94dp"
+            android:layout_height="@dimen/common50dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_launcher"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/llMoneyContent"
+            android:layout_width="@dimen/common94dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvMoneyType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:includeFontPadding="false"
+                    android:paddingBottom="@dimen/common3dp"
+                    android:text="¥"
+                    android:textColor="@color/color_ff5151"
+                    android:textSize="@dimen/sp16" />
+
+                <TextView
+                    android:id="@+id/tvMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:lines="1"
+                    android:textColor="@color/color_ff5151"
+                    android:textSize="@dimen/sp28"
+                    tools:text="888" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvCouponType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lines="1"
+                android:text="满200可用"
+                android:textColor="@color/color_606166"
+                android:textSize="@dimen/sp11" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_discount_coupon_btn"
+            android:gravity="center"
+            android:paddingLeft="@dimen/common14dp"
+            android:paddingTop="@dimen/common7dp"
+            android:paddingRight="@dimen/common14dp"
+            android:paddingBottom="@dimen/common7dp"
+            android:text="去使用"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp14"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/tvInterestChoose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/interest_selector_checkbox"
+            android:checked="false"
+            android:clickable="false"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/common15dp"
+            android:layout_toStartOf="@+id/tvUser"
+            android:layout_toEndOf="@+id/llMoneyContent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvLatinosName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:drawablePadding="@dimen/common5dp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="全场通用xxxx"
+                    android:textColor="@color/color_303133"
+                    android:textSize="@dimen/sp15" />
+
+                <TextView
+                    android:id="@+id/tvLatinosDes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common8dp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="times"
+                    android:textColor="@color/color_909199"
+                    android:textSize="@dimen/sp11" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_cal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common4dp"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/color_ff5151"
+                    android:textSize="@dimen/sp11"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/common36dp"
+        android:layout_below="@+id/rlTop"
+        android:layout_alignStart="@id/vBg"
+        android:layout_alignEnd="@id/vBg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/icon_right_more"
+            android:drawablePadding="@dimen/common4dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingStart="@dimen/common10dp"
+            android:paddingEnd="@dimen/common10dp"
+            android:text="使用规则"
+            android:textColor="@color/color_606166"
+            android:textSize="@dimen/sp12" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvUnserviceableInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/common20dp"
+            android:layout_marginEnd="@dimen/common10dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingTop="@dimen/common2dp"
+            android:paddingBottom="@dimen/common2dp"
+            android:text="@string/unserviceable"
+            android:textColor="@color/color_ff5151"
+            android:textSize="@dimen/sp11"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLookBindLoan"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/common20dp"
+            android:layout_marginEnd="@dimen/common15dp"
+            android:background="@drawable/bg_transparent_bfc2cc_10"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingStart="@dimen/common8dp"
+            android:paddingTop="@dimen/common2dp"
+            android:paddingEnd="@dimen/common8dp"
+            android:paddingBottom="@dimen/common2dp"
+            android:text="查看绑定借款"
+            android:textColor="@color/color_909199"
+            android:textSize="@dimen/sp11"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivLeftTopFlag"
+        android:layout_width="@dimen/common46dp"
+        android:layout_height="@dimen/common41dp"
+        android:layout_marginStart="@dimen/common11dp"
+        android:scaleType="fitStart"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/img_item_coupon_bind" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTipFlag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/vBg"
+        android:layout_alignEnd="@id/vBg"
+        android:background="@drawable/bg_item_interest_right_top"
+        android:paddingStart="@dimen/common4dp"
+        android:paddingTop="@dimen/common1dp"
+        android:paddingEnd="@dimen/common4dp"
+        android:paddingBottom="@dimen/common2dp"
+        android:textColor="@color/color_ff5151"
+        android:textSize="@dimen/dimen_12sp"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivInvalidOverdue"
+        android:layout_width="@dimen/common50dp"
+        android:layout_height="@dimen/common50dp"
+        android:layout_alignTop="@id/vBg"
+        android:layout_alignEnd="@id/vBg"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/src_coupon_invalid"
+        android:visibility="gone" />
+</RelativeLayout>

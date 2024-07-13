@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
+    android:layout_width="@dimen/common120dp"
+    android:layout_height="@dimen/common160dp"
+    android:layout_marginEnd="@dimen/common20dp"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    tools:viewBindingIgnore="true">
+
+    <ImageView
+        android:id="@+id/iv_goods"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/common10dp" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_goods"
+        android:layout_marginTop="@dimen/common5dp"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:maxLines="2"
+        android:textColor="@color/color_313131"
+        android:textSize="@dimen/sp12"
+        tools:text="新品】海尔洗衣机 健康杀菌干洗洗衣机洗衣机" />
+
+    <TextView
+        android:id="@+id/tv_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_title"
+        android:gravity="center_vertical"
+        android:text="￥"
+        android:textColor="@color/color_ff5151"
+        android:textSize="@dimen/dimen_11sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_title"
+        android:layout_toRightOf="@+id/tv_mark"
+        android:gravity="center_vertical"
+        android:maxLength="7"
+        android:textColor="@color/color_ff5151"
+        android:textSize="@dimen/sp13"
+        android:textStyle="bold"
+        tools:text="8888.885555" />
+
+    <TextView
+        android:id="@+id/tv_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/common18dp"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginStart="@dimen/common5dp"
+        android:layout_marginTop="@dimen/common4dp"
+        android:layout_toRightOf="@+id/tv_money"
+        android:background="@drawable/bg_tag"
+        android:gravity="center_vertical"
+        android:maxLength="6"
+        android:paddingStart="@dimen/common6dp"
+        android:paddingEnd="@dimen/common6dp"
+        android:textColor="@color/color_ac6d51"
+        android:textSize="@dimen/sp10"
+        tools:text="6期免息1111" />
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.app.haiercash.base.bui.TitleBarView
+        android:id="@+id/bar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View style="@style/Divider05dp_EDEFF2" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mineBackground"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common15dp"
+                android:layout_marginTop="@dimen/common10dp"
+                android:layout_marginEnd="@dimen/common15dp"
+                android:text="@string/msg_manager_desc"
+                android:textColor="@color/color_909199"
+                android:textSize="@dimen/sp13" />
+
+            <LinearLayout
+                android:id="@+id/ll_msg_switch"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common50dp"
+                android:layout_marginTop="@dimen/common10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/common15dp"
+                android:paddingEnd="@dimen/common15dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/msg_manager"
+                    android:textColor="@color/color_303133"
+                    android:textSize="@dimen/sp16" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_msg_switch"
+                    android:layout_width="@dimen/common40dp"
+                    android:layout_height="@dimen/common22dp"
+                    android:layout_marginStart="@dimen/common10dp"
+                    app:srcCompat="@drawable/togglebutton_on" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

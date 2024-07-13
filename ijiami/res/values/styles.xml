@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="appsafekb_keyboard_DialogAnim" parent="android:Animation" >
+        <item name="android:windowEnterAnimation">@anim/safekb_dialog_anim_enter</item>
+        <item name="android:windowExitAnimation">@anim/safekb_dialog_anim_exit</item>
+    </style>
+
+
+<!--
+
+        <item name="android:windowFrame">@null</item>&lt;!&ndash;边框&ndash;&gt;
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">false</item>&lt;!&ndash;半透明 padding?&ndash;&gt;
+        <item name="android:windowIsFloating">false</item>&lt;!&ndash; false则包裹。  windowIsFloating  true.match_parent失效 false则 不能自动消失 设置windowIsTranslucent same&ndash;&gt;
+        <item name="android:windowBackground">@android:color/transparent</item>&lt;!&ndash;这里可以设置透明背景&ndash;&gt;
+        <item name="android:backgroundDimEnabled">false</item>&lt;!&ndash; 变暗 允许 &ndash;&gt;
+        <item name="android:windowContentOverlay">@null</item>
+
+-->
+
+    <style name="appsafekb_keyboard_Dialog">
+
+
+
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+
+    
+
+    <style name="appsafekb_license_Dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
+</resources>

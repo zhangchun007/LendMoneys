@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/common80dp"
+            android:background="@color/color_F3F7FD"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/llLoanCouponContent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common433dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/bg_pop_loan_coupon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/llLoanCouponContent" />
+
+        <LinearLayout
+            android:id="@+id/llLoanCouponContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/common71dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_default="wrap"
+            app:layout_constraintHeight_max="@dimen/common441dp"
+            app:layout_constraintHeight_min="@dimen/common362dp"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCouponTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common15dp"
+                android:layout_marginTop="@dimen/common30dp"
+                android:text="请选择可用免息券"
+                android:textColor="@color/color_303133"
+                android:textSize="@dimen/sp22"
+                android:textStyle="bold" />
+
+            <com.haiercash.gouhua.widget.MarqueeTextView
+                android:id="@+id/tvCouponTopTip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common13dp"
+                android:layout_marginTop="@dimen/common10dp"
+                android:layout_marginEnd="@dimen/common15dp"
+                android:background="@drawable/bg_pop_loan_coupon_tip"
+                android:drawableStart="@drawable/ic_pop_loan_coupon"
+                android:drawablePadding="@dimen/common2dp"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingStart="@dimen/common13dp"
+                android:paddingTop="@dimen/common10dp"
+                android:paddingEnd="@dimen/common15dp"
+                android:paddingBottom="@dimen/common10dp"
+                android:singleLine="true"
+                android:text="发生逾期不可用，记得按时还款哦～"
+                android:textColor="@color/color_ffd28d01"
+                android:textSize="@dimen/sp13" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPopLoanCoupon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common13dp" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnLoanCoupon"
+            style="@style/commonButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common42dp"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginEnd="@dimen/common15dp"
+            android:layout_marginBottom="@dimen/common20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCouponClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common10dp"
+            android:layout_marginEnd="@dimen/common10dp"
+            android:paddingStart="@dimen/common10dp"
+            android:paddingTop="@dimen/common10dp"
+            android:paddingEnd="@dimen/common10dp"
+            android:paddingBottom="@dimen/common10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/llLoanCouponContent"
+            app:srcCompat="@drawable/icon_close_grey" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

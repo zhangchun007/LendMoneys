@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <com.app.haiercash.base.bui.TitleBarView
+        android:id="@+id/bar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/ll_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/common20dp"
+        android:paddingEnd="@dimen/common20dp"
+        android:paddingBottom="@dimen/common30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common30dp"
+            android:text="绑定手机号"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp22"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common10dp"
+            android:text="为了您的账号安全，需绑定手机号"
+            android:textColor="@color/gray_909199"
+            android:textSize="@dimen/sp15" />
+
+        <com.haiercash.gouhua.widget.DelEditText
+            android:id="@+id/et_input_mobile_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common22dp"
+            android:gravity="center_vertical"
+            android:hint="请输入手机号"
+            android:inputType="number"
+            android:maxLength="13"
+            android:maxLines="1"
+            android:paddingTop="@dimen/common8dp"
+            android:paddingBottom="@dimen/common8dp"
+            android:textColor="@color/color_303133"
+            android:textColorHint="@color/color_BFC2CC"
+            android:textCursorDrawable="@drawable/edittext_cursor"
+            android:textSize="@dimen/sp18"
+            app:enable_custom_line="true" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common28dp"
+            android:orientation="horizontal">
+
+            <com.haiercash.gouhua.widget.DelEditText
+                android:id="@+id/det_input_verify"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:hint="请输入验证码"
+                android:inputType="number"
+                android:maxLength="6"
+                android:maxLines="1"
+                android:paddingTop="@dimen/common3dp"
+                android:textColor="@color/color_303133"
+                android:textColorHint="@color/color_BFC2CC"
+                android:textCursorDrawable="@drawable/edittext_cursor"
+                android:textSize="@dimen/sp18"
+                app:enable_custom_line="true" />
+
+            <com.haiercash.gouhua.sms.SmsTimeView
+                android:id="@+id/stv_sms"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_button_login_sms"
+                android:gravity="center"
+                android:minHeight="@dimen/common36dp"
+                android:paddingTop="@dimen/common8dp"
+                android:paddingBottom="@dimen/common7dp"
+                android:textSize="@dimen/sp15"
+                app:afterTimerText="s"
+                app:normalText="获取验证码"
+                app:refreshText="重新发送"
+                app:highTextColor="@drawable/send_sms_selector" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_agreement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common15dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <CheckBox
+                android:id="@+id/cb_agree"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:button="@drawable/cb_single_standard"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_agreement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/common5dp"
+                android:text="我已阅读并同意"
+                android:textSize="@dimen/sp12" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/common40dp"
+            android:background="@drawable/selector_big_btn"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="@string/sure"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_18sp" />
+    </LinearLayout>
+</LinearLayout>

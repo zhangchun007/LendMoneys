@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:viewBindingIgnore="true">
+
+    <View
+        android:id="@+id/view_help_center"
+        style="@style/Divider_0_5dp" />
+
+    <TextView
+        android:id="@+id/iv_empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:drawableTop="@drawable/img_empty_bill"
+        android:gravity="center"
+        android:text="什么都没有发生~"
+        android:textSize="@dimen/sp14"
+        android:visibility="gone" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view_line2"
+        android:layout_below="@+id/view_help_center"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/rv_help_head100"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:visibility="gone" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/rv_help_head"
+                android:layout_width="match_parent"
+                android:layout_height="160dp" />
+
+            <com.haiercash.gouhua.widget.CirclePageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:paddingBottom="@dimen/common10dp"
+                android:visibility="gone"
+                app:fillColor="#c7c7c7"
+                app:pageColor="#eeeeee"
+                app:strokeWidth="0dp" />
+
+            <View
+                android:id="@+id/view_divder_type"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common10dp"
+                android:background="@color/windowBackground" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/common15dp"
+                android:paddingTop="@dimen/common15dp"
+                android:paddingBottom="@dimen/common8dp"
+                android:text="常见问题"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp18"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <View
+        android:id="@+id/view_line2"
+        style="@style/Divider_0_5dp"
+        android:layout_above="@+id/ll_server" />
+
+    <LinearLayout
+        android:id="@+id/ll_server"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_online_server"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="@dimen/common20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingEnd="@dimen/common10dp"
+                android:src="@drawable/iv_online_server" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="在线客服"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp16"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/Divider1dp_portrait"
+            android:layout_margin="@dimen/common5dp"
+            android:background="@color/ffd8d8d8" />
+
+        <LinearLayout
+            android:id="@+id/ll_phone_server"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="@dimen/common20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingEnd="@dimen/common10dp"
+                android:src="@drawable/iv_phone_server" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="电话客服"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp16"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

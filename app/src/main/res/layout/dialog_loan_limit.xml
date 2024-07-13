@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    tools:viewBindingIgnore="true">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.2"
+        android:background="@color/transparent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="7.6"
+        android:minWidth="@dimen/common283dp"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_radius8"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/common30dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common29dp"
+                android:text="您还没有额度哦~"
+                android:textColor="@color/color_303133"
+                android:textSize="@dimen/sp17"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common10dp"
+                android:layout_marginTop="@dimen/common8dp"
+                android:layout_marginEnd="@dimen/common10dp"
+                android:text="您还没有额度哦~"
+                android:textColor="@color/color_303133"
+                android:textSize="@dimen/sp15" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/common149dp"
+                android:layout_height="@dimen/common98dp"
+                android:layout_marginTop="@dimen/common11dp"
+                app:srcCompat="@drawable/img_dialog_loan_limit" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBtn"
+                style="@style/commonButton"
+                android:layout_width="@dimen/common160dp"
+                android:layout_height="@dimen/common40dp"
+                android:layout_marginTop="@dimen/common8dp"
+                android:text="申请额度"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_16sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivClose"
+            android:layout_width="@dimen/common32dp"
+            android:layout_height="@dimen/common32dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/common15dp"
+            app:srcCompat="@drawable/close_pop_white" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.2"
+        android:background="@color/transparent" />
+</LinearLayout>

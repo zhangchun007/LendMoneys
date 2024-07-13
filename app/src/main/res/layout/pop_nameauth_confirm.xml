@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_top_radius"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/common23dp"
+            android:layout_height="@dimen/common23dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/common15dp"
+            android:layout_marginEnd="@dimen/common15dp"
+            android:padding="@dimen/common5dp"
+            android:src="@drawable/icon_close_grey" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common2dp"
+            android:layout_marginEnd="@dimen/common15dp"
+            android:layout_marginBottom="@dimen/common10dp"
+            android:text="请输入短信验证码"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp22" />
+
+        <LinearLayout
+            android:id="@+id/ll_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginEnd="@dimen/common15dp"
+            android:layout_marginBottom="@dimen/common16dp"
+            android:background="@drawable/bg_common_sms_inter_name"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/common10dp"
+            android:paddingEnd="@dimen/common10dp"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/common15dp"
+                android:layout_height="@dimen/common16dp"
+                android:layout_marginEnd="@dimen/common4dp"
+                android:src="@drawable/ic_exclamation_yellow_1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_inter_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/common10dp"
+                android:paddingBottom="@dimen/common10dp"
+                android:text=""
+                android:textColor="@color/color_975200"
+                android:textSize="@dimen/sp13" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginEnd="@dimen/common15dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_tips"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/color_909199"
+                android:textSize="@dimen/sp15"
+                tools:text="验证码已发送至188****5678" />
+
+            <com.haiercash.gouhua.sms.SmsTimeView
+                android:id="@+id/tv_countdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common10dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp15"
+                app:normalText="重新获取" />
+        </LinearLayout>
+
+        <!-- 验证码-->
+        <com.haiercash.gouhua.activity.login.SplitEditTextView
+            android:id="@+id/splitEdit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common35dp"
+            android:layout_marginLeft="@dimen/common19dp"
+            android:layout_marginTop="@dimen/common30dp"
+            android:layout_marginRight="@dimen/common19dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:inputType="number"
+            android:textColor="@color/color_303133"
+            android:textSelectHandleLeft="@android:color/transparent"
+            android:textSelectHandleRight="@android:color/transparent"
+            android:textSize="@dimen/sp24"
+            app:borderColor="@color/colorPrimary"
+            app:borderSize="@dimen/common1dp"
+            app:contentNumber="6"
+            app:contentShowMode="text"
+            app:cursorColor="@color/colorPrimary"
+            app:cursorHeight="@dimen/common21dp"
+            app:cursorWidth="@dimen/common2dp"
+            app:inputBoxStyle="underline"
+            app:spaceSize="@dimen/common11dp"
+            app:underlineFocusColor="@color/color_606166"
+            app:underlineNormalColor="@color/color_e8eaef" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_error_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common15dp"
+            android:layout_marginTop="@dimen/common6dp"
+            android:layout_marginEnd="@dimen/common15dp"
+            android:layout_marginBottom="@dimen/common32dp"
+            android:background="@null"
+            android:drawableStart="@drawable/icon_error_set_pwd"
+            android:drawablePadding="@dimen/common3dp"
+            android:text="验证码错误"
+            android:textColor="@color/color_ff5151"
+            android:textSize="12sp"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/splitEdit" />
+
+        <include layout="@layout/include_keyboardview" />
+
+        <com.haiercash.gouhua.view.NavigationBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

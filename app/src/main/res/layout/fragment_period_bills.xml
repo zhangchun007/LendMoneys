@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mineBackground"
+    android:orientation="vertical">
+
+    <com.haiercash.gouhua.widget.MarqueeTextView
+        android:id="@+id/tvBillRemark"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common38dp"
+        android:background="@color/color_FFF8E4"
+        android:drawableStart="@drawable/icon_remind1"
+        android:drawablePadding="@dimen/common4dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="start|center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingStart="@dimen/common14dp"
+        android:paddingEnd="@dimen/common14dp"
+        android:singleLine="true"
+        android:text="请珍爱信用，及时还款，逾期将上报人行征信。严重逾期被诉，可能被纳入失信被执行人名单及限制高消费名单。"
+        android:textColor="@color/color_ffd28d01"
+        android:textSize="@dimen/sp14"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/llEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common79dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBillRemark">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/common220dp"
+            android:layout_height="@dimen/common150dp"
+            app:srcCompat="@drawable/img_empty_bill" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common20dp"
+            android:text="您暂时没有7日内待还的借款哦～"
+            android:textColor="@color/color_909199"
+            android:textSize="@dimen/dimen_14sp" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/fragment_bills_comm_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/rlBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBillRemark" />
+
+    <View
+        android:id="@+id/vShadow"
+        style="@style/Shadow_up"
+        android:layout_width="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/rlBottom"
+        app:layout_constraintEnd_toEndOf="@id/rlBottom"
+        app:layout_constraintStart_toStartOf="@id/rlBottom" />
+
+    <RelativeLayout
+        android:id="@+id/rlBottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common60dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/common28dp"
+            android:layout_marginEnd="@dimen/common8dp"
+            android:layout_toStartOf="@+id/btRepayment"
+            android:gravity="center|start"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/common2dp"
+                android:paddingBottom="@dimen/common2dp">
+
+                <TextView
+                    android:id="@+id/tvTotalAmountTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="合计: "
+                    android:textColor="@color/color_303133"
+                    android:textSize="@dimen/sp15" />
+
+                <TextView
+                    android:id="@+id/tvTotalAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_ff5151"
+                    android:textSize="@dimen/sp16"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHasDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_333333"
+                android:textSize="@dimen/sp12"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvOverdueRem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="逾期笔数过多,具体金额见结算页面"
+                android:textColor="@color/text_gray_light"
+                android:textSize="@dimen/sp9"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btRepayment"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/common36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/common15dp"
+            android:background="@drawable/selector_big_btn_primary_color"
+            android:enabled="false"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingLeft="@dimen/common19dp"
+            android:paddingRight="@dimen/common19dp"
+            android:text="立即还款(0)"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp14" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

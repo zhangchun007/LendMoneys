@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    tools:viewBindingIgnore="true">
+
+    <View
+        android:id="@+id/v_top_space"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v_top_space">
+
+        <com.haiercash.gouhua.view.StatusBar
+            android:id="@+id/status_bar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="220dp"
+            android:layout_height="@dimen/common50dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp18"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/status_bar" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/head_left"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/common50dp"
+            android:paddingStart="@dimen/common15dp"
+            android:paddingEnd="@dimen/common10dp"
+            android:src="@drawable/iv_back_arrow_blues"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/status_bar" />
+
+        <ImageView
+            android:id="@+id/head_close"
+            android:layout_width="@dimen/common13dp"
+            android:layout_height="@dimen/common50dp"
+            android:src="@drawable/ic_web_close"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/head_left"
+            app:layout_constraintTop_toBottomOf="@id/status_bar" />
+
+        <ImageView
+            android:id="@+id/head_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/common15dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/status_bar" />
+
+        <TextView
+            android:id="@+id/head_rightText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/common15dp"
+            android:textColor="@color/gray_303133"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/status_bar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.haiercash.gouhua.x5webview.CusWebView
+        android:id="@+id/bkWebview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_header" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackground"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <com.app.haiercash.base.bui.TitleBarView
+        android:id="@+id/bar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View style="@style/Divider_0_5dp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/common1dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_perfect_des"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/common16dp"
+                android:paddingTop="@dimen/common15dp"
+                android:paddingEnd="@dimen/common16dp"
+                android:text="个人资料"
+                android:textColor="@color/text_black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/des_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.1"
+                android:paddingStart="@dimen/common16dp"
+                android:paddingTop="@dimen/common5dp"
+                android:paddingEnd="@dimen/common16dp"
+                android:text="请填写/确认您真实的个人信息"
+                android:textColor="@color/gray_909199"
+                android:textSize="@dimen/sp12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_perfect_des" />
+
+            <TextView
+                android:id="@+id/des"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/common38dp"
+                android:lineSpacingMultiplier="1.1"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/common10dp"
+                android:layout_marginTop="@dimen/common15dp"
+                android:paddingEnd="@dimen/common6dp"
+                android:text="我们将保护您的隐私,您的资料仅用于审核批复额度"
+                android:textColor="@color/color_d28d01"
+                android:background="@drawable/bg_pop_loan_coupon_tip"
+                android:textSize="@dimen/sp14"
+                android:layout_marginStart="@dimen/common15dp"
+                android:layout_marginEnd="@dimen/common15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/des_info" />
+
+            <TextView
+                android:id="@+id/tv_occupation"
+                style="@style/PersonInfoKey"
+                android:text="职业"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/des" />
+
+            <TextView
+                android:id="@+id/et_occupation"
+                style="@style/StyleValue_con"
+                android:drawableEnd="@drawable/the_arrow_r_grey"
+                android:gravity="center_vertical"
+                android:hint="请选择"
+                android:paddingStart="@dimen/common12dp"
+                android:paddingEnd="@dimen/common16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_occupation"
+                app:layout_constraintTop_toBottomOf="@id/des" />
+
+            <View
+                style="@style/Divider1dp_con"
+                android:layout_marginStart="@dimen/common16dp"
+                android:layout_marginEnd="@dimen/common16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_occupation" />
+
+            <TextView
+                android:id="@+id/tv_work"
+                style="@style/PersonInfoKey"
+                android:layout_marginTop="@dimen/common1dp"
+                android:text="工作单位"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_occupation" />
+
+            <com.haiercash.gouhua.widget.DelEditText
+                android:id="@+id/et_work_name"
+                style="@style/StyleValue_con"
+                android:layout_marginTop="@dimen/common1dp"
+                android:hint="请输入单位名称"
+                android:paddingStart="@dimen/common12dp"
+                android:paddingEnd="@dimen/common8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_work"
+                app:layout_constraintTop_toBottomOf="@+id/et_occupation" />
+
+            <View
+                style="@style/Divider_0_5dp"
+                android:layout_marginStart="@dimen/common16dp"
+                android:layout_marginEnd="@dimen/common16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_work_name" />
+
+            <TextView
+                style="@style/PersonInfoKey"
+                android:layout_marginTop="@dimen/common1dp"
+                android:text="单位电话"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_work_name" />
+
+            <com.haiercash.gouhua.widget.DelEditText
+                android:id="@+id/et_work_phone"
+                style="@style/StyleValue_con"
+                android:layout_marginTop="@dimen/common1dp"
+                android:digits="1234567890-"
+                android:hint="示例021-12345678"
+                android:inputType="number"
+                android:maxLength="12"
+                android:paddingStart="@dimen/common12dp"
+                android:paddingEnd="@dimen/common8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/et_work_name"
+                app:layout_constraintTop_toBottomOf="@+id/et_work_name" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/common8dp"
+                android:background="@color/windowBackground"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_work_phone" />
+
+            <TextView
+                style="@style/PersonInfoKey"
+                android:layout_marginTop="@dimen/common8dp"
+                android:text="居住地址"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_work_phone" />
+
+            <TextView
+                android:id="@+id/et_home_place"
+                style="@style/StyleValue_con"
+                android:layout_marginTop="@dimen/common8dp"
+                android:drawableEnd="@drawable/the_arrow_r_grey"
+                android:gravity="center_vertical"
+                android:hint="请选择"
+                android:paddingStart="@dimen/common12dp"
+                android:paddingEnd="@dimen/common16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/et_work_phone"
+                app:layout_constraintTop_toBottomOf="@id/et_work_phone" />
+
+            <View
+                style="@style/Divider1dp_con"
+                android:layout_marginStart="@dimen/common16dp"
+                android:layout_marginEnd="@dimen/common16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_home_place" />
+
+            <com.haiercash.gouhua.widget.DelEditText
+                android:id="@+id/et_home_intimate"
+                style="@style/StyleValue_con"
+                android:layout_marginTop="@dimen/common1dp"
+                android:hint="请输入详细地址"
+                android:maxLines="2"
+                android:paddingStart="@dimen/common12dp"
+                android:paddingEnd="@dimen/common16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/et_home_place"
+                app:layout_constraintTop_toBottomOf="@+id/et_home_place" />
+
+            <View
+                style="@style/Divider1dp_con"
+                android:layout_marginStart="@dimen/common16dp"
+                android:layout_marginEnd="@dimen/common16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_home_intimate" />
+
+            <TextView
+                style="@style/PersonInfoKey"
+                android:layout_marginTop="@dimen/common1dp"
+                android:text="学历"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_home_intimate" />
+
+            <TextView
+                android:id="@+id/et_education"
+                style="@style/StyleValue_con"
+                android:layout_marginTop="@dimen/common1dp"
+                android:drawableEnd="@drawable/the_arrow_r_grey"
+                android:gravity="center_vertical"
+                android:hint="请选择"
+                android:paddingStart="@dimen/common12dp"
+                android:paddingEnd="@dimen/common16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/et_home_intimate"
+                app:layout_constraintTop_toBottomOf="@id/et_home_intimate" />
+
+            <View
+                style="@style/Divider1dp_con"
+                android:layout_marginStart="@dimen/common16dp"
+                android:layout_marginEnd="@dimen/common16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_education" />
+
+            <TextView
+                style="@style/PersonInfoKey"
+                android:layout_marginTop="@dimen/common1dp"
+                android:text="婚姻状况"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_education" />
+
+            <TextView
+                android:id="@+id/et_marriage_status"
+                style="@style/StyleValue_con"
+                android:layout_marginTop="@dimen/common1dp"
+                android:drawableEnd="@drawable/the_arrow_r_grey"
+                android:gravity="center_vertical"
+                android:hint="请选择"
+                android:paddingStart="@dimen/common12dp"
+                android:paddingEnd="@dimen/common16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/et_education"
+                app:layout_constraintTop_toBottomOf="@id/et_education" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/common8dp"
+                android:background="@color/windowBackground"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_marriage_status" />
+
+            <TextView
+                style="@style/PersonInfoKey"
+                android:layout_marginTop="@dimen/common8dp"
+                android:text="月收入"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_marriage_status" />
+
+            <com.haiercash.gouhua.widget.DelEditText
+                android:id="@+id/et_salary"
+                style="@style/StyleValue_con"
+                android:layout_marginTop="@dimen/common8dp"
+                android:hint="请输入月收入"
+                android:inputType="number"
+                android:maxLength="6"
+                android:paddingStart="@dimen/common12dp"
+                android:paddingEnd="@dimen/common8dp"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/et_marriage_status"
+                app:layout_constraintTop_toBottomOf="@id/et_marriage_status" />
+
+            <View
+                style="@style/Divider1dp_con"
+                android:layout_marginStart="@dimen/common16dp"
+                android:layout_marginEnd="@dimen/common16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_salary" />
+
+            <TextView
+                style="@style/PersonInfoKey"
+                android:layout_marginTop="@dimen/common1dp"
+                android:text="个人邮箱"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_salary" />
+
+            <com.haiercash.gouhua.widget.DelEditText
+                android:id="@+id/et_email"
+                style="@style/StyleValue_con"
+                android:layout_marginTop="@dimen/common1dp"
+                android:hint="请输入个人邮箱"
+                android:paddingStart="@dimen/common12dp"
+                android:paddingEnd="@dimen/common8dp"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/et_salary"
+                app:layout_constraintTop_toBottomOf="@id/et_salary" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/common8dp"
+                android:background="@color/windowBackground"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_email" />
+
+            <TextView
+                style="@style/PersonInfoKey"
+                android:layout_marginTop="@dimen/common8dp"
+                android:text="常用联系人1"
+                android:textSize="@dimen/sp12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_email" />
+
+            <com.haiercash.gouhua.widget.DelEditText
+                android:id="@+id/et_contact_name"
+                style="@style/StyleValue_con"
+                android:layout_marginTop="@dimen/common8dp"
+                android:hint="请输入联系人姓名"
+                android:maxEms="20"
+                android:maxLength="20"
+                android:paddingStart="@dimen/common12dp"
+                android:paddingEnd="@dimen/common8dp"
+                android:singleLine="true"
+                app:input_style="not_number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/et_email"
+                app:layout_constraintTop_toBottomOf="@id/et_email" />
+
+            <View
+                style="@style/Divider1dp_con"
+                android:layout_marginStart="@dimen/common16dp"
+                android:layout_marginEnd="@dimen/common16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_contact_name" />
+
+            <TextView
+                style="@style/PersonInfoKey"
+                android:layout_marginTop="@dimen/common1dp"
+                android:text="关系"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_contact_name" />
+
+            <TextView
+                android:id="@+id/et_contact_relation"
+                style="@style/StyleValue_con"
+                android:layout_marginTop="@dimen/common1dp"
+                android:drawableEnd="@drawable/the_arrow_r_grey"
+                android:gravity="center_vertical"
+                android:hint="请选择"
+                android:paddingStart="@dimen/common12dp"
+                android:paddingEnd="@dimen/common16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/et_contact_name"
+                app:layout_constraintTop_toBottomOf="@id/et_contact_name" />
+
+            <View
+                style="@style/Divider1dp_con"
+                android:layout_marginStart="@dimen/common16dp"
+                android:layout_marginEnd="@dimen/common16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_contact_relation" />
+
+            <TextView
+                style="@style/PersonInfoKey"
+                android:layout_marginTop="@dimen/common1dp"
+                android:text="联系人电话"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_contact_relation" />
+
+            <com.haiercash.gouhua.widget.DelEditText
+                android:id="@+id/et_contact_phone"
+                style="@style/StyleValue_con"
+                android:layout_marginTop="@dimen/common1dp"
+                android:drawableEnd="@drawable/the_arrow_r_grey"
+                android:gravity="center_vertical"
+                android:hint="请从通讯录选择"
+                android:paddingStart="@dimen/common12dp"
+                android:paddingEnd="@dimen/common16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/et_contact_relation"
+                app:layout_constraintTop_toBottomOf="@id/et_contact_relation" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/common8dp"
+                android:background="@color/windowBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_contact_phone" />
+
+
+            <TextView
+                style="@style/PersonInfoKey"
+                android:layout_marginTop="@dimen/common8dp"
+                android:text="常用联系人2"
+                android:textSize="@dimen/sp12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_contact_phone" />
+
+            <com.haiercash.gouhua.widget.DelEditText
+                android:id="@+id/et_contact_name2"
+                style="@style/StyleValue_con"
+                android:layout_marginTop="@dimen/common8dp"
+                android:hint="请输入联系人姓名"
+                android:maxEms="20"
+                android:maxLength="20"
+                android:paddingStart="@dimen/common12dp"
+                android:paddingEnd="@dimen/common8dp"
+                android:singleLine="true"
+                app:input_style="not_number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/et_contact_phone"
+                app:layout_constraintTop_toBottomOf="@id/et_contact_phone" />
+
+            <View
+                style="@style/Divider1dp_con"
+                android:layout_marginStart="@dimen/common16dp"
+                android:layout_marginEnd="@dimen/common16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_contact_name2" />
+
+            <TextView
+                style="@style/PersonInfoKey"
+                android:layout_marginTop="@dimen/common1dp"
+                android:text="关系"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_contact_name2" />
+
+            <TextView
+                android:id="@+id/et_contact_relation2"
+                style="@style/StyleValue_con"
+                android:layout_marginTop="@dimen/common1dp"
+                android:drawableEnd="@drawable/the_arrow_r_grey"
+                android:gravity="center_vertical"
+                android:hint="请选择"
+                android:paddingStart="@dimen/common12dp"
+                android:paddingEnd="@dimen/common16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/et_contact_name2"
+                app:layout_constraintTop_toBottomOf="@id/et_contact_name2" />
+
+            <View
+                style="@style/Divider1dp_con"
+                android:layout_marginStart="@dimen/common16dp"
+                android:layout_marginEnd="@dimen/common16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_contact_relation2" />
+
+            <TextView
+                style="@style/PersonInfoKey"
+                android:layout_marginTop="@dimen/common1dp"
+                android:text="联系人电话"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_contact_relation2" />
+
+            <com.haiercash.gouhua.widget.DelEditText
+                android:id="@+id/et_contact_phone2"
+                style="@style/StyleValue_con"
+                android:layout_marginTop="@dimen/common1dp"
+                android:drawableEnd="@drawable/the_arrow_r_grey"
+                android:gravity="center_vertical"
+                android:hint="请从通讯录选择"
+                android:paddingStart="@dimen/common12dp"
+                android:paddingEnd="@dimen/common16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/et_contact_relation2"
+                app:layout_constraintTop_toBottomOf="@id/et_contact_relation2" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/windowBackground"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_contact_phone2" />
+
+            <TextView
+                android:id="@+id/bt_next"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common48dp"
+                android:layout_marginStart="@dimen/common15dp"
+                android:layout_marginTop="@dimen/common20dp"
+                android:layout_marginEnd="@dimen/common15dp"
+                android:background="@drawable/bg_quota_commit_radius21"
+                android:gravity="center"
+                android:textSize="@dimen/sp18"
+                android:text="提交"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_contact_phone2" />
+
+            <com.haiercash.gouhua.view.EduProgressBottomBarView
+                android:id="@+id/progress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common20dp"
+                app:edu_progress="3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bt_next" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

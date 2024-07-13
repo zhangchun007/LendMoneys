@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common50dp"
+        android:layout_marginLeft="@dimen/common10dp"
+        android:layout_marginRight="@dimen/common5dp">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common50dp"
+            android:text="银行"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/dimen_16sp" />
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="@dimen/common100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="单笔限额"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/dimen_16sp" />
+    </RelativeLayout>
+
+    <View
+        style="@style/Divider_0_5dp"
+        android:layout_marginLeft="@dimen/common10dp"
+        android:layout_marginRight="@dimen/common5dp" />
+</LinearLayout>

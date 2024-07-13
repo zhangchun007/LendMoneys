@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/common15dp">
+
+    <ImageView
+        android:layout_width="@dimen/common24dp"
+        android:layout_height="@dimen/common24dp"
+        android:layout_gravity="center"
+        android:src="@drawable/iv_addbankcard" />
+
+    <TextView
+        android:id="@+id/tv_add_bankcard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common15dp"
+        android:layout_marginTop="@dimen/common5dp"
+        android:layout_marginBottom="@dimen/common5dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:paddingTop="@dimen/common16dp"
+        android:paddingBottom="@dimen/common16dp"
+        android:text="添加银行卡"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp16" />
+
+    <TextView
+        android:id="@+id/tv_limit_bankcard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:drawableStart="@drawable/icon_tips"
+        android:drawablePadding="@dimen/common5dp"
+        android:gravity="right"
+        android:paddingEnd="@dimen/common15dp"
+        android:text="银行卡限额说明"
+        android:textColor="@color/gray_999999"
+        android:textSize="@dimen/sp13" />
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.app.haiercash.base.bui.TitleBarView
+        android:id="@+id/bar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View style="@style/Divider05dp_EDEFF2" />
+
+    <com.hunofox.gestures.widget.LockIndicator
+        android:id="@+id/lock_indicator"
+        android:layout_width="@dimen/common48dp"
+        android:layout_height="@dimen/common48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/common35dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common38dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/gesture_verify_tip"
+        android:textColor="@color/color_303133"
+        android:textSize="@dimen/sp16" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common15dp"
+        android:gravity="center"
+        android:textColor="@color/color_303133"
+        android:textSize="@dimen/sp12" />
+
+    <include
+        layout="@layout/activity_gesture_verify"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/common40dp"
+        android:layout_marginBottom="@dimen/common10dp"
+        android:layout_weight="1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_forget_gesture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="@dimen/common36dp"
+        android:gravity="center"
+        android:text="@string/gesture_verify_forget"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp14" />
+</LinearLayout>

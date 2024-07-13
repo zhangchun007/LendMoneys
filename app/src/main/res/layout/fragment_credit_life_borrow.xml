@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.haiercash.gouhua.widget.SlowSwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/srl_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackground"
+    tools:viewBindingIgnore="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/ll_yellow_expire"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:background="#fff4ca"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="温馨提示:申请多个产品,更容易获批哦"
+                android:textColor="#ff9b00"
+                android:textSize="@dimen/sp12" />
+
+            <ImageView
+                android:id="@+id/iv_close_yellow"
+                android:layout_width="@dimen/common10dp"
+                android:layout_height="@dimen/common10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/common11dp"
+                android:src="@drawable/iv_close" />
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_yellow_expire">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_vp_contain"
+                    android:layout_width="match_parent"
+                    android:layout_height="155dp"
+                    android:clipChildren="false"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/viewpager"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="48dp"
+                        android:layout_marginTop="@dimen/common15dp"
+                        android:layout_marginRight="45dp"
+                        android:layout_marginBottom="@dimen/common15dp"
+                        android:clipChildren="false"
+                        android:overScrollMode="never" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/v_divder"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common10dp"
+                    android:background="@color/windowBackground"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_vp_contain" />
+
+                <LinearLayout
+                    android:id="@+id/ll_show_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common45dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/v_divder">
+
+                    <View
+                        android:layout_width="@dimen/common3dp"
+                        android:layout_height="@dimen/common12dp"
+                        android:layout_marginLeft="@dimen/common15dp"
+                        android:background="@color/colorPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common9dp"
+                        android:text="贷款大全"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/sp15" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/v_credit_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/divider"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_show_title" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/v_credit_line" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.haiercash.gouhua.widget.SlowSwipeRefreshLayout>

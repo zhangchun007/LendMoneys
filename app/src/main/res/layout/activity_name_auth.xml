@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <com.app.haiercash.base.bui.TitleBarView
+        android:id="@+id/bar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View style="@style/Divider_0_5dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:paddingLeft="@dimen/common16dp"
+            android:paddingRight="@dimen/common16dp">
+
+            <TextView
+                android:id="@+id/tv_smrz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/common25dp"
+                android:text="实名认证"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp23"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_des1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/common6dp"
+                android:text="@string/input_your_info_to_validate"
+                android:textColor="@color/text_gray_light"
+                android:textSize="@dimen/sp12"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_smrz" />
+
+            <TextView
+                android:id="@+id/tv_tips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common25dp"
+                android:background="@drawable/bg_fff4d4_16"
+                android:paddingLeft="@dimen/common10dp"
+                android:paddingTop="@dimen/common8dp"
+                android:paddingBottom="@dimen/common8dp"
+                android:text="如个人信息有误请修改/重新扫描"
+                android:textColor="@color/color_975200"
+                android:textSize="@dimen/sp13"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_des1" />
+
+            <TextView
+                android:id="@+id/tv_name_title"
+                style="@style/StyleKey"
+                android:layout_marginTop="@dimen/common15dp"
+                android:text="姓名"
+                android:textColor="@color/text_gray_light"
+                android:textSize="@dimen/sp16"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tips" />
+
+            <com.haiercash.gouhua.widget.DelEditText
+                android:id="@+id/et_idcard_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入您本人姓名"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:textColor="@color/text_black"
+                android:textColorHint="@color/change_login_edt"
+                app:input_style="chinese"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name_title" />
+
+            <ImageView
+                android:id="@+id/iv_edit_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/common10dp"
+                android:src="@drawable/ic_edite_name"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name_title" />
+
+            <View
+                android:id="@+id/v_line3"
+                style="@style/Divider1dp_con"
+                android:layout_marginTop="@dimen/common12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_idcard_name" />
+
+
+            <TextView
+                android:id="@+id/tv_idcard_des"
+                style="@style/StyleKey"
+                android:layout_marginTop="@dimen/common15dp"
+                android:text="身份证号"
+                android:textColor="@color/text_gray_light"
+                android:textSize="@dimen/sp16"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_line3" />
+
+            <com.haiercash.gouhua.widget.DelEditText
+                android:id="@+id/et_idcard_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入您本人身份证号"
+                android:maxLength="18"
+                android:textColor="@color/text_black"
+                android:textColorHint="@color/change_login_edt"
+                android:textSize="20sp"
+                app:input_style="id_number"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_idcard_des" />
+
+            <ImageView
+                android:id="@+id/iv_scan_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/common10dp"
+                android:src="@drawable/ic_scan_idcard"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_idcard_des" />
+
+            <View
+                android:id="@+id/v_line4"
+                style="@style/Divider1dp_con"
+                android:layout_marginTop="@dimen/common12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_idcard_number" />
+
+            <TextView
+                android:id="@+id/tv_expiry_title"
+                style="@style/StyleKey"
+                android:layout_marginTop="@dimen/common15dp"
+                android:text="有效期"
+                android:textColor="@color/text_gray_light"
+                android:textSize="@dimen/sp16"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_line4" />
+
+            <TextView
+                android:id="@+id/tv_idcard_expiry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common10dp"
+                android:textColor="@color/text_black"
+                android:textColorHint="@color/change_login_edt"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_expiry_title" />
+
+            <ImageView
+                android:id="@+id/iv_scan_expiry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/common10dp"
+                android:src="@drawable/ic_scan_idcard"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_expiry_title" />
+
+            <View
+                android:id="@+id/line"
+                style="@style/Divider1dp_con"
+                android:layout_marginTop="@dimen/common12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_idcard_expiry" />
+
+            <Button
+                android:id="@+id/bt_next"
+                style="@style/bigButton"
+                android:layout_marginTop="@dimen/common20dp"
+                android:enabled="true"
+                android:text="下一步"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line" />
+
+            <TextView
+                android:id="@+id/tv_back_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="@dimen/common30dp"
+                android:text="返回扫描身份证 >"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp16"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bt_next" />
+
+            <com.haiercash.gouhua.view.EduProgressBottomBarView
+                android:id="@+id/progressbar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:edu_progress="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

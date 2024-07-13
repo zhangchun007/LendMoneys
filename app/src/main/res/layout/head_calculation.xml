@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/common15dp"
+    android:paddingEnd="@dimen/common15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common20dp"
+        android:background="@drawable/bg_head_main"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/common15dp"
+        android:paddingBottom="@dimen/common15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="还款总额(元)"
+            android:textColor="@color/color_303133"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/tvRepayAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common5dp"
+            android:gravity="center"
+            android:textColor="@color/color_303133"
+            android:textSize="@dimen/sp40"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp05"
+            android:layout_marginTop="@dimen/common15dp"
+            android:alpha="0.3"
+            android:background="@color/color_EDEFF2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common12dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="本金"
+                    android:textColor="@color/color_606166"
+                    android:textSize="@dimen/sp13" />
+
+                <TextView
+                    android:id="@+id/tvApplyAmt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common6dp"
+                    android:gravity="center"
+                    android:textColor="@color/color_303133"
+                    android:textSize="@dimen/sp16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="总利息"
+                    android:textColor="@color/color_606166"
+                    android:textSize="@dimen/sp13" />
+
+                <TextView
+                    android:id="@+id/tvSumInterest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common6dp"
+                    android:gravity="center"
+                    android:textColor="@color/color_303133"
+                    android:textSize="@dimen/sp16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="期数"
+                    android:textColor="@color/color_606166"
+                    android:textSize="@dimen/sp13" />
+
+                <TextView
+                    android:id="@+id/tvSumPerNO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common6dp"
+                    android:gravity="center"
+                    android:textColor="@color/color_303133"
+                    android:textSize="@dimen/sp16" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common15dp"
+        android:background="@drawable/bg_head_main"
+        android:orientation="horizontal"
+        android:padding="@dimen/common15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="还款方式"
+            android:textColor="@color/color_303133"
+            android:textSize="@dimen/sp16" />
+
+        <TextView
+            android:id="@+id/tvRepayWay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end|right"
+            android:text="还款方式"
+            android:textColor="@color/color_303133"
+            android:textSize="@dimen/sp14" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common15dp"
+        android:background="@color/white"
+        android:paddingStart="@dimen/common15dp"
+        android:paddingTop="@dimen/common12dp"
+        android:paddingBottom="@dimen/common10dp"
+        android:text="还款详情"
+        android:textColor="@color/color_303133"
+        android:textSize="@dimen/sp16" />
+</LinearLayout>

@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_biometric_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common60dp"
+        android:drawableTop="@drawable/src_verify_biometri"
+        android:drawablePadding="@dimen/common5dp"
+        android:gravity="center"
+        android:paddingBottom="@dimen/common10dp"
+        android:text="点击进行指纹登录"
+        android:textColor="@color/color_606166"
+        android:textSize="@dimen/sp16" />
+
+</LinearLayout>

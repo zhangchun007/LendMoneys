@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:viewBindingIgnore="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_pop_cancellation"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/common15dp"
+            android:src="@drawable/icon_close2" />
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/common14dp">
+
+            <TextView
+                android:id="@+id/tv_customer_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/icon_cancellation_kefu"
+                android:drawablePadding="@dimen/common12dp"
+                android:gravity="center"
+                android:padding="@dimen/common30dp"
+                android:text="在线客服注销"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp16" />
+
+            <TextView
+                android:id="@+id/tv_phone_server"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/icon_cancellation_phone"
+                android:drawablePadding="@dimen/common12dp"
+                android:gravity="center"
+                android:padding="@dimen/common30dp"
+                android:text="电话客服注销9:00-18:00(含节假日)"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp16" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingStart="@dimen/common18dp"
+    android:paddingEnd="@dimen/common20dp"
+    android:paddingBottom="@dimen/common15dp"
+    android:layout_marginTop="@dimen/common15dp"
+    android:background="@drawable/bg_white_radius8">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="@dimen/common20dp"
+        android:layout_height="@dimen/common20dp"
+        android:src="@drawable/logo"
+        android:layout_marginTop="@dimen/common15dp" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/iv_logo"
+        tools:text="榕树贷"
+        android:textSize="@dimen/sp16"
+        android:layout_marginStart="@dimen/common5dp"
+        android:layout_marginTop="@dimen/common15dp"
+        android:textStyle="bold"
+        android:textColor="@color/gray_303133" />
+
+    <TextView
+        android:id="@+id/tv_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_logo"
+        tools:text="最高额度200，000"
+        android:textSize="@dimen/sp18"
+        android:layout_marginTop="@dimen/common10dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_total"
+        tools:text="最高额度200，000"
+        android:textSize="@dimen/sp12"
+        android:layout_marginTop="@dimen/common5dp"
+        android:textColor="@color/gray_909199" />
+    <TextView
+        android:id="@+id/tv_apply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:text="立即申请"
+        android:gravity="center"
+        android:paddingStart="@dimen/common15dp"
+        android:paddingEnd="@dimen/common15dp"
+        android:paddingTop="@dimen/common5dp"
+        android:paddingBottom="@dimen/common5dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp14"
+        android:background="@drawable/bg_radius18_primary_color" />
+</RelativeLayout>

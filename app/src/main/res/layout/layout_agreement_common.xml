@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/v_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/common15dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_agreement"
+        style="@style/LetterSpacing_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common15dp"
+        android:layout_marginTop="@dimen/common10dp"
+        android:layout_marginEnd="@dimen/common15dp"
+        android:text="点击阅读并同意，则表示同意以上所有协议"
+        android:textColor="@color/gray_666666"
+        android:textSize="@dimen/sp13" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/bt_contract"
+        style="@style/commonButton"
+        android:layout_marginStart="@dimen/common15dp"
+        android:layout_marginTop="@dimen/common10dp"
+        android:layout_marginEnd="@dimen/common15dp"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="阅读并同意（5S）"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp15" />
+</LinearLayout>

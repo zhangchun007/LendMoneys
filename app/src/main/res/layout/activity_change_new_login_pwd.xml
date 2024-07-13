@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <com.app.haiercash.base.bui.TitleBarView
+        android:id="@+id/bar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_change_new_login_pwd_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common20dp"
+        android:layout_marginTop="@dimen/common30dp"
+        android:text="设置新密码"
+        android:textColor="@color/color_303133"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common20dp"
+        android:layout_marginTop="@dimen/common10dp"
+        android:layout_marginEnd="@dimen/common20dp"
+        android:lineHeight="@dimen/common21dp"
+        android:text="密码需为8-20位数字和字母组合，建议不要使用与常用软件相同的密码"
+        android:textColor="@color/color_909199"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common20dp"
+        android:layout_marginTop="@dimen/common30dp"
+        android:layout_marginEnd="@dimen/common20dp"
+        android:orientation="horizontal">
+
+        <com.haiercash.gouhua.widget.NewNKeyBoardTextField
+            android:id="@+id/edt_new_pwd"
+            style="@style/change_login_edt_pwd"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/common50dp"
+            android:layout_weight="1"
+            android:width="0dp"
+            android:hint="输入新登录密码"
+            android:maxLength="20"
+            android:textColor="@color/color_303133"
+            android:textCursorDrawable="@drawable/edittext_cursor" />
+
+        <CheckBox
+            android:id="@+id/passwordCheckBox"
+            android:layout_width="@dimen/common20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/common10dp"
+            android:background="@drawable/bg_pwd_show_hide"
+            android:button="@null"
+            android:gravity="center"
+            android:textColor="@color/text_gray_light"
+            android:textSize="@dimen/sp14"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_new_pwd"
+        style="@style/Divider_0_5dp"
+        android:layout_marginStart="@dimen/common20dp"
+        android:layout_marginEnd="@dimen/common20dp"
+        android:background="@color/color_e8eaef" />
+
+    <com.haiercash.gouhua.widget.NewNKeyBoardTextField
+        android:id="@+id/edt_new_pwd_again"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common50dp"
+        android:layout_marginStart="@dimen/common20dp"
+        android:layout_marginEnd="@dimen/common20dp"
+        android:background="@null"
+        android:hint="确认新登录密码"
+        android:inputType="textPassword"
+        android:maxLength="20"
+        android:textColor="@color/color_303133"
+        android:textColorHint="@color/change_login_edt"
+        android:textCursorDrawable="@drawable/edittext_cursor"
+        android:textSize="@dimen/dimen_16sp" />
+
+    <View
+        android:id="@+id/line_new_pwd_again"
+        style="@style/Divider_0_5dp"
+        android:layout_marginStart="@dimen/common20dp"
+        android:layout_marginEnd="@dimen/common20dp"
+        android:background="@color/color_e8eaef" />
+
+    <TextView
+        android:id="@+id/tvSetFinish"
+        style="@style/bigButton"
+        android:layout_height="@dimen/common48dp"
+        android:layout_marginStart="@dimen/common20dp"
+        android:layout_marginTop="@dimen/common40dp"
+        android:layout_marginEnd="@dimen/common20dp"
+        android:enabled="false"
+        android:text="确定"
+        android:textSize="@dimen/sp18" />
+</LinearLayout>

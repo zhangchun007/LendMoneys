@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/vDialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99000000">
+
+    <FrameLayout
+        android:id="@+id/vContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            layout="@layout/item_coupon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common36dp"
+            android:layout_marginBottom="0dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="@dimen/common30dp"
+            android:layout_marginBottom="@dimen/common12dp"
+            android:text="示例"
+            android:textColor="@color/gray_909199"
+            android:textSize="@dimen/sp10" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common40dp"
+            android:layout_marginStart="@dimen/common15dp"
+            android:drawableStart="@drawable/icon_des_white"
+            android:drawablePadding="@dimen/common4dp"
+            android:gravity="center|start"
+            android:text="免息券使用说明"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp13" />
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivGuide"
+        android:layout_width="@dimen/common278dp"
+        android:layout_height="@dimen/common170dp"
+        android:layout_marginStart="@dimen/common33dp"
+        android:layout_marginTop="@dimen/common2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vContent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

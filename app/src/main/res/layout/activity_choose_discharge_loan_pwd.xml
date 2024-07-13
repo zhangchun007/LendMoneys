@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common50dp"
+            android:background="@color/white"
+            android:padding="@dimen/common5dp">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/common15dp"
+                android:layout_height="@dimen/common15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/common10dp"
+                android:src="@drawable/icon_close" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="请输入交易密码"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp17" />
+        </RelativeLayout>
+
+        <com.haiercash.gouhua.view.CustomCodeView
+            android:id="@+id/password_input_transaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common7dp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_no_six_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/common10dp"
+            android:gravity="center"
+            android:paddingBottom="@dimen/common30dp"
+            android:text="非6位密码"
+            android:textColor="@color/colorPrimary"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_forget_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/common10dp"
+            android:layout_marginEnd="@dimen/common16dp"
+            android:paddingBottom="@dimen/common30dp"
+            android:text="忘记密码"
+            android:textColor="@color/colorPrimary"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+</LinearLayout>

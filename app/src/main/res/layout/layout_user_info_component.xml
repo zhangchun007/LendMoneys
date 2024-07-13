@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_top_bg"
+        android:layout_width="match_parent"
+        android:layout_height="231dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_mine_top_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_user_avatar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/bg_circle_white"
+        android:padding="2dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_user_avatar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="4dp"
+        android:text="登录/注册"
+        android:textColor="@color/color_303133"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/img_user_avatar"
+        app:layout_constraintTop_toTopOf="@+id/img_user_avatar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_vip_right"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginLeft="10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_user_name"
+        app:layout_constraintLeft_toRightOf="@+id/tv_user_name"
+        app:layout_constraintTop_toTopOf="@+id/tv_user_name" />
+
+    <TextView
+        android:id="@+id/tv_user_num_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text=""
+        android:textColor="@color/color_606166"
+        android:textSize="14dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_user_name"
+        app:layout_constraintLeft_toRightOf="@+id/tv_user_name"
+        app:layout_constraintTop_toTopOf="@+id/tv_user_name" />
+
+    <TextView
+        android:id="@+id/tv_user_num_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="4dp"
+        android:text="登录可享更多精彩"
+        android:visibility="visible"
+        android:textColor="@color/color_606166"
+        android:textSize="14dp"
+        app:layout_constraintLeft_toRightOf="@+id/img_user_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/tv_user_name" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_vip_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="21dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="4dp"
+        android:visibility="visible"
+        app:layout_constraintLeft_toRightOf="@+id/img_user_avatar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constrainedWidth="true"
+        android:layout_marginRight="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_user_name" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_vip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="15dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_vip_default"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_user_avatar" />
+
+    <Space
+        android:id="@+id/id_vip_space"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_vip"
+        app:layout_constraintTop_toTopOf="@id/iv_vip" />
+
+    <TextView
+        android:id="@+id/tv_vip_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/img_vip_tips"
+        android:gravity="center_horizontal"
+        android:paddingTop="3dp"
+        android:scaleType="fitXY"
+        android:text="会员即将到期，尽快续费嗷～"
+        android:textColor="#68290E"
+        android:textSize="10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/id_vip_space"
+        app:layout_constraintEnd_toEndOf="@+id/iv_vip"
+        app:layout_constraintTop_toTopOf="@+id/id_vip_space" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/img_user_menu_bg"
+        android:paddingTop="4dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_vip"
+        app:layout_goneMarginTop="20dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

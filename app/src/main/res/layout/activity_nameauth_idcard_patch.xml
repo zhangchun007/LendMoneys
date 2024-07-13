@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:viewBindingIgnore="true">
+
+    <com.app.haiercash.base.bui.TitleBarView
+        android:id="@+id/bar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View style="@style/Divider_0_5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/common16dp"
+        android:paddingTop="@dimen/common25dp"
+        android:text="扫描身份证"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/sp23"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/common16dp"
+        android:paddingTop="@dimen/common6dp"
+        android:text="@string/input_your_info_to_validate"
+        android:textColor="@color/text_gray_light"
+        android:textSize="@dimen/sp12" />
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common16dp"
+        android:layout_marginTop="@dimen/common25dp"
+        android:layout_marginRight="@dimen/common16dp"
+        android:background="@drawable/bg_fff4d4_16"
+        android:padding="@dimen/common12dp"
+        android:text="由于您之前未提交身份证照片，请扫描上传身份证照片，以便更好的完成额度申请。"
+        android:textColor="@color/color_975200"
+        android:textSize="@dimen/sp13" />
+
+    <ImageView
+        android:id="@+id/iv_nameauth"
+        android:layout_width="241dp"
+        android:layout_height="202dp"
+        android:layout_gravity="center"
+        android:paddingTop="@dimen/common40dp"
+        android:src="@drawable/ic_nameauth_idcard" />
+
+    <TextView
+        android:id="@+id/tv_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="@dimen/common20dp"
+        android:text="点击图片扫描身份证"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp16" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/common15dp"
+        android:text="姓名：张三"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/sp20" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom|center_horizontal"
+        android:paddingBottom="@dimen/common25dp"
+        android:text="*请保证所填资料为同一申请人，否则申请将会被拒绝" />
+
+
+</LinearLayout>

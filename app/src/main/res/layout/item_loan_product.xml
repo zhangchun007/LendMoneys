@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
+    android:layout_width="wrap_content"
+    android:layout_height="86dp"
+    android:layout_marginStart="@dimen/common7dp"
+    android:layout_marginBottom="@dimen/common10dp"
+    android:background="@drawable/bg_loan_product_1"
+    tools:viewBindingIgnore="true">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/common10dp"
+        android:layout_toLeftOf="@+id/iv_logo"
+        android:ellipsize="end"
+        android:maxEms="6"
+        android:maxLines="1"
+        android:textColor="@color/color_313131"
+        android:textSize="@dimen/sp15"
+        android:textStyle="bold"
+        tools:text="教育分期" />
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="@dimen/common40dp"
+        android:layout_height="@dimen/common40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/common26dp"
+        android:layout_marginEnd="@dimen/common12dp" />
+</RelativeLayout>

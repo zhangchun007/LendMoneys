@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_quick_apply"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common44dp"
+    android:layout_gravity="bottom"
+    android:layout_marginStart="@dimen/common15dp"
+    android:layout_marginEnd="@dimen/common15dp"
+    android:layout_marginBottom="@dimen/common16dp"
+    android:background="@drawable/bg_ff000000_8dp"
+    android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/iv_quick_apply"
+        android:layout_width="@dimen/common34dp"
+        android:layout_height="@dimen/common34dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/common10dp"
+        android:src="@drawable/img_quick_apply_money" />
+
+    <TextView
+        android:id="@+id/tv_quick_apply_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/common5dp"
+        android:layout_toEndOf="@+id/iv_quick_apply"
+        android:text="还差2步，马上享额度"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp14" />
+
+    <TextView
+        android:id="@+id/tv_go_apply"
+        android:layout_width="@dimen/common72dp"
+        android:layout_height="@dimen/common24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/common32dp"
+        android:background="@drawable/bg_3f7dff_1555ff_radius12"
+        android:clickable="true"
+        android:focusable="false"
+        android:gravity="center"
+        android:text="立即申额"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp12" />
+
+    <LinearLayout
+        android:id="@+id/ll_close_apply"
+        android:layout_width="@dimen/common22dp"
+        android:layout_height="@dimen/common20dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/bg_gray_radius_lb_rb"
+        android:clickable="true"
+        android:focusable="false"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common6dp"
+            android:src="@drawable/icon_close_grey" />
+    </LinearLayout>
+
+</RelativeLayout>

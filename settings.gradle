@@ -1,0 +1,6 @@
+include ':idcard_quality'
+include ':qr_code'
+include ':app',  ':common',':livenesslib', ':idcardlib', ':gesturespassword'
+include ':ijiami'
+include ':android-crop'
+include ':banner'

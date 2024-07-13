@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".fragments.mine.MessageFragment"
+    tools:viewBindingIgnore="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_open_notice"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginLeft="@dimen/common10dp"
+        android:layout_marginTop="@dimen/common8dp"
+        android:layout_marginRight="@dimen/common10dp"
+        android:layout_marginBottom="@dimen/common8dp"
+        android:background="@drawable/shape_messge_notice_bg">
+
+        <ImageView
+            android:id="@+id/img_message_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_message_notice"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="开启推送通知，及时查收消息"
+            android:textColor="#975200"
+            android:textSize="@dimen/common12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/img_message_notice"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_open_notice"
+            android:layout_width="49dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="@dimen/common35dp"
+            android:background="@drawable/shape_messge_notice_open_bg"
+            android:gravity="center"
+            android:text="去开启"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/common11dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_message_notice_close"
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:layout_marginRight="@dimen/common15dp"
+            android:src="@drawable/img_message_notice_close"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rg_group"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common50dp"
+        android:layout_below="@+id/layout_open_notice"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tab1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/tab2"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/rb_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:button="@null"
+                android:checked="true"
+                android:drawableBottom="@drawable/bottom_tab_selector"
+                android:drawablePadding="@dimen/common4dp"
+                android:gravity="center"
+                android:text="通知"
+                android:textColor="@color/tab_message_selector"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Space
+                android:id="@+id/id_space"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="4dp"
+                app:layout_constraintRight_toRightOf="@id/rb_1"
+                app:layout_constraintTop_toTopOf="@id/rb_1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/notice_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_circle12_ff5151"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:textSize="9dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/id_space"
+                app:layout_constraintLeft_toRightOf="@+id/id_space"
+                tools:text="9" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tab2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/tab1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/rb_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/transparent"
+                android:button="@null"
+                android:drawableBottom="@drawable/bottom_tab_selector"
+                android:drawablePadding="@dimen/common4dp"
+                android:gravity="center"
+                android:text="活动"
+                android:textColor="@color/tab_message_selector"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Space
+                android:id="@+id/id_space2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="4dp"
+                app:layout_constraintRight_toRightOf="@id/rb_2"
+                app:layout_constraintTop_toTopOf="@id/rb_2" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/activity_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_messge_notice_num_bg"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:textSize="9dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/id_space2"
+                app:layout_constraintLeft_toRightOf="@+id/id_space2"
+                tools:text="99+" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rg_group">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/v_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <View style="@style/Shadow_down" />
+    </FrameLayout>
+
+</RelativeLayout>
