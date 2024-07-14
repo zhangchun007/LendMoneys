@@ -2425,6 +2425,7 @@ com.app.haiercash.base.utils.log.LogUtils:
     public static varargs void eTag(java.lang.String,java.lang.Object[])
     public static void file(int,java.lang.Object)
     public static void file(int,java.lang.String,java.lang.Object)
+    public static void file(java.lang.Object)
     public static void file(java.lang.String,java.lang.Object)
     public static varargs void iTag(java.lang.String,java.lang.Object[])
     public static void json(int,java.lang.String)
@@ -2440,8 +2441,11 @@ com.app.haiercash.base.utils.log.LogUtils:
 com.app.haiercash.base.utils.log.Logger:
     public void <init>()
     public static void eTag(java.lang.String,java.lang.String)
+    public static void file(java.lang.Object)
+    public static java.lang.String getFilePath()
     public static void i(java.lang.String,java.lang.String)
     public static void j(java.lang.String,java.lang.String)
+    public static void setStackDeep(android.content.Context,int)
     public static void v(java.lang.String,java.lang.String)
     public static void w(java.lang.String)
 com.app.haiercash.base.utils.permission.PermissionUtils:
@@ -5675,6 +5679,17 @@ com.haiercash.gouhua.fragments.main.MainHelper:
     public static final java.lang.String strFormatSelect
     public void <init>()
     public static java.lang.String getCurrentUserStatue(com.haiercash.gouhua.beans.EduBean)
+com.haiercash.gouhua.fragments.main.MineFragment$16
+com.haiercash.gouhua.fragments.main.MineFragment$17
+com.haiercash.gouhua.fragments.main.MineFragment$18
+com.haiercash.gouhua.fragments.main.MineFragment:
+    private androidx.appcompat.app.AlertDialog alertDialog
+    static synthetic int access$1300(com.haiercash.gouhua.fragments.main.MineFragment)
+    static synthetic int access$1302(com.haiercash.gouhua.fragments.main.MineFragment,int)
+    static synthetic androidx.appcompat.app.AlertDialog access$1400(com.haiercash.gouhua.fragments.main.MineFragment)
+    static synthetic int access$1500(com.haiercash.gouhua.fragments.main.MineFragment)
+    static synthetic java.lang.String[] access$1600(com.haiercash.gouhua.fragments.main.MineFragment)
+    private void changeEnvironment()
 com.haiercash.gouhua.fragments.main.MineFragmentNew:
     private java.lang.String getPageName()
 com.haiercash.gouhua.fragments.mine.CheckCertNoFragment:
@@ -5876,8 +5891,18 @@ com.haiercash.gouhua.utils.CallsLog:
     public void <init>()
 com.haiercash.gouhua.utils.CharUtil:
     public void <init>()
+com.haiercash.gouhua.utils.CommomUtils$1
+com.haiercash.gouhua.utils.CommomUtils$2
+com.haiercash.gouhua.utils.CommomUtils$3
 com.haiercash.gouhua.utils.CommomUtils:
+    private static androidx.appcompat.app.AlertDialog alertDialog
     public void <init>()
+    static synthetic int access$000()
+    static synthetic int access$002(int)
+    static synthetic androidx.appcompat.app.AlertDialog access$100()
+    static synthetic int access$200()
+    static synthetic java.lang.String[] access$300()
+    public static void changeEnvironment(android.app.Activity)
 com.haiercash.gouhua.utils.GlideImageTarget
 com.haiercash.gouhua.utils.GlideUtils:
     public static final int ALL
@@ -23456,7 +23481,7 @@ com.chad.library.adapter.base.module.UpFetchModule
 com.haiercash.gouhua.base.CommonConfig:
     private static java.lang.String BAIRONGCID_DEBUG
     private static java.lang.String BAIRONGCID_RELEASE
-    public static java.lang.String CRASHREPORT_RELEASE
+    public static java.lang.String CRASHREPORT_DEBUG
     public static java.lang.String TDCHANNELID_DEBUG
     public static java.lang.String WX_APP_SECRET
     public static java.lang.String XGV2ACCESSID_DEBUG
